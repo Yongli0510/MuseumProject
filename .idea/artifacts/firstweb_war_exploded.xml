@@ -7,6 +7,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="firstweb" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.20-bin" />
+          <element id="file-copy" path="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/mysql-connector-java-5.1.20-bin.jar" />
+        </element>
       </element>
     </root>
   </artifact>
