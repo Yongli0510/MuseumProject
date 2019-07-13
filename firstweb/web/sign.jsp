@@ -21,45 +21,61 @@
 
 <head>
     <title>Sign</title>
+    <style>
+        .row-center{
+            text-align:center;
+            margin-top: 120px;
+        }
+        .col-center {
+            display:inline-block;
+            float:none;
+            text-align:left;
+        }
+    </style>
 </head>
 <body>
 
 <div class="container" id="reg_content">
-    <form>
-        <div class="form-group row">
-            <label for="sign_name" class="col-sm-2 col-form-label">Name</label>
-            <div class="col-sm-6">
-                <input type="text" class="form-control" id="sign_name" placeholder="Enter name">
-            </div>
-            <div id="name_message"></div>
-        </div>
+    <div class="row-center">
+        <div class="col-center">
+            <form>
+                <div class="form-group row">
+                    <label for="sign_name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="sign_name" placeholder="Enter name">
+                    </div>
+                    <div id="name_message"></div>
+                </div>
 
-        <div class="form-group row">
-            <label for="sign_mail" class="col-sm-2 col-form-label">Email address</label>
-            <div class="col-sm-6">
-                <input type="email" class="form-control" id="sign_mail" placeholder="Enter email">
-            </div>
-            <div id="email_message"></div>
-        </div>
+                <div class="form-group row">
+                    <label for="sign_mail" class="col-sm-2 col-form-label">Email address</label>
+                    <div class="col-sm-6">
+                        <input type="email" class="form-control" id="sign_mail" placeholder="Enter email">
+                    </div>
+                    <div id="email_message"></div>
+                </div>
 
-        <div class="form-group row">
-            <label for="sign_pwd_fir" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-6">
-                <input type="password" class="form-control" id="sign_pwd_fir" placeholder="Enter Password">
-            </div>
-            <div id="pwd_fir_message"></div>
-        </div>
+                <div class="form-group row">
+                    <label for="sign_pwd_fir" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-6">
+                        <input type="password" class="form-control" id="sign_pwd_fir" placeholder="Enter Password">
+                    </div>
+                    <div id="pwd_fir_message"></div>
+                </div>
 
-        <div class="form-group row">
-            <label for="sign_pwd_sec" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-6">
-                <input type="password" class="form-control" id="sign_pwd_sec" placeholder="Enter your password again">
-            </div>
-            <div id="pwd_sec_message"></div>
-        </div>
+                <div class="form-group row">
+                    <label for="sign_pwd_sec" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-6">
+                        <input type="password" class="form-control" id="sign_pwd_sec" placeholder="Enter your password again">
+                    </div>
+                    <div id="pwd_sec_message"></div>
+                </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
 </div>
 
 
