@@ -6,172 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5903928-5498-41dc-9f8f-466f2557eedd" name="Default Changelist" comment="finished homepage">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/javax.servlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/css/homePage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/css/menu-frontend.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/homepage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/image/dot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/image/logo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/image/search.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/image/安喜宫绣佛像.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/image/缂丝花鸟图.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/image/鲍天成透雕浮槎犀角杯.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/search.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/JdbcUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/JdbcUtilTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/META-INF/firstweb.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/SignChecker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.ejb.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.jms.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.persistence.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.resource.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.servlet.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.servlet.jsp.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.servlet.jsp.jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.transaction.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/mysql-connector-java-5.1.20-bin.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/back.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/homePage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/menu-frontend.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/signin.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/layui.mobile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/code.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/layer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/font/iconfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/0.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/colorpicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/element.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/flow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/laydate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/layedit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/layer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/laypage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/laytpl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/mobile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/rate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/slider.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/transfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/tree.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/layui.all.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/homepage.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/dot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/logo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/search.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/安喜宫绣佛像.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/缂丝花鸟图.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/鲍天成透雕浮槎犀角杯.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/js/md5.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/log.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/search.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/sign.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/firstweb/JdbcUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/firstweb/JdbcUtilTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/firstweb/META-INF/firstweb.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/firstweb/SignChecker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f5903928-5498-41dc-9f8f-466f2557eedd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -182,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firstweb/web/homepage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="140">
+              <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#span#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -206,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/firstweb/web/css/homePage.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
+            <state relative-caret-position="558">
+              <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -229,8 +65,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="yongli0510" />
         <option value="Yongli Wang" />
+        <option value="yongli0510" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -247,12 +83,12 @@
         <option value="$PROJECT_DIR$/firstweb/web/search.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/homePage.html" />
         <option value="$PROJECT_DIR$/firstweb/web/css/yidong-museum.css" />
-        <option value="$PROJECT_DIR$/firstweb/web/css/homePage.css" />
         <option value="$PROJECT_DIR$/firstweb/web/homePage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/WEB-INF/homepage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/c.html" />
         <option value="$PROJECT_DIR$/firstweb/web/homepage.html" />
         <option value="$PROJECT_DIR$/firstweb/web/homepage.jsp" />
+        <option value="$PROJECT_DIR$/firstweb/web/css/homePage.css" />
       </list>
     </option>
   </component>
@@ -281,23 +117,6 @@
               <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -310,7 +129,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563104137000" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563104317186" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -495,12 +314,20 @@
       <workItem from="1562999104083" duration="77000" />
       <workItem from="1563002396350" duration="1032000" />
       <workItem from="1563003467607" duration="4215000" />
-      <workItem from="1563081811574" duration="13559000" />
+      <workItem from="1563081811574" duration="13888000" />
     </task>
+    <task id="LOCAL-00001" summary="finished homepage">
+      <created>1563104224639</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563104224639</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20167000" />
+    <option name="totallyTimeSpent" value="20496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -516,7 +343,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47025496" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.47025496" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -678,13 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/css/homePage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="58" column="13" selection-start-line="58" selection-start-column="13" selection-end-line="58" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/WEB-INF/homepage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1627">
@@ -732,14 +552,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/homepage.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="140">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#input#0;n#span#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/css/homePage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
         </state>
       </provider>
     </entry>
