@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f5903928-5498-41dc-9f8f-466f2557eedd" name="Default Changelist" comment="finished homepage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/css/homePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/css/homePage.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/search.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/homePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/homePage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/homepage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/search.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/search.jsp" afterDir="false" />
@@ -25,7 +22,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firstweb/web/homepage.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
@@ -34,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/firstweb/web/details.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+            <state relative-caret-position="437">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -69,6 +66,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="yongli0510 &lt;17302010031@fudan.edu.cn&gt;" />
         <option value="Yongli Wang" />
         <option value="yongli0510" />
       </list>
@@ -159,7 +157,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563176427407" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563176790947" />
     <property name="last_opened_file_path" value="C:/xampp/htdocs/搜索结果.php" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Problems" />
@@ -357,7 +355,7 @@
       <workItem from="1563002396350" duration="1032000" />
       <workItem from="1563003467607" duration="4215000" />
       <workItem from="1563081811574" duration="21922000" />
-      <workItem from="1563167129507" duration="8117000" />
+      <workItem from="1563167129507" duration="8358000" />
     </task>
     <task id="LOCAL-00001" summary="finished homepage">
       <created>1563104224639</created>
@@ -366,15 +364,21 @@
       <option name="project" value="LOCAL" />
       <updated>1563104224639</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="finished searchPage and detailsPage">
+      <created>1563176634269</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1563176634270</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36647000" />
+    <option name="totallyTimeSpent" value="36888000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27345845" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -425,7 +429,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finished homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="finished homepage" />
+    <MESSAGE value="finished searchPage and detailsPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished searchPage and detailsPage" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/firstweb/web/index.jsp">
@@ -590,20 +595,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/details.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/homepage.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
