@@ -1,4 +1,4 @@
-<%@ page import="jdbc.UserDao" %>
+<%@ page import="dao.impl.UserDaoImpl" %>
 <%@ page import="entity.User" %><%--
   Created by IntelliJ IDEA.
   User: dell
@@ -71,7 +71,7 @@
     String name = request.getParameter("log_name");
     String pwd = request.getParameter("log_pwd");
     if (name!=null && pwd!=null){
-        User u = (new UserDao()).findUser(new User(name,pwd));
+        User u = (new UserDaoImpl()).getUser(new User(name,pwd));
         if(u!=null && pwd.equals(u.getPassword()))
             session.setAttribute("name",request.getParameter("log_name"));
         else {

@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class JdbcUtil {
     private final static String URL = "jdbc:mysql://47.102.158.139:3306/museum_pj?serverTimezone=UTC"; //若没有改动，默认端口3306
-    private final static String USER = "Li"; // 安装mysql时的用户名
+    private final static String USER = "admin"; // 安装mysql时的用户名
     private final static String PASSWORD = "123123"; //安装mysql时的密码
 
     public JdbcUtil() {
@@ -28,25 +28,14 @@ public class JdbcUtil {
     }
 
     // 关闭结果集、语句和连接
-    public void close(ResultSet rs, Statement st, Connection conn) {
+    public void releaseConnection(Connection conn) {
         try {
-            if (rs != null) {
-                rs.close();
-            }
-            if (st != null) {
-                st.close();
-            }
             if (conn != null) {
                 conn.close();
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    //查询相应的表
-    public void search(){
-
     }
 
 }

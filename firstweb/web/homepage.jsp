@@ -1,5 +1,6 @@
 <%@ page import="entity.Exhibit" %>
-<%@ page import="jdbc.ExhibitDao" %><%--
+<%@ page import="dao.impl.ExhibitDaoImpl" %>
+<%@ page import="java.util.List" %><%--
 Created by IntelliJ IDEA.
 User: lenovo
 Date: 2019/7/14
@@ -46,10 +47,10 @@ To change this template use File | Settings | File Templates.
 </div>
 
 <%
+    request.setCharacterEncoding("utf-8");
     //TODO:获得热度前三的展品的id
-    Exhibit ex1 = new ExhibitDao().findExhibit(0);
-    Exhibit ex2 = new ExhibitDao().findExhibit(1);
-    Exhibit ex3 = new ExhibitDao().findExhibit(2);
+    ExhibitDaoImpl exhibitDaoImpl = new ExhibitDaoImpl();
+    List<Exhibit> hottestExhibits = exhibitDaoImpl.getHottestExhibits(3);
 
 %>
 
@@ -62,24 +63,24 @@ To change this template use File | Settings | File Templates.
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active text-center">
-                <img class="img-fluid" src="image/<%=ex1.getPic()%>.jpg" >
+                <img class="img-fluid" src="image/<%=hottestExhibits.get(0).getPic()%>.jpg" >
                 <div class="carousel-caption">
-                    <h5><%=ex1.getName()%></h5>
-                    <p><%=ex1.getDetail()%></p>
+                    <h5><%=hottestExhibits.get(0).getName()%></h5>
+                    <p><%=hottestExhibits.get(0).getDetail()%></p>
                 </div>
             </div>
             <div class="carousel-item text-center">
-                <img class="img-fluid" src="image/<%=ex2.getPic()%>.jpg">
+                <img class="img-fluid" src="image/<%=hottestExhibits.get(1).getPic()%>.jpg">
                 <div class="carousel-caption">
-                    <h5><%=ex2.getName()%></h5>
-                    <p><%=ex2.getDetail()%></p>
+                    <h5><%=hottestExhibits.get(1).getName()%></h5>
+                    <p><%=hottestExhibits.get(1).getDetail()%></p>
                 </div>
             </div>
             <div class="carousel-item text-center">
-                <img class="img-fluid" src="image/<%=ex3.getPic()%>.jpg">
+                <img class="img-fluid" src="image/<%=hottestExhibits.get(2).getPic()%>.jpg">
                 <div class="carousel-caption">
-                    <h5><%=ex3.getName()%></h5>
-                    <p><%=ex3.getDetail()%></p>
+                    <h5><%=hottestExhibits.get(2).getName()%></h5>
+                    <p><%=hottestExhibits.get(2).getDetail()%></p>
                 </div>
             </div>
         </div>
@@ -96,35 +97,34 @@ To change this template use File | Settings | File Templates.
 
 
 <%
+
     //TODO:获得另外三种展品的id
-    Exhibit ex4 = new ExhibitDao().findExhibit(0);
-    Exhibit ex5 = new ExhibitDao().findExhibit(1);
-    Exhibit ex6 = new ExhibitDao().findExhibit(2);
+    List<Exhibit> latestExhibits = exhibitDaoImpl.getLatestExhibits(3);
 %>
 <div class="container">
     <div class="card-deck">
         <div class="card text-center text-white bg-dark" style="width: 400px">
-            <img class="card-img-top" src="image/<%=ex4.getPic()%>.jpg">
+            <img class="card-img-top" src="image/<%=latestExhibits.get(0).getPic()%>.jpg">
             <div class="card-body">
-                <h5 class="card-title"><%=ex4.getName()%></h5>
-                <p class="card-text"><%=ex4.getDetail()%></p>
-                <a href="details.jsp?id=<%=ex4.getId()%>" name="a1" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title"><%=latestExhibits.get(0).getName()%></h5>
+                <p class="card-text"><%=latestExhibits.get(0).getDetail()%></p>
+                <a href="details.jsp?id=<%=latestExhibits.get(0).getId()%>" name="a1" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
         <div class="card text-center text-white bg-dark" style="width: 18rem;">
-            <img class="card-img-top" src="image/<%=ex5.getPic()%>.jpg">
+            <img class="card-img-top" src="image/<%=latestExhibits.get(1).getPic()%>.jpg">
             <div class="card-body">
-                <h5 class="card-title"><%=ex5.getName()%></h5>
-                <p class="card-text"><%=ex5.getDetail()%></p>
-                <a href="details.jsp?id=<%=ex5.getId()%>" name="a1" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title"><%=latestExhibits.get(1).getName()%></h5>
+                <p class="card-text"><%=latestExhibits.get(1).getDetail()%></p>
+                <a href="details.jsp?id=<%=latestExhibits.get(1).getId()%>" name="a1" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
         <div class="card text-center text-white bg-dark" style="width: 18rem;">
-            <img class="card-img-top" src="image/<%=ex6.getPic()%>.jpg">
+            <img class="card-img-top" src="image/<%=latestExhibits.get(2).getPic()%>.jpg">
             <div class="card-body">
-                <h5 class="card-title"><%=ex6.getName()%></h5>
-                <p class="card-text"><%=ex6.getDetail()%></p>
-                <a href="details.jsp?id=<%=ex6.getId()%>" name="a1" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title"><%=latestExhibits.get(2).getName()%></h5>
+                <p class="card-text"><%=latestExhibits.get(2).getDetail()%></p>
+                <a href="details.jsp?id=<%=latestExhibits.get(2).getId()%>" name="a1" class="btn btn-primary">Go somewhere</a>
             </div>
         </div>
     </div>

@@ -34,5 +34,9 @@
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="popper" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="c3p0-0.9.5.2" level="project" />
+    <orderEntry type="library" name="commons-dbcp2-2.6.0" level="project" />
+    <orderEntry type="library" name="commons-logging-1.2" level="project" />
+    <orderEntry type="library" name="commons-pool2-2.6.2" level="project" />
   </component>
 </module>
