@@ -9,15 +9,7 @@
 <html>
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+<link href="css/signin.css" rel="stylesheet">
 
 <head>
     <title>Sign</title>
@@ -33,18 +25,18 @@
         }
     </style>
 </head>
-<body>
+<body class="text-center">
 
 <div class="container" id="reg_content">
-    <div class="row-center">
-        <div class="col-center">
+
             <form>
                 <div class="form-group row">
                     <label for="sign_name" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" id="sign_name" placeholder="Enter name">
                     </div>
-                    <div id="name_message"></div>
+
+                    <div id="name_message" class="col-sm-4"></div>
                 </div>
 
                 <div class="form-group row">
@@ -52,7 +44,7 @@
                     <div class="col-sm-6">
                         <input type="email" class="form-control" id="sign_mail" placeholder="Enter email">
                     </div>
-                    <div id="email_message"></div>
+                    <div id="email_message" class="col-sm-4"></div>
                 </div>
 
                 <div class="form-group row">
@@ -60,7 +52,7 @@
                     <div class="col-sm-6">
                         <input type="password" class="form-control" id="sign_pwd_fir" placeholder="Enter Password">
                     </div>
-                    <div id="pwd_fir_message"></div>
+                    <div id="pwd_fir_message" class="col-sm-4"></div>
                 </div>
 
                 <div class="form-group row">
@@ -68,22 +60,30 @@
                     <div class="col-sm-6">
                         <input type="password" class="form-control" id="sign_pwd_sec" placeholder="Enter your password again">
                     </div>
-                    <div id="pwd_sec_message"></div>
+                    <div id="pwd_sec_message" class="col-sm-4"></div>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
-        </div>
-    </div>
+
 
 </div>
 
 
 </body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 <script>
     $(function () {
         var isEmail = /^([a-z0-9A-Z]+[-|.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
-        var isPwd = /^[a-zA-Z0-9]{6,10}$/;
+        var isPwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,10}$/;
 
         /*Check whether the element is empty*/
         var checkEmpty = function (id) {

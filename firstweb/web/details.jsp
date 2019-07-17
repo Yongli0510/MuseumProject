@@ -1,4 +1,5 @@
-<%--
+<%@ page import="entity.Exhibit" %>
+<%@ page import="jdbc.ExhibitDao" %><%--
 Created by IntelliJ IDEA.
 User: lenovo
 Date: 2019/7/14
@@ -44,26 +45,34 @@ To change this template use File | Settings | File Templates.
         </div>
     </div>
 </div>
+<%
+    Exhibit exhibit = new ExhibitDao().findExhibit(Integer.parseInt(request.getParameter("id")));
+    if(exhibit!=null){
+%>
 
 <div class="container">
     <div class="row">
         <div class="picture-preview">
-            <img src="image/鲍天成透雕浮槎犀角杯.jpg" class="img-fluid">
+            <img src="image/<%=exhibit.getPic()%>.jpg" class="img-fluid">
         </div>
         <div class="card text-white bg-dark text-center" style="width: 400px;height: 500px">
             <div class="card-body">
-                <h5 class="card-title cp-info-name">鲍天成透雕浮槎犀角杯</h5>
-                <p class="card-text cp-info-description">年代：清</p>
-                <p class="card-text cp-info-description">馆藏地点：上海市博物馆</p>
-                <p class="card-text cp-info-description">出土时间：1991年</p>
-                <p class="card-text cp-info-description">简介：图轴以宋徽宗赵佶的画稿为粉本进行摹缂。采用平缂、搭缂、盘梭、长短戗、木梳戗、合色线等繁复的技法将花叶的晕色、鸟羽的纹理表现得惟妙惟肖，行梭运丝的细巧使得所缂物象线条柔美，色泽鲜丽，较好地表现了原画细腻柔婉、高雅华贵的艺术风格。</p>
-                <p class="card-text cp-info-description">热度：142</p>
+                <h5 class="card-title cp-info-name"><%=exhibit.getName()%></h5>
+                <p class="card-text cp-info-description">年代：<%=exhibit.getAge()%></p>
+                <p class="card-text cp-info-description">馆藏地点：<%=exhibit.getPlace()%></p>
+                <p class="card-text cp-info-description">出土时间：<%=exhibit.getYear()%>年</p>
+                <p class="card-text cp-info-description">简介：<%=exhibit.getDetail()%></p>
+                <p class="card-text cp-info-description">热度：<%=exhibit.getHotDegree()%></p>
                 <a href="#" class="btn btn-primary">收藏</a>
                 <a href="#" class="btn btn-primary">管理该展品</a>
             </div>
         </div>
     </div>
 </div>
+
+<%
+    }
+%>
 
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -1,4 +1,5 @@
-<%--
+<%@ page import="jdbc.UserDao" %>
+<%@ page import="entity.User" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/13
@@ -6,16 +7,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    if (request.getParameter("log_name")!=null && request.getParameter("log_pwd")!=null){
-        session.setAttribute("name",request.getParameter("log_name"));
-        //TODO:之后需要修改
-    }
-    if (session.getAttribute("name")!=null){
-        response.sendRedirect("back.jsp");
-        //TODO:直接跳转至原界面
-    }
-%>
 
 <html>
 <head>
@@ -76,28 +67,24 @@
             return $.md5(pwd);
         };
 
-        function test(){
-            var form ={
-                "name":$("#log_name").val(),
-                "pwd":modifyPwd($("#log_pwd"))
-            };
-//             var req = new XMLHttpRequest();
-//             req.open("post", "${pageContext.request.contextPath}/public/testupload", false);
-//             req.send(form);
-            $.ajax({
-                url:"${pageContext.request.contextPath}",
-                type:"post",
-                data:form,
-                processData:false,
-                contentType:false,
-                success:function(data){
-
-                },
-                error:function(e){
-                    $("#error_msg").show();
-                }
-            });
-        }
+        <%
+    String name = request.getParameter("log_name");
+    String pwd = request.getParameter("log_pwd");
+    if (name!=null && pwd!=null){
+        User u = (new UserDao()).findUser(new User(name,pwd));
+        if(u!=null && pwd.equals(u.getPassword()))
+            session.setAttribute("name",request.getParameter("log_name"));
+        else {
+            %>
+        $("#error_msg").show();
+        <%
+    }
+}
+if (session.getAttribute("name")!=null){
+    response.sendRedirect("back.jsp");
+    //TODO:直接跳转至原界面
+}
+%>
 
     });
 
@@ -105,3 +92,25 @@
 
 </body>
 </html>
+<%--function test(){--%>
+<%--var form ={--%>
+<%--"name":$("#log_name").val(),--%>
+<%--"pwd":modifyPwd($("#log_pwd"))--%>
+<%--};--%>
+<%--//             var req = new XMLHttpRequest();--%>
+<%--//             req.open("post", "${pageContext.request.contextPath}/public/testupload", false);--%>
+<%--//             req.send(form);--%>
+<%--$.ajax({--%>
+<%--url:"${pageContext.request.contextPath}",--%>
+<%--type:"post",--%>
+<%--data:form,--%>
+<%--processData:false,--%>
+<%--contentType:false,--%>
+<%--success:function(data){--%>
+
+<%--},--%>
+<%--error:function(e){--%>
+<%--$("#error_msg").show();--%>
+<%--}--%>
+<%--});--%>
+<%--}--%>

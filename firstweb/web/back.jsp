@@ -90,9 +90,14 @@
         <div style="padding: 15px;">
             <div style="padding: 20px; background-color: #F2F2F2;" id="loves_section">
                 <div class="layui-row layui-col-space15">
+
+                    <%
+                        for (int i = 1; i <= 3; i++) {
+                            if (session.getAttribute("s"+i) != null) {
+                    %>
                     <div class="layui-col-md6">
                         <div class="layui-card">
-                            <div class="layui-card-header">收藏1</div>
+                            <div class="layui-card-header"><%= new String(((String)session.getAttribute("s"+i)).getBytes("ISO-8859-1"))%>></div>
                             <div class="layui-card-body">
                                 收藏展品的时间<br>
                                 馆藏地点<br>
@@ -101,28 +106,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="layui-col-md6">
-                        <div class="layui-card">
-                            <div class="layui-card-header">收藏2</div>
-                            <div class="layui-card-body">
-                                收藏展品的时间<br>
-                                馆藏地点<br>
-                                热度<br>
-                                收藏是否公开的属性
-                            </div>
-                        </div>
-                    </div>
-                    <div class="layui-col-md6">
-                        <div class="layui-card">
-                            <div class="layui-card-header">收藏3</div>
-                            <div class="layui-card-body">
-                                收藏展品的时间<br>
-                                馆藏地点<br>
-                                热度<br>
-                                收藏是否公开的属性
-                            </div>
-                        </div>
-                    </div>
+                    <%
+                            }
+                        }
+                    %>
+
 
                 </div>
             </div>
@@ -138,7 +126,7 @@
 <script src="framework/layui/layui.js"></script>
 <script>
     //JavaScript代码区域
-    layui.use('element', function(){
+    layui.use('element', function () {
         var element = layui.element;
 
     });

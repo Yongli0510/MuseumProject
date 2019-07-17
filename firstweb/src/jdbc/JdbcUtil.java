@@ -1,14 +1,16 @@
+package jdbc;
+
 import java.sql.*;
 
 public class JdbcUtil {
-    private final static String URL = "jdbc:mysql://localhost:3306/"; //若没有改动，默认端口3306
-    private final static String USER = "root"; // 安装mysql时的用户名
-    private final static String PASSWORD = "123456"; //安装mysql时的密码
+    private final static String URL = "jdbc:mysql://localhost:3306/museum_pj?serverTimezone=UTC"; //若没有改动，默认端口3306
+    private final static String USER = "Li"; // 安装mysql时的用户名
+    private final static String PASSWORD = "123123"; //安装mysql时的密码
 
     public JdbcUtil() {
         try {
             // 反射
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
@@ -41,4 +43,10 @@ public class JdbcUtil {
             e.printStackTrace();
         }
     }
+
+    //查询相应的表
+    public void search(){
+
+    }
+
 }
