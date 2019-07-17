@@ -3,7 +3,7 @@ package jdbc;
 import java.sql.*;
 
 public class JdbcUtil {
-    private final static String URL = "jdbc:mysql://localhost:3306/museum_pj?serverTimezone=UTC"; //若没有改动，默认端口3306
+    private final static String URL = "jdbc:mysql://47.102.158.139:3306/museum_pj?serverTimezone=UTC"; //若没有改动，默认端口3306
     private final static String USER = "Li"; // 安装mysql时的用户名
     private final static String PASSWORD = "123123"; //安装mysql时的密码
 
