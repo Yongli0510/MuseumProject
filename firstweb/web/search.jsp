@@ -6,6 +6,7 @@ Time: 16:15
 To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -13,6 +14,7 @@ To change this template use File | Settings | File Templates.
     <link rel="stylesheet" href="css/homePage.css">
 
     <title>搜索艺术品</title>
+
 </head>
 <body>
 <div class="container">
@@ -45,27 +47,35 @@ To change this template use File | Settings | File Templates.
 
 <div class="container">
     <h1 style="color: #bb9b68;">快来搜索艺术品吧！</h1>
-    <form action="search.jsp" method="post">
-        <p>按名称搜索：<input type="text" name="searchItems"></p>
-        <p>按简介搜索：<input type="text" name="searchItems"></p>
-        <p>按馆藏地点搜索：<input type="text" name="searchItems" ></p>
-        <button type="submit" class="btn btn-primary">搜索</button>
+    <form>
+        <p>按名称搜索：<input type="text" id="name" name="searchItems"></p>
+        <p>按简介搜索：<input type="text" id="detail" name="searchItems"></p>
+        <p>按馆藏地点搜索：<input type="text" id="place" name="searchItems" ></p>
+        <button id = "search" type="button" class="btn btn-primary">搜索</button>
     </form>
 </div>
 
-<%
-    request.setCharacterEncoding("UTF-8");
+<div class="container">
+    <div id="searchResult">
 
-    if(request.getParameterValues("searchItems") != null){
-        for(String searchItem : request.getParameterValues("searchItems")){
-%>
-            <p><%= searchItem %></p>
-<%
-        }
-    }
-%>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    </div>
+    <nav aria-label="Page navigation example" class="row justify-content-center">
+        <ul class="pagination" id="page_prev" >
+
+        </ul>
+        <ul class="pagination" id="page_ul">
+
+        </ul>
+        <ul class="pagination" id="page_next">
+
+        </ul>
+    </nav>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="js/page.js"></script>
 </body>
 </html>
