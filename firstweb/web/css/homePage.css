@@ -92,23 +92,23 @@ body {
     background: url('../image/dot.png') no-repeat top left;
 }
 
-ul {
+#menu ul {
     margin: 0px;
     padding: 0px;
     list-style-type: none;
 }
 
-a {
+#menu-outer a, #header a {
     color: #fff;
     text-decoration: none;
     background-color: transparent;
 }
 
-a:focus {
+#menu-outer a:focus ,#header a:focus{
     outline-style: none;
 }
 
-a:hover{
+#menu-outer a:hover , #header a:hover{
     color: #b69769;
     text-decoration: none;
 }

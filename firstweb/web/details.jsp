@@ -1,5 +1,5 @@
 <%@ page import="entity.Exhibit" %>
-<%@ page import="jdbc.ExhibitDao" %><%--
+<%@ page import="dao.impl.ExhibitDaoImpl" %><%--
 Created by IntelliJ IDEA.
 User: lenovo
 Date: 2019/7/14
@@ -46,8 +46,11 @@ To change this template use File | Settings | File Templates.
     </div>
 </div>
 <%
-    Exhibit exhibit = new ExhibitDao().findExhibit(Integer.parseInt(request.getParameter("id")));
+    ExhibitDaoImpl exhibitDaoImpl = new ExhibitDaoImpl();
+    Exhibit exhibit = exhibitDaoImpl.getExhibit(Integer.parseInt(request.getParameter("id")));
     if(exhibit!=null){
+        //热度加一
+        exhibitDaoImpl.updateHotDegree(exhibit.getId());
 %>
 
 <div class="container">
@@ -55,14 +58,14 @@ To change this template use File | Settings | File Templates.
         <div class="picture-preview">
             <img src="image/<%=exhibit.getPic()%>.jpg" class="img-fluid">
         </div>
-        <div class="card text-white bg-dark text-center" style="width: 400px;height: 500px">
+        <div class="card text-white bg-dark text-center" style="width: 400px;height: 700px">
             <div class="card-body">
                 <h5 class="card-title cp-info-name"><%=exhibit.getName()%></h5>
                 <p class="card-text cp-info-description">年代：<%=exhibit.getAge()%></p>
                 <p class="card-text cp-info-description">馆藏地点：<%=exhibit.getPlace()%></p>
                 <p class="card-text cp-info-description">出土时间：<%=exhibit.getYear()%>年</p>
                 <p class="card-text cp-info-description">简介：<%=exhibit.getDetail()%></p>
-                <p class="card-text cp-info-description">热度：<%=exhibit.getHotDegree()%></p>
+                <p class="card-text cp-info-description">热度：<%=exhibit.getHotDegree() + 1%></p>
                 <a href="#" class="btn btn-primary">收藏</a>
                 <a href="#" class="btn btn-primary">管理该展品</a>
             </div>
