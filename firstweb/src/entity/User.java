@@ -1,14 +1,21 @@
 package entity;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 public class User {
     protected int id;
     protected String name;
     protected String password;
     protected int permission;
+
+    protected String loves;
+
+    public String getLoves() {
+        return loves;
+    }
+
+    public void setLoves(String loves) {
+        this.loves = loves;
+    }
 
     public User() {
     }

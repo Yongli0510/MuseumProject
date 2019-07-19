@@ -1,5 +1,4 @@
-<%@ page import="dao.impl.UserDaoImpl" %>
-<%@ page import="entity.User" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/13
@@ -23,7 +22,7 @@
 </head>
 
 <body class="text-center">
-<form METHOD="POST" class="form-signin" id="log_form" action="log.jsp">
+<form METHOD="POST" class="form-signin" id="log_form">
     <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
 
     <label for="log_name" class="sr-only">账户</label>
@@ -35,12 +34,6 @@
 
     <div class="alert alert-warning" role="alert" id="error_msg">
         用户名或密码错误
-    </div>
-
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> 记住密码
-        </label>
     </div>
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
@@ -67,24 +60,25 @@
             return $.md5(pwd);
         };
 
-        <%
-    String name = request.getParameter("log_name");
-    String pwd = request.getParameter("log_pwd");
-    if (name!=null && pwd!=null){
-        User u = (new UserDaoImpl()).getUser(new User(name,pwd));
-        if(u!=null && pwd.equals(u.getPassword()))
-            session.setAttribute("name",request.getParameter("log_name"));
-        else {
-            %>
-        $("#error_msg").show();
-        <%
-    }
-}
-if (session.getAttribute("name")!=null){
-    response.sendRedirect("back.jsp");
-    //TODO:直接跳转至原界面
-}
-%>
+        var log = function () {
+            $.ajax({
+                type: "post",
+                url: "sLog",
+                data: {
+                    "log_name": $("#log_name").val(),
+                    "log_pwd": $("#log_pwd").val()
+                },
+                success: function (data) {
+                    if ("false" === data) {
+                        $("#error_msg").show();
+                    }
+                }
+            })
+        };
+
+        $("[type = 'submit']").click(function () {
+            log();
+        });
 
     });
 
