@@ -32,17 +32,16 @@
     <label for="log_pwd" class="sr-only">密码</label>
     <input type="password" id="log_pwd" name="log_pwd" class="form-control" placeholder="Password" required>
 
-    <div class="alert alert-warning" role="alert" id="error_msg">
-        用户名或密码错误
+    <div class="error_msg">
+
     </div>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+
+    <button class="btn btn-lg btn-primary btn-block" id="to_log">登录</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
 </form>
 
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -53,34 +52,39 @@
 <script src="js/md5.js"></script>
 <script>
     $(function () {
-        $("#error_msg").hide();
-
         /*前端md5加密*/
         var modifyPwd = function (pwd) {
             return $.md5(pwd);
         };
 
-        var log = function () {
-            $.ajax({
-                type: "post",
-                url: "sLog",
-                data: {
-                    "log_name": $("#log_name").val(),
-                    "log_pwd": $("#log_pwd").val()
-                },
-                success: function (data) {
-                    if ("false" === data) {
-                        $("#error_msg").show();
-                    }
-                }
-            })
-        };
-
-        $("[type = 'submit']").click(function () {
-            log();
-        });
-
     });
+
+    $("#to_log").click(function () {
+        $.ajax({
+            type: 'post',
+            url: "slog",
+            data: {
+                "log_name": $("#log_name").val(),
+                "log_pwd": $("#log_pwd").val()
+            },
+            success: function (data) {
+                var jsonObject = JSON.parse(data);
+                if (jsonObject === null) {
+                    var content = "<div class=\"alert alert-warning\" role=\"alert\" >\n" +
+                        "        用户名或密码错误\n" +
+                        "    </div>";
+                    $("#error_msg").html(content);
+                }else {
+
+                }
+            },
+            error:function (msg) {
+                alert("zzzzzz");
+            }
+        });
+    });
+
+
 
 </script>
 

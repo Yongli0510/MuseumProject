@@ -7,203 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb709441-a820-4b67-8955-ac8b2ed637cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/firstweb/src/service/LoveService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/src/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/src/servlet/LogServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/framework/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/js/log.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/userManage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/fastjson_1_2_58.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstweb/src/Servlet/HandleLogServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/fastjson-1.2.58.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/firstweb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/firstweb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/WEB-INF/lib/lombok.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/back.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/back.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/homepage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/src/Servlet/searchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/Servlet/searchServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/src/service/PageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/PageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/src/servlet/LogServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/firstweb/web/log.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/log.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/lombok.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/META-INF/firstweb.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/museum_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/museum_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/dao/ExhibitDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/dao/ExhibitDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/dao/impl/ExhibitDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/dao/impl/ExhibitDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/jdbc/JdbcUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/jdbc/JdbcUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.annotation.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.ejb.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.jms.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.persistence.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.resource.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.servlet.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.servlet.jsp.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.servlet.jsp.jstl.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/lib/javax.transaction.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/back.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/homePage.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/signin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/layui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/layui.mobile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/code.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/laydate/default/laydate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/icon-ext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/layer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/loading-0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/loading-1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/css/modules/layer/default/loading-2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/font/iconfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/font/iconfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/font/iconfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/font/iconfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/font/iconfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/0.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/10.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/11.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/12.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/13.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/14.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/15.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/16.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/17.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/18.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/19.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/20.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/21.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/22.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/23.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/24.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/25.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/26.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/27.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/28.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/29.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/3.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/30.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/31.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/33.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/34.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/35.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/36.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/37.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/38.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/39.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/4.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/40.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/41.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/42.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/43.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/44.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/45.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/46.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/47.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/48.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/49.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/5.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/50.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/51.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/52.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/54.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/55.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/56.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/57.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/58.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/59.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/6.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/60.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/61.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/62.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/63.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/64.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/65.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/66.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/67.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/68.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/69.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/7.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/70.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/71.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/8.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/images/face/9.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/carousel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/code.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/colorpicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/element.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/flow.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/laydate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/layedit.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/laypage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/laytpl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/mobile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/rate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/slider.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/table.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/transfer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/tree.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/lay/modules/util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/layui.all.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/framework/layui/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/details.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/details.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/details.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/homepage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/homepage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/dot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/logo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/search.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/安喜宫绣佛像.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/缂丝花鸟图.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/image/鲍天成透雕浮槎犀角杯.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/friends.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/js/md5.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/log.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/log.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/search.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/sign.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/firstweb/META-INF/firstweb.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/firstweb/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/firstweb/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/firstweb/dao/ExhibitDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/firstweb/dao/ExhibitDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/firstweb/dao/impl/ExhibitDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/firstweb/dao/impl/ExhibitDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/firstweb/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/firstweb/entity/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/firstweb/jdbc/JdbcUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/firstweb/jdbc/JdbcUtil.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -234,12 +56,78 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/service/LoveService.java">
+        <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/searchServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+            <state relative-caret-position="713">
+              <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#536#537#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/HandleLogServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firstweb/web/js/page.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="620">
+              <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#76#83#1" expanded="true" />
+                <element signature="e#86#93#1" expanded="true" />
+                <element signature="e#77#84#1" expanded="true" />
+                <element signature="e#86#93#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/firstweb/web/log.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firstweb/web/search.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firstweb/src/service/PageService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-140">
+              <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+              <folding>
+                <element signature="e#226#227#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -248,83 +136,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firstweb/src/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/web/back.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
-              <folding>
-                <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/LogServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/web/log.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1160">
-              <caret line="58" column="40" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/web/WEB-INF/web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/ExhibitDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-135">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/dao/DAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+            <state relative-caret-position="200">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -389,12 +202,17 @@
         <option value="$PROJECT_DIR$/firstweb/web/userManage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/friends.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/back.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/src/entity/User.java" />
         <option value="$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/firstweb/src/service/LoveService.java" />
         <option value="$PROJECT_DIR$/firstweb/src/service/UserService.java" />
-        <option value="$PROJECT_DIR$/firstweb/web/log.jsp" />
+        <option value="$PROJECT_DIR$/firstweb/src/entity/User.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/service/UserHandleService.java" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/LogServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/servlet/searchServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/service/PageService.java" />
+        <option value="$PROJECT_DIR$/firstweb/web/WEB-INF/servlet/HandleLogServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/servlet/HandleLogServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/web/log.jsp" />
       </list>
     </option>
   </component>
@@ -406,8 +224,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="561" />
-    <option name="y" value="57" />
+    <option name="x" value="560" />
+    <option name="y" value="55" />
     <option name="width" value="1440" />
     <option name="height" value="805" />
   </component>
@@ -416,6 +234,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -440,15 +259,7 @@
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
               <item name="firstweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
@@ -484,7 +295,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -492,22 +302,25 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563526075409" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563618612134" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\2019summer\卓越软件开发\MuseumProject\firstweb\src\servlet" />
+      <recent name="D:\2019summer\卓越软件开发\MuseumProject\firstweb\web\WEB-INF" />
+      <recent name="D:\2019summer\卓越软件开发\MuseumProject\firstweb\web" />
       <recent name="C:\Users\lenovo\MuseumProject\firstweb\web" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\2019summer\卓越软件开发\MuseumProject\firstweb\web\framework" />
       <recent name="D:\2019summer\卓越软件开发\MuseumProject\lib" />
+      <recent name="D:\2019summer\卓越软件开发\MuseumProject\firstweb\web\framework" />
       <recent name="D:\2019summer\卓越软件开发\MuseumProject\firstweb\web\WEB-INF\lib" />
       <recent name="D:\2019summer\卓越软件开发\MuseumProject\firstweb\web" />
       <recent name="C:\Users\lenovo\MuseumProject\firstweb\web\image" />
@@ -705,7 +518,9 @@
       <workItem from="1563286708444" duration="7483000" />
       <workItem from="1563343852956" duration="5501000" />
       <workItem from="1563439844314" duration="12364000" />
-      <workItem from="1563514018556" duration="7051000" />
+      <workItem from="1563514018556" duration="7650000" />
+      <workItem from="1563539835383" duration="4624000" />
+      <workItem from="1563592834310" duration="8698000" />
     </task>
     <task id="LOCAL-00001" summary="finished homepage">
       <created>1563104224639</created>
@@ -721,13 +536,20 @@
       <option name="project" value="LOCAL" />
       <updated>1563351506170</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="bug">
+      <created>1563526118238</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1563526118238</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70138000" />
+    <option name="totallyTimeSpent" value="84059000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -737,9 +559,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="449" y="46" width="1152" height="644" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.44698355" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.18230563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -749,18 +572,18 @@
       <window_info id="Web" order="7" sideWeight="0.50141644" side_tool="true" weight="0.327748" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7158177" weight="0.26171875" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7158177" visible="true" weight="0.3385269" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.24929178" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.2647453" side_tool="true" weight="0.52974504" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.26541555" side_tool="true" weight="0.62606233" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.7352547" weight="0.52974504" />
-      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.73458445" weight="0.42634562" />
+      <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.49932975" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49597856" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -774,36 +597,37 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22654155" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.18230563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.50141644" side_tool="true" weight="0.327748" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.47025496" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7158177" weight="0.3385269" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.24929178" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5033512" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.79289544" weight="0.3286119" />
-      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Messages" order="14" sideWeight="0.4966488" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.26541555" side_tool="true" weight="0.62606233" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.73458445" weight="0.42634562" />
+      <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49597856" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.2680965" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout-to-restore>
@@ -864,27 +688,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finished homepage" />
     <MESSAGE value="dao" />
-    <option name="LAST_COMMIT_MESSAGE" value="dao" />
+    <MESSAGE value="bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/museum_project.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6__2_.xml" />
-    <entry file="file://$PROJECT_DIR$/.idea/artifacts/firstweb_war_exploded.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -931,13 +738,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/detail.jsp" />
     <entry file="jar://$PROJECT_DIR$/firstweb/web/WEB-INF/lib/mysql-connector-java-5.1.20-bin.jar!/com/mysql/jdbc/SQLError.class" />
-    <entry file="file://$PROJECT_DIR$/firstweb/web/search.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.sql/java/sql/Connection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -1076,55 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/entity/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding>
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/service/LoveService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/log.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1160">
-          <caret line="58" column="40" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-12.0.1/lib/src.zip!/java.base/java/lang/reflect/Method.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -1132,35 +883,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/LogServlet.java">
+    <entry file="file://$PROJECT_DIR$/firstweb/src/service/LoveService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        <state relative-caret-position="180">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/back.jsp">
+    <entry file="file://$PROJECT_DIR$/firstweb/src/entity/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
+        <state relative-caret-position="160">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
-            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#script#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#207#208#0" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/ExhibitDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
+        <state relative-caret-position="20">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/back.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="-7">
+          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/entity/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/searchServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#536#537#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/service/PageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+          <folding>
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/HandleLogServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/js/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#76#83#1" expanded="true" />
+            <element signature="e#86#93#1" expanded="true" />
+            <element signature="e#77#84#1" expanded="true" />
+            <element signature="e#86#93#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/log.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="71" column="42" selection-start-line="71" selection-start-column="42" selection-end-line="71" selection-end-column="42" />
         </state>
       </provider>
     </entry>

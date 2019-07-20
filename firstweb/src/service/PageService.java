@@ -9,11 +9,11 @@ import java.util.List;
 public class PageService {
     private ExhibitDaoImpl exhibitDao;
 
-    public PageService(ExhibitDaoImpl e){
+    public PageService(ExhibitDaoImpl e) {
         this.exhibitDao = e;
     }
 
-    public Page<Exhibit> paging(String[] searchItems,int currentPage){
+    public Page<Exhibit> paging(String[] searchItems, int currentPage) {
         List<Exhibit> resultSet = exhibitDao.searchExhibits(searchItems);
         Page<Exhibit> bean = new Page<>();
         bean.setPageSize(6);//每页展示6条数据
@@ -40,8 +40,8 @@ public class PageService {
         bean.setLast(bean.getTotalPage());
 
         int fromIndex = (currentPage - 1) * bean.getPageSize();
-        int toIndex = Math.min(bean.getTotalNum(),currentPage * bean.getPageSize());
-        bean.setList(resultSet.subList(fromIndex,toIndex));//把数据装进集合
+        int toIndex = Math.min(bean.getTotalNum(), currentPage * bean.getPageSize());
+        bean.setList(resultSet.subList(fromIndex, toIndex));//把数据装进集合
         return bean;
     }
 
