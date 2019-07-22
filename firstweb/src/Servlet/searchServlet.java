@@ -1,4 +1,4 @@
-package Servlet;
+package servlet;
 
 import com.alibaba.fastjson.JSON;
 import dao.impl.ExhibitDaoImpl;

@@ -1,15 +1,11 @@
-var currentPage = 1; //当前页面
-var name,detail,place; //搜索项
+var friend_name;
 
-function goPage(page) {
+function list(message) {
     $.ajax({
-        url:"searchServlet",
+        url:"friendSearchServlet",
         type:'post',
         data:{
-            "page":page,
-            "name":name,
-            "detail":detail,
-            "place":place
+            "name":message
         },
         success:function (data) {
             currentPage = page;
@@ -47,38 +43,7 @@ function goPage(page) {
     });
 }
 
-function genPageLink(pb){
-    //拼接分页的超链接
-    if(pb.currentPage == 1){
-        $("#page_prev").html('<li id="page_prev" class="disabled page-item"><a href="#" class="page-link">&laquo;</a></li>');
-    }
-    else{
-        $("#page_prev").html('<li id="page_prev" class="page-item" ><a href="javascript:goPage(' + (--currentPage) + ')" class="page-link">&laquo;</a></li>');
-    }
-
-    var s = "";
-    for(var i = 1;i<=pb.totalPage;i++){
-        //如果当前遍历到的页码数等于当前页，则当前页码被激活class="active"
-        if(pb.currentPage == i){
-            s += '<li id="page_ul" class="active page-item"><a href="javascript:goPage(' + i + ')" class="page-link">'+i+'</a></li>';
-        }
-        else{
-            s += '<li id="page_ul" class="page-item"><a href="javascript:goPage(' + i + ')" class="page-link">'+i+'</a></li>';
-        }
-    }
-    $("#page_ul").html(s);
-
-    if(pb.currentPage == pb.totalPage){
-        $("#page_next").html('<li id="page_next" class="disabled page-item" ><a href="#" class="page-link">&raquo;</a></li>');
-    }else{
-        $("#page_next").html('<li id="page_next" class="page-item" ><a href="javascript:goPage(' + (++currentPage) + ')" class="page-link">&raquo;</a></li>');
-    }
-}
-
-$("#search").click(function () {
-    name = $("#name").val();
-    detail = $("#detail").val();
-    place = $("#place").val();
-    goPage(1);
+$("#friend_search").click(function () {
+    friend_name = $("#name").val();
+    goPage(friend_name);
 });
-

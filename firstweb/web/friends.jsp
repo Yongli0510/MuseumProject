@@ -1,4 +1,7 @@
-<%--
+<%@ page import="dao.impl.UserDaoImpl" %>
+<%@ page import="entity.User" %>
+<%@ page import="service.FriendService" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/18
@@ -88,47 +91,112 @@
     <div class="layui-body">
         <!-- 内容主体区域 -->
         <div style="padding: 15px;">
-            <div style="padding: 20px; background-color: #F2F2F2;" id="loves_section">
-                <div class="layui-row layui-col-space15">
-                    <div class="layui-col-md6">
-                        <div class="layui-card">
-                            <div class="layui-card-header" data-toggle="popover">卡片面板</div>
-                            <div class="layui-card-body">
-                                卡片式面板面板通常用于非白色背景色的主体内<br>
-                                从而映衬出边框投影
-                            </div>
-                        </div>
 
-                        <div class="card" style="width: 18rem;position: absolute">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                <a href="#" class="card-link">Card link</a>
-                                <a href="#" class="card-link">Another link</a>
+
+            <div class="layui-tab layui-tab-card">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">我的好友</li>
+                    <li>好友查询</li>
+                    <li>收到的邀请</li>
+                </ul>
+
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <%--我的好友栏目--%>
+                        <div class="layui-row layui-col-space15">
+                            <%
+                                //TODO:修改log之后记得改这里
+                                User temp = new User();
+                                temp.setName("lalala");
+                                temp.setPassword("lll_111_qqq");
+                                session.setAttribute("me", temp);
+                                //TODO:到这里为止
+
+                                FriendService fs = new FriendService(new UserDaoImpl());
+                                User me = (User) session.getAttribute("me");
+                                List<User> myFriends = fs.getFriend(me);
+
+                                for (User myFriend : myFriends) {
+                            %>
+                            <div class="layui-col-md6">
+                                <div class="layui-card">
+                                    <div class="layui-card-header" data-toggle="popover">名称：<%=myFriend.getName()%>
+                                    </div>
+                                    <div class="layui-card-body">
+                                        个性签名：<%=myFriend.getSignature()%>
+                                    </div>
+                                    <a href="personalpage.jsp?id=<%=myFriend.getId()%>"
+                                       class="btn btn-primary">进入ta的主页</a>
+                                </div>
                             </div>
+                            <%
+                                }
+                            %>
+                        </div>
+                    </div>
+
+
+                    <div class="layui-tab-item">
+                        <%--好友查询栏目--%>
+                        <form class="layui-form" action="">
+                            <div class="layui-form-item">
+                                <a id="bt_search_friend" class="layui-form-label btn btn-primary">搜索ta</a>
+                                <div class="layui-input-block">
+                                    <input type="text" autocomplete="off" placeholder="请输入"
+                                           class="layui-input">
+                                </div>
+                            </div>
+                        </form>
+                        <hr>
+                        <div id="find_friend_result">
+                            <%--展示查询的结果--%>
+                        </div>
+                    </div>
+
+                    <div class="layui-tab-item">
+                        <%--展示所有的好友申请记录--%>
+                        <div class="layui-row layui-col-space15">
+                            <%
+                                List<User> myInvites = fs.getInvite(me);
+                                for (User myInvite : myInvites) {
+                            %>
+                            <div class="layui-col-md6">
+                                <div class="layui-card">
+                                    <div class="layui-card-header" data-toggle="popover">来源：<%=myInvite.getName()%>
+                                    </div>
+                                    <div class="layui-card-body">
+                                        ta的签名：<%=myInvite.getSignature()%>
+                                    </div>
+
+                                    <div class="layui-btn-group">
+                                        <form type="post" action="friendHandleServlet">
+                                            <button type="button" class="layui-btn" name="agree">同意</button>
+                                            <button type="button" class="layui-btn" name="refuse">拒绝</button>
+                                        </form>
+                                        <button type="button" class="layui-btn"
+                                                onclick="location.href='personalpage.jsp?id=<%=myInvite.getId()%>'">
+                                            查看ta的主页
+                                        </button>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <%
+                                }
+                            %>
                         </div>
 
                     </div>
-                    <div class="layui-col-md6">
-                        <div class="layui-card">
-                            <div class="layui-card-header">卡片面板</div>
-                            <div class="layui-card-body">
-                                结合 layui 的栅格系统<br>
-                                轻松实现响应式布局
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+
             </div>
         </div>
-    </div>
 
-    <div class="layui-footer">
-        <!-- 底部固定区域 -->
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+        </div>
     </div>
 </div>
 
@@ -145,50 +213,9 @@
 <script>
     //JavaScript代码区域
     layui.use('element', function () {
-        var element = layui.element;
+        var $ = layui.jquery
+            , element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
     });
-
-    $(function () {
-        // $(".card").hide();
-
-        $("[data-toggle='popover']").each(function () {
-            var element = $(this);
-            element.popover({
-                trigger: 'manual',
-                html: true,
-                title: 'kkkk',
-                placement: 'bottom',
-                content: function () {
-                    return content();
-                }
-            }).on("mouseenter", function () {
-                var _this = this;
-                $(this).popover("show");
-                $(this).siblings(".popover").on("mouseleave", function () {
-                    $(_this).popover('hide');
-                });
-            }).on("mouseleave", function () {
-                var _this = this;
-                setTimeout(function () {
-                    if (!$(".popover:hover").length) {
-                        $(_this).popover("hide")
-                    }
-                }, 100);
-            });
-
-        });
-
-
-        //模拟动态加载内容(真实情况可能会跟后台进行ajax交互)
-        function content() {
-            var data = $();
-            return data;
-        }
-
-    });
-
-
-
 
 </script>
 

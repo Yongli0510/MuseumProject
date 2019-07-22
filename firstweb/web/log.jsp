@@ -22,7 +22,7 @@
 </head>
 
 <body class="text-center">
-<form METHOD="POST" class="form-signin" id="log_form">
+<form class="form-signin" id="log_form">
     <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
 
     <label for="log_name" class="sr-only">账户</label>
@@ -32,13 +32,11 @@
     <label for="log_pwd" class="sr-only">密码</label>
     <input type="password" id="log_pwd" name="log_pwd" class="form-control" placeholder="Password" required>
 
-    <div class="error_msg">
-
+    <div class="alert alert-warning" role="alert" id="error_msg">
+        用户名或密码错误
     </div>
 
-
-    <button class="btn btn-lg btn-primary btn-block" id="to_log">登录</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
+    <a class="btn btn-lg btn-primary btn-block" id="to_log">登录</a>
 </form>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -48,67 +46,70 @@
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
+<script src="framework/layui/layui.js"></script>
 <script src="js/md5.js"></script>
 <script>
+
+
     $(function () {
-        /*前端md5加密*/
-        var modifyPwd = function (pwd) {
-            return $.md5(pwd);
-        };
+        $("#error_msg").hide();
 
     });
+    /*前端md5加密*/
+    var modifyPwd = function (pwd) {
+        return $.md5(pwd);
+    };
+
+    var show = function() {
+        layui.use('layer', function() { //独立版的layer无需执行这一句
+            var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+            //配置一个透明的询问框
+            layer.msg('大部分参数都是可以公用的<br>合理搭配，展示不一样的风格', {
+                time: 20000, //20s后自动关闭
+                btn: ['明白了']
+            });
+        });
+    };
 
     $("#to_log").click(function () {
-        $.ajax({
-            type: 'post',
-            url: "slog",
-            data: {
-                "log_name": $("#log_name").val(),
-                "log_pwd": $("#log_pwd").val()
-            },
-            success: function (data) {
-                var jsonObject = JSON.parse(data);
-                if (jsonObject === null) {
-                    var content = "<div class=\"alert alert-warning\" role=\"alert\" >\n" +
-                        "        用户名或密码错误\n" +
-                        "    </div>";
-                    $("#error_msg").html(content);
-                }else {
-
-                }
-            },
-            error:function (msg) {
-                alert("zzzzzz");
+        $.post("./slog", {
+            log_name: $("#log_name").val(),
+            log_pwd: modifyPwd($("#log_pwd").val())
+        }, function (result) {
+            var jsonObject = JSON.parse(result);
+            if (jsonObject === null) {
+                $("#error_msg").show();
+            } else {
+                show();
             }
         });
-    });
 
+    });
 
 
 </script>
 
 </body>
 </html>
-<%--function test(){--%>
-<%--var form ={--%>
-<%--"name":$("#log_name").val(),--%>
-<%--"pwd":modifyPwd($("#log_pwd"))--%>
-<%--};--%>
-<%--//             var req = new XMLHttpRequest();--%>
-<%--//             req.open("post", "${pageContext.request.contextPath}/public/testupload", false);--%>
-<%--//             req.send(form);--%>
 <%--$.ajax({--%>
-<%--url:"${pageContext.request.contextPath}",--%>
-<%--type:"post",--%>
-<%--data:form,--%>
-<%--processData:false,--%>
-<%--contentType:false,--%>
-<%--success:function(data){--%>
-
+<%--type: 'post',--%>
+<%--url: "slog",--%>
+<%--data: {--%>
+<%--"log_name": $("#log_name").val(),--%>
+<%--"log_pwd": $("#log_pwd").val()--%>
 <%--},--%>
-<%--error:function(e){--%>
-<%--$("#error_msg").show();--%>
+<%--success: function (data) {--%>
+<%--var jsonObject = JSON.parse(data);--%>
+<%--if (jsonObject === null) {--%>
+<%--layer.msg('用户名或密码输入错误', {--%>
+<%--time: 5000, //5s后自动关闭--%>
+<%--btn: ['明白了']--%>
+<%--});--%>
+<%--} else {--%>
+<%--alert("xxxx");--%>
+<%--}--%>
+<%--},--%>
+<%--error: function (msg) {--%>
+<%--alert("zzzzzz");--%>
 <%--}--%>
 <%--});--%>
-<%--}--%>
