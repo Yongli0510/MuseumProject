@@ -1,4 +1,8 @@
-<%--
+<%@ page import="entity.User" %>
+<%@ page import="java.util.List" %>
+<%@ page import="entity.Exhibit" %>
+<%@ page import="service.UserService" %>
+<%@ page import="dao.impl.UserDaoImpl" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/13
@@ -15,6 +19,10 @@
     <link rel="stylesheet" href="framework/layui/css/layui.css">
 </head>
 <body class="layui-layout-body">
+
+<%
+    User me = (User) session.getAttribute("me");
+%>
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
         <div class="layui-logo">我的信息</div>
@@ -34,7 +42,7 @@
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
-                    <%=session.getAttribute("name")%>
+                    <%=me.getName()%>
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a href="">基本资料</a></dd>
@@ -88,12 +96,13 @@
                 <div class="layui-row layui-col-space15">
 
                     <%
-                        for (int i = 1; i <= 3; i++) {
-                            if (session.getAttribute("s"+i) != null) {
+                        UserService us = new UserService(new UserDaoImpl());
+                        List<Exhibit> loves = us.getLoves(me);
+                        for (Exhibit love : loves) {
                     %>
                     <div class="layui-col-md6">
                         <div class="layui-card">
-                            <div class="layui-card-header"><%= new String(((String)session.getAttribute("s"+i)).getBytes("ISO-8859-1"))%>></div>
+                            <div class="layui-card-header"><%= love.getName()%>></div>
                             <div class="layui-card-body">
                                 收藏展品的时间<br>
                                 馆藏地点<br>
@@ -103,7 +112,6 @@
                         </div>
                     </div>
                     <%
-                            }
                         }
                     %>
 

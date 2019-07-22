@@ -42,7 +42,7 @@ To change this template use File | Settings | File Templates.
                 <li>|</li>
                 <li><a href="search.jsp">搜索</a></li>
                 <li>|</li>
-                <li><a href="back.jsp">个人信息</a></li>
+                <li><a href="backlove.jsp">个人信息</a></li>
             </ul>
         </div>
     </div>

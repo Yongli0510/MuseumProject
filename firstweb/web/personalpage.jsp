@@ -49,7 +49,7 @@
                 <li>|</li>
                 <li><a href="search.jsp">搜索</a></li>
                 <li>|</li>
-                <li><a href="back.jsp">个人信息</a></li>
+                <li><a href="backlove.jsp">个人信息</a></li>
             </ul>
         </div>
     </div>
@@ -101,7 +101,7 @@
                 <h5 class="card-title cp-info-name">收藏的文物</h5>
                 <hr>
                 <%
-                    List<Exhibit> loves = us.getList(friend);
+                    List<Exhibit> loves = us.getLoves(friend);
                     for (Exhibit love : loves) {
                 %>
                 <a href="details.jsp?id=<%=love.getId()%>" class="card-text cp-info-description"><%=love.getName()%></a>

@@ -31,18 +31,17 @@ public class HandleLogServlet extends HttpServlet {
 
 
         //TODO:
-        String path = "back.jsp";
+        String path = "backlove.jsp";
 
         UserService userService = new UserService(new UserDaoImpl());
         User ru = userService.log(name, pwd);
         System.out.println(ru);
 
         if (ru != null) {
-            response.sendRedirect(path);
             request.getSession().setAttribute("me",ru);
-        }else {
-            out.append(JSON.toJSONString(ru));
         }
+        out.append(JSON.toJSONString(ru));
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws

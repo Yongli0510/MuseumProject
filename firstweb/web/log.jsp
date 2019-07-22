@@ -64,8 +64,8 @@
         layui.use('layer', function() { //独立版的layer无需执行这一句
             var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
             //配置一个透明的询问框
-            layer.msg('大部分参数都是可以公用的<br>合理搭配，展示不一样的风格', {
-                time: 20000, //20s后自动关闭
+            layer.msg('登录成功！<br>5秒后将自动跳转...', {
+                time: 5000, //5s后自动关闭
                 btn: ['明白了']
             });
         });
@@ -81,6 +81,10 @@
                 $("#error_msg").show();
             } else {
                 show();
+                setTimeout(function () {
+                    window.location.href="backlove.jsp";
+                },5000);
+
             }
         });
 

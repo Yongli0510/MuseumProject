@@ -32,7 +32,7 @@ public class UserService {
         return userDao.getUser(id);
     }
 
-    public List<Exhibit> getList(User user){
+    public List<Exhibit> getLoves(User user){
         ExhibitDaoImpl exhibitDao = new ExhibitDaoImpl();
 
         int[] exs = userDao.getLoves(user);
