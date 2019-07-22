@@ -1,6 +1,7 @@
 package servlet;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import dao.impl.UserDaoImpl;
 import entity.User;
 import service.UserService;
@@ -40,8 +41,9 @@ public class HandleLogServlet extends HttpServlet {
         if (ru != null) {
             request.getSession().setAttribute("me",ru);
         }
+//        JSONObject object = new JSONObject();
+//        object.put("s","");
         out.append(JSON.toJSONString(ru));
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
