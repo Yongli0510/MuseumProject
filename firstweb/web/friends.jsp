@@ -1,8 +1,8 @@
+<%@ page import="dao.impl.FriendDaoImpl" %>
 <%@ page import="dao.impl.UserDaoImpl" %>
 <%@ page import="entity.User" %>
 <%@ page import="service.FriendService" %>
-<%@ page import="java.util.List" %>
-<%@ page import="dao.impl.FriendDaoImpl" %><%--
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/18
@@ -107,10 +107,15 @@
                         <div class="layui-row layui-col-space15">
                             <%
 
-                                FriendService fs = new FriendService(new UserDaoImpl(),new FriendDaoImpl());
+                                FriendService fs = new FriendService(new UserDaoImpl(), new FriendDaoImpl());
                                 User me = (User) session.getAttribute("me");
                                 List<User> myFriends = fs.getFriend(me.getId());
 
+                                if (myFriends.isEmpty()) {
+                            %>
+                            你暂时还没有好友
+                            <%
+                            } else {
                                 for (User myFriend : myFriends) {
                             %>
                             <div class="layui-col-md6">
@@ -121,16 +126,19 @@
                                         个性签名：<%=myFriend.getSignature()%>
                                     </div>
                                     <div class="layui-btn-group">
-                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="window.location.href='personalpage.jsp?id=<%=myFriend.getId()%>'">
+                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                                                onclick="window.location.href='personalpage.jsp?id=<%=myFriend.getId()%>'">
                                             <i class="layui-icon">&#xe612;</i>
                                         </button>
-                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updateMyFriend(<%=me.getId()%>,<%=myFriend.getId()%>,'del')">
+                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                                                onclick="updateMyFriend(<%=me.getId()%>,<%=myFriend.getId()%>,'del')">
                                             <i class="layui-icon">&#xe640;</i>
                                         </button>
                                     </div>
                                 </div>
                             </div>
                             <%
+                                    }
                                 }
                             %>
                         </div>
@@ -139,12 +147,12 @@
 
                     <div class="layui-tab-item">
                         <%--好友查询栏目--%>
-                        <form class="layui-form" action="">
+                        <form class="layui-form">
                             <div class="layui-form-item">
-                                <a id="bt_search_friend" class="layui-form-label btn btn-primary">搜索ta</a>
+                                <button type="button" class="layui-form-label layui-btn"><a class="layui-icon">GO
+                                    &#xe609;</a></button>
                                 <div class="layui-input-block">
-                                    <input type="text" autocomplete="off" placeholder="请输入"
-                                           class="layui-input">
+                                    <input type="text" autocomplete="off" placeholder="请输入" class="layui-input">
                                 </div>
                             </div>
                         </form>
@@ -217,24 +225,24 @@
             , element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
     });
 
-    var updateMyFriend = function (UID,FID,FUNC) {
+    var updateMyFriend = function (UID, FID, FUNC) {
         $.post("./updatefriend", {
-            uid:UID,
-            fid:FID,
-            func:FUNC
+            uid: UID,
+            fid: FID,
+            func: FUNC
         }, function (result) {
             var jsonObject = JSON.parse(result);
             if (jsonObject.success === true) {
                 show("修改成功");
                 setTimeout(function () {
                     location.reload();
-                },2000);
+                }, 2000);
 
             } else {
                 show("修改失败");
                 setTimeout(function () {
                     location.reload();
-                },2000);
+                }, 2000);
             }
         });
     };
