@@ -55,7 +55,7 @@
                     <dd><a href="">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="">退了</a></li>
+            <li class="layui-nav-item"><a href="logout">退了</a></li>
         </ul>
     </div>
 
@@ -114,11 +114,19 @@
                             <div class="layui-card-body">
                                 收藏展品的时间:<%=love.getTime()%><br>
                                 馆藏地点:<%=ex.getPlace()%><br>
-                                热度<%=ex.getHotDegree()%><br>
+                                热度:<%=ex.getHotDegree()%><br>
                                 可见度：<%=love.getCanSee()==0?"不可见":"可见"%><br>
                                 <div class="layui-btn-group">
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm bt_love_level_1" >公开</button>
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm bt_love_level_0" id=""><i class="layui-icon">私有</i></button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=me.getId()%>,<%=ex.getId()%>,'setpublic',1)">公开</button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=me.getId()%>,<%=ex.getId()%>,'setpublic',0)">私有</button>
+                                </div>
+                                <div class="layui-btn-group">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="window.location.href='details.jsp?id=<%=ex.getId()%>'">
+                                        <i class="layui-icon">&#xe602;</i>
+                                    </button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=me.getId()%>,<%=ex.getId()%>,'del',0)">
+                                        <i class="layui-icon">&#xe640;</i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -154,36 +162,28 @@
         var element = layui.element;
     });
 
-    $(function () {
+    var updataMyLove = function (userid,artid,func,level) {
+        $.post("./updatelovelevel", {
+            userId:userid,
+            artId:artid,
+            newLevel: level,
+            func:func
+        }, function (result) {
+            var jsonObject = JSON.parse(result);
+            if (jsonObject.success === true) {
+                show("修改成功");
+                setTimeout(function () {
+                    location.reload();
+                },2000);
 
-        var setPublic = function (level) {
-            $.post("./updatelovelevel", {
-                newLevel: level
-            }, function (result) {
-                var jsonObject = JSON.parse(result);
-                if (jsonObject.success === true) {
-                    show("修改成功");
-                } else {
-                    show("修改失败");
-                }
-            });
-        };
-
-        $(".bt_love_level_0").click(function () {
-            setPublic(0);
+            } else {
+                show("修改失败");
+                setTimeout(function () {
+                    location.reload();
+                },2000);
+            }
         });
-        $(".bt_love_level_1").click(function () {
-            setPublic(1);
-        });
-    });
-
-
-
-
-
-
-
-
+    };
 
 </script>
 </body>

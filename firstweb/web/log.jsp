@@ -62,7 +62,6 @@
     };
 
 
-
     $("#to_log").click(function () {
         $.post("./slog", {
             log_name: $("#log_name").val(),
@@ -72,13 +71,14 @@
             if (jsonObject === null) {
                 $("#error_msg").show();
             } else {
-                show("登录成功！<br>5秒后将自动跳转...");
+                show("登录成功！<br>2秒后将自动跳转...");
                 setTimeout(function () {
                     window.location.href="backlove.jsp";
-                },5000);
+                },2000);
 
             }
         });
+
 
     });
 

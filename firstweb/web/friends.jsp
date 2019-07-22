@@ -48,7 +48,7 @@
                     <dd><a href="">安全设置</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item"><a href="">退了</a></li>
+            <li class="layui-nav-item"><a href="logout">退了</a></li>
         </ul>
     </div>
 
@@ -105,12 +105,6 @@
                         <%--我的好友栏目--%>
                         <div class="layui-row layui-col-space15">
                             <%
-                                //TODO:修改log之后记得改这里
-                                User temp = new User();
-                                temp.setName("lalala");
-                                temp.setPassword("lll_111_qqq");
-                                session.setAttribute("me", temp);
-                                //TODO:到这里为止
 
                                 FriendService fs = new FriendService(new UserDaoImpl());
                                 User me = (User) session.getAttribute("me");

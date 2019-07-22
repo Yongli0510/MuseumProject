@@ -7,14 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb709441-a820-4b67-8955-ac8b2ed637cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/firstweb/src/Servlet/UpdateLoveServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/WEB-INF/servlet/UpdateLoveLevelServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_20_bin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_20_bin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstweb/src/Servlet/LogoutServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/firstweb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/firstweb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/Servlet/UpdateLoveLevelServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/src/Servlet/UpdateLoveServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/Servlet/UpdateLoveServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/src/dao/impl/LoveDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/dao/impl/LoveDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/src/service/LoveService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/LoveService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firstweb/web/backlove.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/backlove.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/museum_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/museum_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/friends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/friends.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/js/hintShow.js" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/js/hintShow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/log.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/log.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,50 +44,80 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/web/log.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-380">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/web/backlove.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1561">
-              <caret line="23" column="118" selection-start-line="23" selection-start-column="118" selection-end-line="23" selection-end-column="118" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/UpdateLoveServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/web/WEB-INF/servlet/UpdateLoveLevelServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.58847183">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/firstweb/web/log.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="485">
+                  <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-80">
+                  <caret line="95" column="50" lean-forward="true" selection-start-line="95" selection-start-column="50" selection-end-line="95" selection-end-column="50" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/UpdateLoveServlet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="245">
+                  <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/LoveDaoImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="420">
+                  <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/firstweb/src/service/LoveService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="440">
+                  <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+                  <folding>
+                    <element signature="e#823#824#0" expanded="true" />
+                    <element signature="e#855#856#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/firstweb/src/dao/DAO.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-40">
+                  <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -113,9 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/firstweb/web/css/yidong-museum.css" />
-        <option value="$PROJECT_DIR$/firstweb/web/homePage.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/web/WEB-INF/homepage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/c.html" />
         <option value="$PROJECT_DIR$/firstweb/web/homepage.html" />
         <option value="$PROJECT_DIR$/firstweb/web/css/homePage.css" />
@@ -149,21 +177,24 @@
         <option value="$PROJECT_DIR$/firstweb/web/personalpage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/FriendHandleServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/FriendSearchServlet.java" />
-        <option value="$PROJECT_DIR$/firstweb/web/friends.jsp" />
         <option value="$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java" />
         <option value="$PROJECT_DIR$/firstweb/web/back.jsp" />
         <option value="$PROJECT_DIR$/firstweb/src/dao/impl/ExhibitDaoImpl.java" />
         <option value="$PROJECT_DIR$/firstweb/src/service/UserService.java" />
-        <option value="$PROJECT_DIR$/firstweb/src/service/LoveService.java" />
-        <option value="$PROJECT_DIR$/firstweb/src/dao/impl/LoveDaoImpl.java" />
         <option value="$PROJECT_DIR$/firstweb/src/entity/LoveItem.java" />
-        <option value="$PROJECT_DIR$/firstweb/web/js/hintShow.js" />
-        <option value="$PROJECT_DIR$/firstweb/web/log.jsp" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/HandleLogServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/UpdateLoveLevelServlet.java" />
-        <option value="$PROJECT_DIR$/firstweb/web/backlove.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/WEB-INF/servlet/UpdateLoveLevelServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/servlet/LogoutServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/web/log.jsp" />
+        <option value="$PROJECT_DIR$/firstweb/web/js/hintShow.js" />
+        <option value="$PROJECT_DIR$/firstweb/src/servlet/DeleteLoveServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/servlet/love/DeleteLoveServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/dao/impl/LoveDaoImpl.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/service/LoveService.java" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/UpdateLoveServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/web/backlove.jsp" />
+        <option value="$PROJECT_DIR$/firstweb/web/friends.jsp" />
       </list>
     </option>
   </component>
@@ -277,7 +308,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563798285095" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563802886200" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -502,7 +533,7 @@
       <workItem from="1563768347402" duration="1331000" />
       <workItem from="1563772399271" duration="7926000" />
       <workItem from="1563780422001" duration="5367000" />
-      <workItem from="1563791813189" duration="4507000" />
+      <workItem from="1563791813189" duration="9164000" />
     </task>
     <task id="LOCAL-00001" summary="finished homepage">
       <created>1563104224639</created>
@@ -560,11 +591,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563785288430</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="收藏界面的模型基本完成">
+      <created>1563798328595</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1563798328595</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133485000" />
+    <option name="totallyTimeSpent" value="138142000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -579,17 +617,17 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6997167" visible="true" weight="0.2808311" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6997167" weight="0.18230563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.29985857" side_tool="true" weight="0.2808311" />
+      <window_info id="Web" order="7" sideWeight="0.30028328" side_tool="true" weight="0.18230563" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.85269123" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" visible="true" weight="0.4716714" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" weight="0.3937677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -614,24 +652,24 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.70679885" visible="true" weight="0.18632708" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6997167" visible="true" weight="0.18230563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.29320112" side_tool="true" weight="0.18632708" />
+      <window_info id="Web" order="7" sideWeight="0.30028328" side_tool="true" weight="0.18230563" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.85269123" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7158177" weight="0.23229462" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" weight="0.3937677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.24929178" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.26541555" side_tool="true" weight="0.62606233" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.27144772" side_tool="true" weight="0.4022663" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.73458445" weight="0.42634562" />
@@ -711,24 +749,10 @@
     <MESSAGE value="merge出了bug，目前大部分已经找回" />
     <MESSAGE value="进入收藏夹页面前的保存" />
     <MESSAGE value="存" />
-    <option name="LAST_COMMIT_MESSAGE" value="存" />
+    <MESSAGE value="收藏界面的模型基本完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="收藏界面的模型基本完成" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d27e727c-e6d9-490b-82b8-ceb2cd815511/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/SignChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/JdbcHandler.java" />
     <entry file="file://$PROJECT_DIR$/firstweb/src/jdbc/Dao.java" />
     <entry file="file://$PROJECT_DIR$/firstweb/web/sign.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -915,34 +939,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/ExhibitDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="14" column="60" lean-forward="true" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/DAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/LoveDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="79" lean-forward="true" selection-start-line="10" selection-start-column="79" selection-end-line="10" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,13 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/service/LoveService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/FriendSearchServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
@@ -1010,13 +1003,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1583">
-          <caret line="109" column="55" lean-forward="true" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jrt://C:/Program Files/Java/jdk-12.0.1!/jdk.javadoc/jdk/javadoc/internal/doclets/toolkit/resources/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -1024,31 +1010,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/js/hintShow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/log.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-380">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/backlove.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1561">
-          <caret line="23" column="118" selection-start-line="23" selection-start-column="118" selection-end-line="23" selection-end-column="118" />
         </state>
       </provider>
     </entry>
@@ -1064,19 +1029,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/HandleLogServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/WEB-INF/servlet/UpdateLoveLevelServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="240">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1084,13 +1039,110 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/UpdateLoveServlet.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        <state relative-caret-position="225">
+          <caret line="506" column="16" selection-start-line="506" selection-start-column="16" selection-end-line="506" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/js/hintShow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/ExhibitDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="13" column="24" lean-forward="true" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/HandleLogServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/love/DeleteLoveServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="32" column="28" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/LoveDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/service/LoveService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/servlet/UpdateLoveServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/backlove.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="108" column="72" lean-forward="true" selection-start-line="108" selection-start-column="72" selection-end-line="108" selection-end-column="72" />
+          <folding>
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/log.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="73" column="18" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-80">
+          <caret line="95" column="50" lean-forward="true" selection-start-line="95" selection-start-column="50" selection-end-line="95" selection-end-column="50" />
         </state>
       </provider>
     </entry>

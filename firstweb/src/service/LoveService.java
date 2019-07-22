@@ -29,4 +29,12 @@ public class LoveService {
         return exhibitDao.getExhibit(id);
     }
 
+    public void updatePublicLevel(int userId, int artId, int canSee){
+        loveDao.updatePublicLevel(userId,artId,canSee);
+    }
+
+    public void delLove(int userId, int artId){
+        loveDao.deleteLove(userId,artId);
+    }
+
 }
