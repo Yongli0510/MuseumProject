@@ -20,6 +20,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>个人信息</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="framework/layui/css/layui.css">
 </head>
 <body class="layui-layout-body">
@@ -113,9 +115,10 @@
                                 收藏展品的时间:<%=love.getTime()%><br>
                                 馆藏地点:<%=ex.getPlace()%><br>
                                 热度<%=ex.getHotDegree()%><br>
+                                可见度：<%=love.getCanSee()==0?"不可见":"可见"%><br>
                                 <div class="layui-btn-group">
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" id="bt_love_level_1">公开</button>
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" id="bt_love_level_0"><i class="layui-icon">私有</i></button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm bt_love_level_1" >公开</button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm bt_love_level_0" id=""><i class="layui-icon">私有</i></button>
                                 </div>
                             </div>
                         </div>
@@ -136,6 +139,13 @@
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 <script src="framework/layui/layui.js"></script>
 <script src="js/hintShow.js"></script>
 <script>
@@ -144,25 +154,35 @@
         var element = layui.element;
     });
 
-    var setPublic = function (level) {
-        $.post("./updateLoveLevel", {
-            newLevel: level
-        }, function (result) {
-            var jsonObject = JSON.parse(result);
-            if (jsonObject.success === true) {
+    $(function () {
 
-            } else {
+        var setPublic = function (level) {
+            $.post("./updatelovelevel", {
+                newLevel: level
+            }, function (result) {
+                var jsonObject = JSON.parse(result);
+                if (jsonObject.success === true) {
+                    show("修改成功");
+                } else {
+                    show("修改失败");
+                }
+            });
+        };
 
-            }
+        $(".bt_love_level_0").click(function () {
+            setPublic(0);
         });
-    };
+        $(".bt_love_level_1").click(function () {
+            setPublic(1);
+        });
+    });
 
-    $("#bt_love_level_0").click(function () {
-        setPublic(0);
-    });
-    $("#bt_love_level_1").click(function () {
-        setPublic(1);
-    });
+
+
+
+
+
+
 
 
 </script>
