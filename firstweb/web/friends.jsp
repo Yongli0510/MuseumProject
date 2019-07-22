@@ -2,7 +2,11 @@
 <%@ page import="dao.impl.UserDaoImpl" %>
 <%@ page import="entity.User" %>
 <%@ page import="service.FriendService" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="service.InviteService" %>
+<%@ page import="dao.impl.InviteDaoImpl" %>
+<%@ page import="entity.Invite" %>
+<%@ page import="service.UserService" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/18
@@ -183,32 +187,42 @@
                         <%--展示所有的好友申请记录--%>
                         <div class="layui-row layui-col-space15">
                             <%
-                                List<User> myInvites = fs.getInvite(me);
-                                for (User myInvite : myInvites) {
-                            %>
-                            <div class="layui-col-md6">
-                                <div class="layui-card">
-                                    <div class="layui-card-header" data-toggle="popover">来源：<%=myInvite.getName()%>
-                                    </div>
-                                    <div class="layui-card-body">
-                                        ta的签名：<%=myInvite.getSignature()%>
-                                    </div>
+                                InviteService is = new InviteService(new InviteDaoImpl());
+                                UserService us = new UserService(new UserDaoImpl());
+                                List<Invite> list = is.getInvite(me.getId());
 
-                                    <div class="layui-btn-group">
-                                        <form type="post" action="friendHandleServlet">
-                                            <button type="button" class="layui-btn" name="agree">同意</button>
-                                            <button type="button" class="layui-btn" name="refuse">拒绝</button>
-                                        </form>
-                                        <button type="button" class="layui-btn"
-                                                onclick="location.href='personalpage.jsp?id=<%=myInvite.getId()%>'">
-                                            查看ta的主页
-                                        </button>
+                                if (list.isEmpty()){
+                                }else {
+                                    for (Invite invite : list) {
+                                        User myInvite = us.getUser(invite.getSendId());
+                                    %>
+                                    <div class="layui-col-md6">
+                                        <div class="layui-card">
+                                            <div class="layui-card-header" data-toggle="popover">来源：<%=myInvite.getName()%>
+                                            </div>
+                                            <div class="layui-card-body">
+                                                ta的签名：<%=myInvite.getSignature()%>
+                                            </div>
+
+                                            <div class="layui-btn-group">
+                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                                                        onclick="location.href='personalpage.jsp?id=<%=myInvite.getId()%>'">
+                                                    <i class="layui-icon">&#xe612;</i>
+                                                </button>
+                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                                                        onclick="inviteHandle(<%=myInvite.getId()%>,<%=me.getId()%>,'agree')">
+                                                    <i class="layui-icon">&#xe654;</i>
+                                                </button>
+                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                                                        onclick="inviteHandle(<%=myInvite.getId()%>,<%=me.getId()%>,'refuse')">
+                                                    <i class="layui-icon">&#xe640;</i>
+                                                </button>
+                                            </div>
+
+                                        </div>
                                     </div>
-
-
-                                </div>
-                            </div>
-                            <%
+                                    <%
+                                    }
                                 }
                             %>
                         </div>
@@ -257,6 +271,28 @@
 
             } else {
                 show("修改失败");
+                setTimeout(function () {
+                    location.reload();
+                }, 2000);
+            }
+        });
+    };
+
+    var inviteHandle = function (sendId, resId, FUNC) {
+        $.post("./invitehandle", {
+            sendId: sendId,
+            resId: resId,
+            func: FUNC
+        }, function (result) {
+            var jsonObject = JSON.parse(result);
+            if (jsonObject.success === true) {
+                show("操作成功");
+                setTimeout(function () {
+                    location.reload();
+                }, 2000);
+
+            } else {
+                show("出错");
                 setTimeout(function () {
                     location.reload();
                 }, 2000);

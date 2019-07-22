@@ -25,6 +25,10 @@ public class LoveService {
         return loveDao.getLoveList(me);
     }
 
+    public List<LoveItem> getShowLoves(User me){
+        return loveDao.getShowLoveList(me);
+    }
+
     public Exhibit getLoveOne(int id){
         return exhibitDao.getExhibit(id);
     }

@@ -17,4 +17,14 @@ public class FriendDaoImpl extends DAO<Friend> {
         update(sql,uid,fid);
     }
 
+    public void addFriend(int uid, int fid){
+        String sql = "INSERT INTO friend (uid, fid) VALUES (?, ?)";
+        update(sql,uid,fid);
+    }
+
+    public Friend isFriend(int uid, int fid){
+        String sql = "SELECT * FROM friend WHERE (uid = ? AND fid = ?)";
+        return get(sql,uid,fid);
+    }
+
 }

@@ -12,9 +12,6 @@ public class FriendService {
     private UserDaoImpl ud;
     private FriendDaoImpl fd;
 
-    public FriendService(FriendDaoImpl fd) {
-        this.fd = fd;
-    }
 
     public FriendService(UserDaoImpl ud){
         this.ud = ud;
@@ -39,41 +36,15 @@ public class FriendService {
         fd.delFriend(fid,uid);
     }
 
-    public List<User> getFriend(User user) {
-        int[] exs = ud.getFriends(user);
-        List<User> list = new ArrayList<>();
-        for (int ex : exs) {
-            list.add(ud.getUser(ex));
-        }
-        return list;
+
+    public boolean isFriend(int uid, int fid){
+        return fd.isFriend(uid, fid) != null;
     }
 
-    public List<User> getInvite(User user){
-        int[] exs = ud.getInvite(user);
-        List<User> list = new ArrayList<>();
-        for (int ex : exs) {
-            list.add(ud.getUser(ex));
-        }
-        return list;
+    public void addFriend(int uid, int fid){
+        fd.addFriend(uid,fid);
+        fd.addFriend(fid,uid);
     }
 
-    public void addFriend(User user, int id){
-        int[] exs = ud.getFriends(user);
-        StringBuilder res = new StringBuilder();
-        for (int ex : exs) {
-            res.append(ex).append(",");
-        }
-        res.append(id);
-        ud.updateFriend(user,res.toString());
-    }
-
-    public boolean isFriend(User user, int id){
-        int[] exs = ud.getFriends(user);
-        for (int ex : exs) {
-            if (ex == id)
-                return true;
-        }
-        return false;
-    }
 
 }

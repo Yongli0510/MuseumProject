@@ -12,6 +12,11 @@ public class LoveDaoImpl extends DAO<LoveItem> {
         return getForList(sql, me.getId());
     }
 
+    public List<LoveItem> getShowLoveList(User me) {
+        String sql = "SELECT * FROM loves WHERE (userid = ? AND canSee = 1) ORDER BY time DESC";
+        return getForList(sql, me.getId());
+    }
+
     public void updatePublicLevel(int userId, int artId, int canSee){
         String sql = "UPDATE loves SET canSee = ? WHERE (userid = ? AND artid = ?)";
         update(sql,canSee,userId,artId);
