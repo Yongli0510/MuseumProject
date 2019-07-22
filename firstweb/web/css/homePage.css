@@ -3,9 +3,18 @@ body {
     font-size: 12px;
     line-height: 1.42857143;
     color: #fff;
-    background-color: #2E2D3C;
+    background: url("../image/decoration/background.jpg") center top no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
 }
 
+#bodypat{
+    background: url("../image/decoration/background.png") repeat;
+    background-attachment: fixed;
+    min-height: 100%;
+}
 #header {
     text-align: right;
     line-height: 40px;
@@ -75,7 +84,7 @@ body {
 #banner .carousel-indicators li {
     margin-left: 2px;
     margin-right: 2px;
-    background: url('../image/dot.png') no-repeat top right;
+    background: url('../image/decoration/dot.png') no-repeat top right;
     cursor: pointer;
     width: 16px;
     height: 16px;
@@ -89,7 +98,7 @@ body {
 }
 
 #banner .carousel-indicators li.active {
-    background: url('../image/dot.png') no-repeat top left;
+    background: url('../image/decoration/dot.png') no-repeat top left;
 }
 
 #menu ul {

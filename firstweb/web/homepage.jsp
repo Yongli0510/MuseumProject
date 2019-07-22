@@ -19,118 +19,130 @@ To change this template use File | Settings | File Templates.
 
 </head>
 <body>
-<div class="container">
-    <div id="header" class="row">
-        <form action="search.jsp" method="post" class="col-md-12">
-            <span><input type="text" name="fullSearchText" value="" id="fullSearchText" class="text-field1" style="width: 180px;" autocomplete="off"/><input type="image" src="image/search.gif" class="text-field1-addon" /></span>
-
-            <span><a href="log.jsp">登录</a> | <a href="sign.jsp">注册</a></span>
-
-        </form>
-    </div>
-</div>
-
-<div id="menu-outer">
+<div id="bodypat">
     <div class="container">
-        <div id="menu" class="row">
-            <div class="col-sm-4">
-                <a href="homepage.jsp"><img id="logo" src="image/logo.gif" class="img-responsive center-block" /></a>
-            </div>
-            <ul class="col-sm-8">
-                <li><a href="homepage.jsp">首页</a></li>
-                <li>|</li>
-                <li><a href="search.jsp">搜索</a></li>
-                <li>|</li>
-                <li><a href="back.jsp">个人信息</a></li>
-            </ul>
+        <div id="header" class="row">
+            <form action="search.jsp" method="post" class="col-md-12">
+                <span><input type="text" name="fullSearchText" value="" id="fullSearchText" class="text-field1" style="width: 180px;" autocomplete="off"/><input type="image" src="image/decoration/search.gif" class="text-field1-addon" /></span>
+
+                <%
+                    if(session.getAttribute("name") != null){
+                %>
+                <span>欢迎您，<a href="back.jsp"><%=session.getAttribute("name")%></a></span>
+                <%
+                    } else{
+                %>
+                <span><a href="log.jsp">登录</a> | <a href="sign.jsp">注册</a></span>
+                <%
+                    }
+                %>
+
+            </form>
         </div>
     </div>
-</div>
 
-<%
-    //TODO:获得热度前三的展品的id
-    ExhibitDaoImpl exhibitDaoImpl = new ExhibitDaoImpl();
-    List<Exhibit> hottestExhibits = exhibitDaoImpl.getHottestExhibits(3);
-
-%>
-
-<div class="container-fluid">
-    <div id="banner" class="carousel slide row" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#banner" data-slide-to="0" class="active">1</li>
-            <li data-target="#banner" data-slide-to="1">2</li>
-            <li data-target="#banner" data-slide-to="2">3</li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active text-center">
-                <a href="details.jsp?id=<%= hottestExhibits.get(0).getId()%>">
-                    <img class="img-fluid" src="image/<%=hottestExhibits.get(0).getPic()%>.jpg" >
-                </a>
-                <div class="carousel-caption">
-                    <h5><%=hottestExhibits.get(0).getName()%></h5>
-                    <p><%=hottestExhibits.get(0).getDetail()%></p>
+    <div id="menu-outer">
+        <div class="container">
+            <div id="menu" class="row">
+                <div class="col-sm-4">
+                    <a href="homepage.jsp"><img id="logo" src="image/decoration/logo.gif" class="img-responsive center-block" /></a>
                 </div>
-            </div>
-            <div class="carousel-item text-center">
-                <a href="details.jsp?id=<%= hottestExhibits.get(1).getId()%>">
-                    <img class="img-fluid" src="image/<%=hottestExhibits.get(1).getPic()%>.jpg">
-                </a>
-                <div class="carousel-caption">
-                    <h5><%=hottestExhibits.get(1).getName()%></h5>
-                    <p><%=hottestExhibits.get(1).getDetail()%></p>
-                </div>
-            </div>
-            <div class="carousel-item text-center">
-                <a href="details.jsp?id=<%= hottestExhibits.get(2).getId()%>">
-                    <img class="img-fluid" src="image/<%=hottestExhibits.get(2).getPic()%>.jpg">
-                </a>
-                <div class="carousel-caption">
-                    <h5><%=hottestExhibits.get(2).getName()%></h5>
-                    <p><%=hottestExhibits.get(2).getDetail()%></p>
-                </div>
+                <ul class="col-sm-8">
+                    <li><a href="homepage.jsp">首页</a></li>
+                    <li>|</li>
+                    <li><a href="search.jsp">搜索</a></li>
+                    <li>|</li>
+                    <li><a href="back.jsp">个人信息</a></li>
+                </ul>
             </div>
         </div>
-        <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#banner" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
-</div>
 
+    <%
+        //TODO:获得热度前三的展品的id
+        ExhibitDaoImpl exhibitDaoImpl = new ExhibitDaoImpl();
+        List<Exhibit> hottestExhibits = exhibitDaoImpl.getHottestExhibits(3);
 
-<%
+    %>
 
-    //TODO:获得另外三种展品的id
-    List<Exhibit> latestExhibits = exhibitDaoImpl.getLatestExhibits(3);
-%>
-<div class="container">
-    <div class="card-deck">
-        <div class="card text-center text-white bg-dark" style="width: 400px">
-            <img class="card-img-top" src="image/<%=latestExhibits.get(0).getPic()%>.jpg">
-            <div class="card-body">
-                <h5 class="card-title"><%=latestExhibits.get(0).getName()%></h5>
-                <p class="card-text"><%=latestExhibits.get(0).getDetail()%></p>
-                <a href="details.jsp?id=<%=latestExhibits.get(0).getId()%>" name="a1" class="btn btn-primary">查看详情</a>
+    <div class="container-fluid">
+        <div id="banner" class="carousel slide row" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#banner" data-slide-to="0" class="active">1</li>
+                <li data-target="#banner" data-slide-to="1">2</li>
+                <li data-target="#banner" data-slide-to="2">3</li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active text-center">
+                    <a href="details.jsp?id=<%= hottestExhibits.get(0).getId()%>">
+                        <img class="img-fluid" src="image/exhibit/<%=hottestExhibits.get(0).getPic()%>.jpg" >
+                    </a>
+                    <div class="carousel-caption">
+                        <h5><%=hottestExhibits.get(0).getName()%></h5>
+                        <p><%=hottestExhibits.get(0).getDetail()%></p>
+                    </div>
+                </div>
+                <div class="carousel-item text-center">
+                    <a href="details.jsp?id=<%= hottestExhibits.get(1).getId()%>">
+                        <img class="img-fluid" src="image/exhibit/<%=hottestExhibits.get(1).getPic()%>.jpg">
+                    </a>
+                    <div class="carousel-caption">
+                        <h5><%=hottestExhibits.get(1).getName()%></h5>
+                        <p><%=hottestExhibits.get(1).getDetail()%></p>
+                    </div>
+                </div>
+                <div class="carousel-item text-center">
+                    <a href="details.jsp?id=<%= hottestExhibits.get(2).getId()%>">
+                        <img class="img-fluid" src="image/exhibit/<%=hottestExhibits.get(2).getPic()%>.jpg">
+                    </a>
+                    <div class="carousel-caption">
+                        <h5><%=hottestExhibits.get(2).getName()%></h5>
+                        <p><%=hottestExhibits.get(2).getDetail()%></p>
+                    </div>
+                </div>
             </div>
+            <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#banner" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <div class="card text-center text-white bg-dark" style="width: 18rem;">
-            <img class="card-img-top" src="image/<%=latestExhibits.get(1).getPic()%>.jpg">
-            <div class="card-body">
-                <h5 class="card-title"><%=latestExhibits.get(1).getName()%></h5>
-                <p class="card-text"><%=latestExhibits.get(1).getDetail()%></p>
-                <a href="details.jsp?id=<%=latestExhibits.get(1).getId()%>" name="a1" class="btn btn-primary">查看详情</a>
+    </div>
+
+
+    <%
+
+        //TODO:获得另外三种展品的id
+        List<Exhibit> latestExhibits = exhibitDaoImpl.getLatestExhibits(3);
+    %>
+    <div class="container">
+        <div class="card-deck">
+            <div class="card text-center text-white bg-dark" style="width: 400px">
+                <img class="card-img-top" src="image/exhibit/<%=latestExhibits.get(0).getPic()%>.jpg">
+                <div class="card-body">
+                    <h5 class="card-title"><%=latestExhibits.get(0).getName()%></h5>
+                    <p class="card-text"><%=latestExhibits.get(0).getDetail()%></p>
+                    <a href="details.jsp?id=<%=latestExhibits.get(0).getId()%>" name="a1" class="btn btn-primary">查看详情</a>
+                </div>
             </div>
-        </div>
-        <div class="card text-center text-white bg-dark" style="width: 18rem;">
-            <img class="card-img-top" src="image/<%=latestExhibits.get(2).getPic()%>.jpg">
-            <div class="card-body">
-                <h5 class="card-title"><%=latestExhibits.get(2).getName()%></h5>
-                <p class="card-text"><%=latestExhibits.get(2).getDetail()%></p>
-                <a href="details.jsp?id=<%=latestExhibits.get(2).getId()%>" name="a1" class="btn btn-primary">查看详情</a>
+            <div class="card text-center text-white bg-dark" style="width: 18rem;">
+                <img class="card-img-top" src="image/exhibit/<%=latestExhibits.get(1).getPic()%>.jpg">
+                <div class="card-body">
+                    <h5 class="card-title"><%=latestExhibits.get(1).getName()%></h5>
+                    <p class="card-text"><%=latestExhibits.get(1).getDetail()%></p>
+                    <a href="details.jsp?id=<%=latestExhibits.get(1).getId()%>" name="a1" class="btn btn-primary">查看详情</a>
+                </div>
+            </div>
+            <div class="card text-center text-white bg-dark" style="width: 18rem;">
+                <img class="card-img-top" src="image/exhibit/<%=latestExhibits.get(2).getPic()%>.jpg">
+                <div class="card-body">
+                    <h5 class="card-title"><%=latestExhibits.get(2).getName()%></h5>
+                    <p class="card-text"><%=latestExhibits.get(2).getDetail()%></p>
+                    <a href="details.jsp?id=<%=latestExhibits.get(2).getId()%>" name="a1" class="btn btn-primary">查看详情</a>
+                </div>
             </div>
         </div>
     </div>

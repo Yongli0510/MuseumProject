@@ -21,7 +21,7 @@ function goPage(page) {
                 if(i == 3)
                     tabData += '</div><div class="card-deck" style="flex-flow: initial">';
                 tabData += '<div class="card text-center text-white bg-dark" style="width: 400px;display: block">';
-                tabData += '<img class="card-img-top" style="max-width: 400px" src="image/' + list[i].pic + '.jpg">';
+                tabData += '<img class="card-img-top" style="max-width: 400px" src="image/exhibit/' + list[i].pic + '.jpg">';
                 tabData += '<div class="card-body">';
                 tabData += '<h5 class="card-title">' + list[i].name + '</h5>';
                 tabData += '<p class="card-text">' + list[i].detail + '</p>';
