@@ -25,6 +25,10 @@ public class UserDaoImpl extends DAO<User> implements UserDao {
         return get(sql, id);
     }
 
+
+
+
+
     public void updateFriend(User user, String friends) {
         User u = getUser(user);
         String sql = "UPDATE `museum_pj`.`user` SET `friends` = '?' WHERE (`id` = '?')";

@@ -5,7 +5,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="entity.Exhibit" %>
 <%@ page import="service.LoveService" %>
-<%@ page import="java.util.ArrayList" %><%--
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="dao.impl.FriendDaoImpl" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/21
@@ -57,7 +58,7 @@
 
 <%
     UserService us = new UserService(new UserDaoImpl());
-    FriendService fs = new FriendService(new UserDaoImpl());
+    FriendService fs = new FriendService(new UserDaoImpl(),new FriendDaoImpl());
     User friend = us.getUser(Integer.parseInt(request.getParameter("id")));
 
     User me = us.getUser(((User) session.getAttribute("me")).getName());

@@ -1,7 +1,8 @@
 <%@ page import="dao.impl.UserDaoImpl" %>
 <%@ page import="entity.User" %>
 <%@ page import="service.FriendService" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%@ page import="dao.impl.FriendDaoImpl" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/18
@@ -106,9 +107,9 @@
                         <div class="layui-row layui-col-space15">
                             <%
 
-                                FriendService fs = new FriendService(new UserDaoImpl());
+                                FriendService fs = new FriendService(new UserDaoImpl(),new FriendDaoImpl());
                                 User me = (User) session.getAttribute("me");
-                                List<User> myFriends = fs.getFriend(me);
+                                List<User> myFriends = fs.getFriend(me.getId());
 
                                 for (User myFriend : myFriends) {
                             %>
@@ -119,8 +120,14 @@
                                     <div class="layui-card-body">
                                         个性签名：<%=myFriend.getSignature()%>
                                     </div>
-                                    <a href="personalpage.jsp?id=<%=myFriend.getId()%>"
-                                       class="btn btn-primary">进入ta的主页</a>
+                                    <div class="layui-btn-group">
+                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="window.location.href='personalpage.jsp?id=<%=myFriend.getId()%>'">
+                                            <i class="layui-icon">&#xe612;</i>
+                                        </button>
+                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updateMyFriend(<%=me.getId()%>,<%=myFriend.getId()%>,'del')">
+                                            <i class="layui-icon">&#xe640;</i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                             <%
@@ -194,22 +201,43 @@
     </div>
 </div>
 
-<script src="framework/layui/layui.js"></script>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+<script src="framework/layui/layui.js"></script>
+<script src="js/hintShow.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function () {
         var $ = layui.jquery
             , element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
     });
+
+    var updateMyFriend = function (UID,FID,FUNC) {
+        $.post("./updatefriend", {
+            uid:UID,
+            fid:FID,
+            func:FUNC
+        }, function (result) {
+            var jsonObject = JSON.parse(result);
+            if (jsonObject.success === true) {
+                show("修改成功");
+                setTimeout(function () {
+                    location.reload();
+                },2000);
+
+            } else {
+                show("修改失败");
+                setTimeout(function () {
+                    location.reload();
+                },2000);
+            }
+        });
+    };
 
 </script>
 

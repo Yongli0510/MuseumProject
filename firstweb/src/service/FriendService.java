@@ -1,6 +1,8 @@
 package service;
 
+import dao.impl.FriendDaoImpl;
 import dao.impl.UserDaoImpl;
+import entity.Friend;
 import entity.User;
 
 import java.util.ArrayList;
@@ -8,10 +10,34 @@ import java.util.List;
 
 public class FriendService {
     private UserDaoImpl ud;
+    private FriendDaoImpl fd;
+
+    public FriendService(FriendDaoImpl fd) {
+        this.fd = fd;
+    }
+
     public FriendService(UserDaoImpl ud){
         this.ud = ud;
     }
 
+    public FriendService(UserDaoImpl ud, FriendDaoImpl fd) {
+        this.ud = ud;
+        this.fd = fd;
+    }
+
+    public List<User> getFriend(int uid){
+        List<Friend> list = fd.getFriends(uid);
+        List<User> res = new ArrayList<>();
+        for (Friend friend : list) {
+            res.add(ud.getUser(friend.getFid()));
+        }
+        return res;
+    }
+
+    public void delFriend(int uid, int fid){
+        fd.delFriend(uid,fid);
+        fd.delFriend(fid,uid);
+    }
 
     public List<User> getFriend(User user) {
         int[] exs = ud.getFriends(user);
