@@ -6,15 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb709441-a820-4b67-8955-ac8b2ed637cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/src/dao/impl/FriendDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/src/entity/Friend.java" afterDir="false" />
+    <list default="true" id="eb709441-a820-4b67-8955-ac8b2ed637cc" name="Default Changelist" comment="完成了好友的删除功能">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/service/FriendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/FriendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/friends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/friends.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/personalpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/personalpage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/firstweb/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/firstweb/dao/impl/UserDaoImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -338,7 +332,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563806801375" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563806937854" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -563,7 +557,7 @@
       <workItem from="1563768347402" duration="1331000" />
       <workItem from="1563772399271" duration="7926000" />
       <workItem from="1563780422001" duration="5367000" />
-      <workItem from="1563791813189" duration="12978000" />
+      <workItem from="1563791813189" duration="13171000" />
     </task>
     <task id="LOCAL-00001" summary="finished homepage">
       <created>1563104224639</created>
@@ -635,11 +629,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563803011584</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完成了好友的删除功能">
+      <created>1563806841313</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1563806841313</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141956000" />
+    <option name="totallyTimeSpent" value="142149000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -652,9 +653,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6997167" weight="0.18230563" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6997167" visible="true" weight="0.18230563" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -664,7 +664,7 @@
       <window_info id="Web" order="7" sideWeight="0.30028328" side_tool="true" weight="0.18230563" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.85269123" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7285523" visible="true" weight="0.3937677" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" visible="true" weight="0.3937677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -788,7 +788,8 @@
     <MESSAGE value="存" />
     <MESSAGE value="收藏界面的模型基本完成" />
     <MESSAGE value="完成了收藏页面的功能，但详情页面的收藏按钮还需调整" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了收藏页面的功能，但详情页面的收藏按钮还需调整" />
+    <MESSAGE value="完成了好友的删除功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成了好友的删除功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
