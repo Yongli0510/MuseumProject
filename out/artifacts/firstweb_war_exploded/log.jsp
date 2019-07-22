@@ -1,5 +1,4 @@
-<%@ page import="dao.impl.UserDaoImpl" %>
-<%@ page import="entity.User" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/13
@@ -23,7 +22,7 @@
 </head>
 
 <body class="text-center">
-<form METHOD="POST" class="form-signin" id="log_form" action="log.jsp">
+<form METHOD="POST" class="form-signin" id="log_form">
     <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
 
     <label for="log_name" class="sr-only">账户</label>
@@ -33,23 +32,16 @@
     <label for="log_pwd" class="sr-only">密码</label>
     <input type="password" id="log_pwd" name="log_pwd" class="form-control" placeholder="Password" required>
 
-    <div class="alert alert-warning" role="alert" id="error_msg">
-        用户名或密码错误
+    <div class="error_msg">
+
     </div>
 
-    <div class="checkbox mb-3">
-        <label>
-            <input type="checkbox" value="remember-me"> 记住密码
-        </label>
-    </div>
 
-    <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+    <button class="btn btn-lg btn-primary btn-block" id="to_log">登录</button>
     <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
 </form>
 
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -60,33 +52,39 @@
 <script src="js/md5.js"></script>
 <script>
     $(function () {
-        $("#error_msg").hide();
-
         /*前端md5加密*/
         var modifyPwd = function (pwd) {
             return $.md5(pwd);
         };
 
-        <%
-    String name = request.getParameter("log_name");
-    String pwd = request.getParameter("log_pwd");
-    if (name!=null && pwd!=null){
-        User u = (new UserDaoImpl()).getUser(new User(name,pwd));
-        if(u!=null && pwd.equals(u.getPassword()))
-            session.setAttribute("name",request.getParameter("log_name"));
-        else {
-            %>
-        $("#error_msg").show();
-        <%
-    }
-}
-if (session.getAttribute("name")!=null){
-    response.sendRedirect("back.jsp");
-    //TODO:直接跳转至原界面
-}
-%>
-
     });
+
+    $("#to_log").click(function () {
+        $.ajax({
+            type: 'post',
+            url: "slog",
+            data: {
+                "log_name": $("#log_name").val(),
+                "log_pwd": $("#log_pwd").val()
+            },
+            success: function (data) {
+                var jsonObject = JSON.parse(data);
+                if (jsonObject === null) {
+                    var content = "<div class=\"alert alert-warning\" role=\"alert\" >\n" +
+                        "        用户名或密码错误\n" +
+                        "    </div>";
+                    $("#error_msg").html(content);
+                }else {
+
+                }
+            },
+            error:function (msg) {
+                alert("zzzzzz");
+            }
+        });
+    });
+
+
 
 </script>
 

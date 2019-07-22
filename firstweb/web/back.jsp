@@ -6,9 +6,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-
-%>
 
 <html>
 <head>
@@ -23,7 +20,6 @@
         <div class="layui-logo">我的信息</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="">控制台</a></li>
             <li class="layui-nav-item"><a href="">商品管理</a></li>
             <li class="layui-nav-item"><a href="">用户</a></li>
             <li class="layui-nav-item">
@@ -128,8 +124,9 @@
     //JavaScript代码区域
     layui.use('element', function () {
         var element = layui.element;
-
     });
+
+
 
 </script>
 </body>

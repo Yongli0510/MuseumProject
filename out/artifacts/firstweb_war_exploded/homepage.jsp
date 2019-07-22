@@ -14,8 +14,10 @@ To change this template use File | Settings | File Templates.
 
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/homePage.css" />
+    <link rel="stylesheet" href="framework/layui/css/layui.css">
 
     <title>主页</title>
+
 </head>
 <body>
 <div class="container">
@@ -47,7 +49,6 @@ To change this template use File | Settings | File Templates.
 </div>
 
 <%
-    request.setCharacterEncoding("utf-8");
     //TODO:获得热度前三的展品的id
     ExhibitDaoImpl exhibitDaoImpl = new ExhibitDaoImpl();
     List<Exhibit> hottestExhibits = exhibitDaoImpl.getHottestExhibits(3);
@@ -63,21 +64,27 @@ To change this template use File | Settings | File Templates.
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active text-center">
-                <img class="img-fluid" src="image/<%=hottestExhibits.get(0).getPic()%>.jpg" >
+                <a href="details.jsp?id=<%= hottestExhibits.get(0).getId()%>">
+                    <img class="img-fluid" src="image/<%=hottestExhibits.get(0).getPic()%>.jpg" >
+                </a>
                 <div class="carousel-caption">
                     <h5><%=hottestExhibits.get(0).getName()%></h5>
                     <p><%=hottestExhibits.get(0).getDetail()%></p>
                 </div>
             </div>
             <div class="carousel-item text-center">
-                <img class="img-fluid" src="image/<%=hottestExhibits.get(1).getPic()%>.jpg">
+                <a href="details.jsp?id=<%= hottestExhibits.get(1).getId()%>">
+                    <img class="img-fluid" src="image/<%=hottestExhibits.get(1).getPic()%>.jpg">
+                </a>
                 <div class="carousel-caption">
                     <h5><%=hottestExhibits.get(1).getName()%></h5>
                     <p><%=hottestExhibits.get(1).getDetail()%></p>
                 </div>
             </div>
             <div class="carousel-item text-center">
-                <img class="img-fluid" src="image/<%=hottestExhibits.get(2).getPic()%>.jpg">
+                <a href="details.jsp?id=<%= hottestExhibits.get(2).getId()%>">
+                    <img class="img-fluid" src="image/<%=hottestExhibits.get(2).getPic()%>.jpg">
+                </a>
                 <div class="carousel-caption">
                     <h5><%=hottestExhibits.get(2).getName()%></h5>
                     <p><%=hottestExhibits.get(2).getDetail()%></p>
@@ -108,7 +115,7 @@ To change this template use File | Settings | File Templates.
             <div class="card-body">
                 <h5 class="card-title"><%=latestExhibits.get(0).getName()%></h5>
                 <p class="card-text"><%=latestExhibits.get(0).getDetail()%></p>
-                <a href="details.jsp?id=<%=latestExhibits.get(0).getId()%>" name="a1" class="btn btn-primary">Go somewhere</a>
+                <a href="details.jsp?id=<%=latestExhibits.get(0).getId()%>" name="a1" class="btn btn-primary">查看详情</a>
             </div>
         </div>
         <div class="card text-center text-white bg-dark" style="width: 18rem;">
@@ -116,7 +123,7 @@ To change this template use File | Settings | File Templates.
             <div class="card-body">
                 <h5 class="card-title"><%=latestExhibits.get(1).getName()%></h5>
                 <p class="card-text"><%=latestExhibits.get(1).getDetail()%></p>
-                <a href="details.jsp?id=<%=latestExhibits.get(1).getId()%>" name="a1" class="btn btn-primary">Go somewhere</a>
+                <a href="details.jsp?id=<%=latestExhibits.get(1).getId()%>" name="a1" class="btn btn-primary">查看详情</a>
             </div>
         </div>
         <div class="card text-center text-white bg-dark" style="width: 18rem;">
@@ -124,14 +131,14 @@ To change this template use File | Settings | File Templates.
             <div class="card-body">
                 <h5 class="card-title"><%=latestExhibits.get(2).getName()%></h5>
                 <p class="card-text"><%=latestExhibits.get(2).getDetail()%></p>
-                <a href="details.jsp?id=<%=latestExhibits.get(2).getId()%>" name="a1" class="btn btn-primary">Go somewhere</a>
+                <a href="details.jsp?id=<%=latestExhibits.get(2).getId()%>" name="a1" class="btn btn-primary">查看详情</a>
             </div>
         </div>
     </div>
 </div>
+<script src="framework/layui/layui.js"></script>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 </body>
 </html>
