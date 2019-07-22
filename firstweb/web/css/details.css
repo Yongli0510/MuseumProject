@@ -1,34 +1,13 @@
-div {
-    display: block ;
-}
-
-.picture-preview {
-    margin-bottom: 16px;
+.layui-inline{
+    height: 600px;
     width: 400px;
-    height: 700px;
 }
 
-.picture-preview img {
-    width: 100%;
-    height: 100%;
+.layui-body img{
+    height: 600px;
+    width: 400px;
 }
 
-.cp-info-name {
-    margin-bottom: 30px;
-    color: #bb9b68;
-    font-size: 20px;
-    text-align: center;
-}
-
-.cp-info-description {
-    margin-bottom: 30px;
-    font-family: '微软雅黑';
-    background-color: transparent;
-    padding: 0px;
-    border-style: none;
-    border-radius: 0px;
-    font-size: 14px;
-    color: #fff;
-    line-height: 26px;
-    text-align: center;
+h3,p{
+    margin: 20px;
 }

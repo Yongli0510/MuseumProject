@@ -1,4 +1,4 @@
-<%--
+<%@ page import="entity.User" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/18
@@ -16,80 +16,85 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo">我的信息</div>
+        <div class="layui-logo">博物馆</div>
         <!-- 头部区域（可配合layui已有的水平导航） -->
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="">控制台</a></li>
-            <li class="layui-nav-item"><a href="">商品管理</a></li>
-            <li class="layui-nav-item"><a href="">用户</a></li>
+            <li class="layui-nav-item"><a href="homepage.jsp">首页</a></li>
+            <li class="layui-nav-item"><a href="search.jsp">搜索</a></li>
+            <%
+                User user = null;
+                if(session.getAttribute("me") != null){
+                    user = (User) session.getAttribute("me");
+                    if(user.getPermission() == 0){
+            %>
             <li class="layui-nav-item">
-                <a href="javascript:;">其它系统</a>
+                <a>后台管理（需管理员权限）</a>
                 <dl class="layui-nav-child">
-                    <dd><a href="">邮件管理</a></dd>
-                    <dd><a href="">消息管理</a></dd>
-                    <dd><a href="">授权管理</a></dd>
+                    <dd><a href="userManage.jsp">人员管理</a></dd>
+                    <dd><a href="exhibitManager.jsp">作品管理</a></dd>
                 </dl>
             </li>
+            <%
+                    }
+                }
+            %>
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <%=session.getAttribute("name")%>
+                <%
+                    if(user != null){
+                %>
+
+                <a>
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    <%= user.getName()%>
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
+                    <dd><a href="personalpage.jsp">个人信息</a></dd>
+                    <dd><a href="friends.jsp">好友列表</a></dd>
+                    <dd><a href="backlove.jsp">收藏夹</a></dd>
+                    <dd><a href="">退出登录</a></dd>
                 </dl>
+
+                <%
+                }
+                else {
+                %>
+
+                <a>
+                    未登录
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="log.jsp">登录</a></dd>
+                    <dd><a href="sign.jsp">注册</a></dd>
+                </dl>
+                <%
+                    }
+                %>
             </li>
-            <li class="layui-nav-item"><a href="">退了</a></li>
         </ul>
     </div>
 
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
-
-            <ul class="layui-nav layui-nav-tree site-demo-nav">
-
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
                 <li class="layui-nav-item layui-nav-itemed">
-                    <a class="javascript:;" href="javascript:;">账户管理</a>
+                    <a class="" >用户相关</a>
                     <dl class="layui-nav-child">
-                        <dd class="">
-                            <a href="">个人信息</a>
-                        </dd>
-                        <dd class="">
-                            <a href="">好友管理</a>
-                        </dd>
+                        <dd><a href="personalpage.jsp">个人信息</a></dd>
+                        <dd><a href="friends.jsp">好友列表</a></dd>
+                        <dd><a href="backlove.jsp">收藏夹</a></dd>
                     </dl>
                 </li>
-
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a class="javascript:;" href="javascript:;">收藏管理</a>
+                <li class="layui-nav-item">
+                    <a>管理界面</a>
                     <dl class="layui-nav-child">
-                        <dd class="layui-this">
-                            <a href="">默认收藏</a>
-                        </dd>
-                        <dd class="">
-                            <a href="">清代藏品</a>
-                        </dd>
+                        <dd><a href="userManage.jsp">人员管理</a></dd>
+                        <dd><a href="exhibitManager.jsp">展品管理</a></dd>
                     </dl>
                 </li>
-
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a class="javascript:;" href="javascript:;">收藏管理</a>
-                    <dl class="layui-nav-child">
-                        <dd class="layui-this">
-                            <a href="">人员管理</a>
-                        </dd>
-                        <dd class="">
-                            <a href="">藏品管理</a>
-                        </dd>
-                    </dl>
-                </li>
-
-
-                <li class="layui-nav-item" style="height: 30px; text-align: center"></li>
             </ul>
-
         </div>
     </div>
 
