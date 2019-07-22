@@ -48,6 +48,7 @@
         crossorigin="anonymous"></script>
 <script src="framework/layui/layui.js"></script>
 <script src="js/md5.js"></script>
+<script src="js/hintShow.js"></script>
 <script>
 
 
@@ -60,16 +61,7 @@
         return $.md5(pwd);
     };
 
-    var show = function() {
-        layui.use('layer', function() { //独立版的layer无需执行这一句
-            var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
-            //配置一个透明的询问框
-            layer.msg('登录成功！<br>5秒后将自动跳转...', {
-                time: 5000, //5s后自动关闭
-                btn: ['明白了']
-            });
-        });
-    };
+
 
     $("#to_log").click(function () {
         $.post("./slog", {
@@ -80,7 +72,7 @@
             if (jsonObject === null) {
                 $("#error_msg").show();
             } else {
-                show();
+                show("登录成功！<br>5秒后将自动跳转...");
                 setTimeout(function () {
                     window.location.href="backlove.jsp";
                 },5000);

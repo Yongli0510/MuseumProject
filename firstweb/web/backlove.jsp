@@ -2,7 +2,11 @@
 <%@ page import="java.util.List" %>
 <%@ page import="entity.Exhibit" %>
 <%@ page import="service.UserService" %>
-<%@ page import="dao.impl.UserDaoImpl" %><%--
+<%@ page import="dao.impl.UserDaoImpl" %>
+<%@ page import="service.LoveService" %>
+<%@ page import="dao.impl.LoveDaoImpl" %>
+<%@ page import="entity.LoveItem" %>
+<%@ page import="dao.impl.ExhibitDaoImpl" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/13
@@ -96,18 +100,23 @@
                 <div class="layui-row layui-col-space15">
 
                     <%
-                        UserService us = new UserService(new UserDaoImpl());
-                        List<Exhibit> loves = us.getLoves(me);
-                        for (Exhibit love : loves) {
+
+                        LoveService ls = new LoveService(new LoveDaoImpl(),new ExhibitDaoImpl());
+                        List<LoveItem> loves = ls.getLoves(me);
+                        for (LoveItem love : loves) {
+                            Exhibit ex = ls.getLoveOne(love.getArtid());
                     %>
                     <div class="layui-col-md6">
                         <div class="layui-card">
-                            <div class="layui-card-header"><%= love.getName()%>></div>
+                            <div class="layui-card-header"><%=ex.getName()%></div>
                             <div class="layui-card-body">
-                                收藏展品的时间<br>
-                                馆藏地点<br>
-                                热度<br>
-                                收藏是否公开的属性
+                                收藏展品的时间:<%=love.getTime()%><br>
+                                馆藏地点:<%=ex.getPlace()%><br>
+                                热度<%=ex.getHotDegree()%><br>
+                                <div class="layui-btn-group">
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" id="bt_love_level_1">公开</button>
+                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" id="bt_love_level_0"><i class="layui-icon">私有</i></button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -128,12 +137,32 @@
 </div>
 
 <script src="framework/layui/layui.js"></script>
+<script src="js/hintShow.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function () {
         var element = layui.element;
     });
 
+    var setPublic = function (level) {
+        $.post("./updateLoveLevel", {
+            newLevel: level
+        }, function (result) {
+            var jsonObject = JSON.parse(result);
+            if (jsonObject.success === true) {
+
+            } else {
+
+            }
+        });
+    };
+
+    $("#bt_love_level_0").click(function () {
+        setPublic(0);
+    });
+    $("#bt_love_level_1").click(function () {
+        setPublic(1);
+    });
 
 
 </script>
