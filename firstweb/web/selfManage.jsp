@@ -177,6 +177,9 @@
 <script src="js/hintShow.js"></script>
 <script src="js/formcheck.js"></script>
 <script src="js/md5.js"></script>
+
+<script src="js/cookie.js"></script>
+<script src="js/previouspage.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function () {

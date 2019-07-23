@@ -222,5 +222,9 @@
 <script src="js/hintShow.js"></script>
 <script type="text/javascript" src="js/usermanage.js"></script>
 
+
+<script src="js/cookie.js"></script>
+<script src="js/previouspage.js"></script>
+
 </body>
 </html>

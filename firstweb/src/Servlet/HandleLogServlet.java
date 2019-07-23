@@ -31,8 +31,6 @@ public class HandleLogServlet extends HttpServlet {
         System.out.println(pwd);
 
 
-        //TODO:
-        String path = "backlove.jsp";
 
         UserService userService = new UserService(new UserDaoImpl());
         User ru = userService.log(name, pwd);
@@ -41,8 +39,6 @@ public class HandleLogServlet extends HttpServlet {
         if (ru != null) {
             request.getSession().setAttribute("me",ru);
         }
-//        JSONObject object = new JSONObject();
-//        object.put("s","");
         out.append(JSON.toJSONString(ru));
     }
 

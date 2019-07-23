@@ -24,7 +24,7 @@ public class UserDaoImpl extends DAO<User> implements UserDao {
     }
 
     public void delUser(int id){
-        String sql = "DELETE FROM user WHERE (id = ?)";
+        String sql = "UPDATE user SET name = '账户已注销 ', password = '0000000' WHERE (id = ?);";
         update(sql,id);
     }
 

@@ -156,6 +156,9 @@
 <script src="framework/layui/layui.js"></script>
 <script type="text/javascript" src="js/page.js"></script>
 
+<script src="js/cookie.js"></script>
+<script src="js/previouspage.js"></script>
+
 <script type="text/javascript">
     //JavaScript代码区域
     layui.use('element', function(){

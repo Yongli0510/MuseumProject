@@ -238,5 +238,8 @@
 
 <script src="framework/layui/layui.js"></script>
 <script type="text/javascript" src="js/exhibitManage.js"></script>
+
+<script src="js/cookie.js"></script>
+<script src="js/previouspage.js"></script>
 </body>
 </html>

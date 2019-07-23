@@ -319,6 +319,9 @@
 <script src="js/hintShow.js"></script>
 <script src="js/sendinvite.js"></script>
 <script src="js/showSearchFriendResult.js"></script>
+
+<script src="js/cookie.js"></script>
+<script src="js/previouspage.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function () {

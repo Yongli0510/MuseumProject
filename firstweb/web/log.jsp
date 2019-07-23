@@ -49,6 +49,8 @@
 <script src="framework/layui/layui.js"></script>
 <script src="js/md5.js"></script>
 <script src="js/hintShow.js"></script>
+
+<script src="js/cookie.js"></script>
 <script>
 
 
@@ -61,7 +63,6 @@
         return $.md5(pwd);
     };
 
-
     $("#to_log").click(function () {
         $.post("./slog", {
             log_name: $("#log_name").val(),
@@ -73,7 +74,7 @@
             } else {
                 show("登录成功！<br>2秒后将自动跳转...");
                 setTimeout(function () {
-                    window.location.href="backlove.jsp";
+                    window.location.href=getCookie("currentPage");
                 },2000);
 
             }
@@ -87,25 +88,3 @@
 
 </body>
 </html>
-<%--$.ajax({--%>
-<%--type: 'post',--%>
-<%--url: "slog",--%>
-<%--data: {--%>
-<%--"log_name": $("#log_name").val(),--%>
-<%--"log_pwd": $("#log_pwd").val()--%>
-<%--},--%>
-<%--success: function (data) {--%>
-<%--var jsonObject = JSON.parse(data);--%>
-<%--if (jsonObject === null) {--%>
-<%--layer.msg('用户名或密码输入错误', {--%>
-<%--time: 5000, //5s后自动关闭--%>
-<%--btn: ['明白了']--%>
-<%--});--%>
-<%--} else {--%>
-<%--alert("xxxx");--%>
-<%--}--%>
-<%--},--%>
-<%--error: function (msg) {--%>
-<%--alert("zzzzzz");--%>
-<%--}--%>
-<%--});--%>
