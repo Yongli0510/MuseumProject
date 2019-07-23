@@ -10,12 +10,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>人员管理</title>
+
     <link rel="stylesheet" href="framework/layui/css/layui.css">
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body class="layui-layout-body">
+
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
         <div class="layui-logo">博物馆</div>
@@ -114,23 +118,39 @@
     </div>
 
     <div class="layui-body">
-        <!-- 内容主体区域 -->
-        <div style="padding: 15px;">
-            <div style="padding: 20px; background-color: #F2F2F2;" id="">
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+            <legend>在已有展品中搜索：</legend>
+        </fieldset>
 
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the card's content.</p>
-                        <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
-                    </div>
+        <div class="demoTable">
+            <div class="layui-inline">
+                <label class="layui-form-label">展品名称</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="name" autocomplete="off">
                 </div>
-
             </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">简介</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="detail" autocomplete="off">
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">馆藏地点</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="place" autocomplete="off">
+                </div>
+            </div>
+            <button class="layui-btn" data-type="reload">搜索</button>
         </div>
+
+        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+            <legend>添加新展品：</legend>
+        </fieldset>
+        <button class="layui-btn" id="addExhibit" style="margin-left: 30px">添加新展品</button>
+
+        <table class="layui-hide" id="test" lay-filter="demo"></table>
+
     </div>
 
     <div class="layui-footer">
@@ -139,16 +159,86 @@
     </div>
 </div>
 
+<form class="layui-form" id="information" method="post" style="display: none" lay-filter="informationForm">
+    <div class="layui-form-item" style="display: none">
+        <label class="layui-form-label">类型</label>
+        <div class="layui-input-inline">
+            <input name="type"  id="type" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item" style="display: none">
+        <label class="layui-form-label">id</label>
+        <div class="layui-input-inline">
+            <input name="id"  id="id" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">作品名称</label>
+        <div class="layui-input-inline">
+            <input name="name" id="nam" lay-verify="name" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">简介</label>
+        <div class="layui-input-inline">
+            <input name="detail" id="det" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">馆藏地点</label>
+        <div class="layui-input-inline">
+            <input name="place" id="pla" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">作品完成年代</label>
+        <div class="layui-input-inline">
+            <input name="age"  id="age" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">出土时间</label>
+        <div class="layui-input-inline">
+            <input name="year" id="year" type="number" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">图片文件名</label>
+        <div class="layui-input-inline">
+            <input name="pic" id="pic" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">上传图片(如果需要修改图片)</label>
+        <div class="layui-upload">
+            <button type="button" class="layui-btn" id="chooseImage">上传图片</button>
+            <div class="layui-upload-list" style="">
+                <img class="layui-upload-img" id="imageShow">
+            </div>
+            <p id="demoText"></p>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button id="save" class="layui-btn">保存修改</button>
+        </div>
+    </div>
+</form>
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+</script>
+
 <script src="framework/layui/layui.js"></script>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/exhibitManage.js"></script>
 
 <script>
     //JavaScript代码区域
