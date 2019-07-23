@@ -43,6 +43,17 @@ public class AddUserServlet extends HttpServlet {
         operator = request.getParameter("operator");
 
         UserService us = new UserService(new UserDaoImpl());
+
+        /*如果用户名已存在，则不能成功注册*/
+        User check = us.getUser(name);
+        if (check != null){
+            JSONObject object = new JSONObject();
+            object.put("success", false);
+            object.put("exist", true);
+            response.getWriter().println(object);
+            return;
+        }
+
         us.addUser(name, password, permission, email, sig);
         JSONObject object = new JSONObject();
         if ("sign".equals(operator)) {

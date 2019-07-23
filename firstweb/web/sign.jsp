@@ -9,6 +9,7 @@
 <html>
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="framework/layui/css/layui.css">
 <link href="css/signin.css" rel="stylesheet">
 
 <head>
@@ -63,7 +64,17 @@
                     <div id="pwd_sec_message" class="col-sm-4"></div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="form-group row">
+                    <label for="sign_captcha" class="col-sm-2 col-form-label">Email address</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control" id="sign_captcha" placeholder="Enter email">
+                    </div>
+                    <div id="email_captcha" class="col-sm-4"><a class="layui-form-label layui-btn" id="to_send">校验码</a></div>
+                </div>
+
+
+
+                <a class="btn btn-primary" id="to_sign">注册</a>
             </form>
 
 
@@ -71,16 +82,27 @@
 
 
 </body>
-<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+<script src="framework/layui/layui.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/hintShow.js"></script>
+
+<script src="js/cookie.js"></script>
 <script>
+    var cName,cPassword,cMail;
+    var number;
+
+    var final_check = function(){
+        return cName === true && cPassword === true && cMail === true;
+    };
+
+
     $(function () {
         var isEmail = /^([a-z0-9A-Z]+[-|.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
         var isPwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,10}$/;
@@ -97,16 +119,38 @@
             return false;
         };
 
+        $("#to_send").click(function () {
+           if (cMail !== true) {
+               show("您还未正确填写邮箱");
+           }else {
+               var email = $("#sign_mail").val();
+               $.post("./mailsend", {
+                   email:email
+               }, function (result) {
+                   var jsonObject = JSON.parse(result);
+                   if (jsonObject.success === true) {
+                       show("验证码已发送，请注意查收");
+                       number = jsonObject.captcha;
+                   } else {
+                       show("验证码发送失败，请检查你的邮箱是否正确");
+                   }
+               });
+           }
+        });
+
 
         $("#sign_name").blur(function () {
             if (checkEmpty(this)) {
                 $(this).css("background-color", "#FFFFCC");
                 $("#name_message").html("");
+                cName = false;
             } else if (checkNameValid(this)) {
                 $(this).css("background-color", "#FFFFFF");
-                $("#name_message").html("<label>" + "valid" + "</label>");
+                $("#name_message").html("<label>" + "合法" + "</label>");
+                cName = true;
             } else {
-                $("#name_message").html("<label>" + "inValid" + "</label>");
+                $("#name_message").html("<label>" + "不合法" + "</label>");
+                cName = false;
             }
         });
 
@@ -114,12 +158,15 @@
             if (checkEmpty(this)) {
                 $(this).css("background-color", "#FFFFCC");
                 $("#email_message").html("");
+                cMail = false;
             } else {
                 var email = $.trim($('#sign_mail').val());
                 if (!(isEmail.test(email))) {
                     $("#email_message").html("<label>" + "不合法邮箱" + "</label>");
+                    cMail = false;
                 } else {
-                    $("#email_message").html("<label>" + "valid" + "</label>");
+                    $("#email_message").html("<label>" + "合法" + "</label>");
+                    cMail = true;
                 }
                 $(this).css("background-color", "#FFFFFF");
 
@@ -133,7 +180,7 @@
                 $(this).css("background-color", "#FFFFCC");
                 $("#pwd_fir_message").html("");
             }else if (isPwd.test(pwd)) {
-                $("#pwd_fir_message").html("<label>" + "valid" + "</label>");
+                $("#pwd_fir_message").html("<label>" + "合法" + "</label>");
                 $(this).css("background-color", "#FFFFFF");
             }else {
                 $("#pwd_fir_message").html("<label>" + "密码不合法" + "</label>");
@@ -147,13 +194,52 @@
             if (checkEmpty(this)) {
                 $(this).css("background-color", "#FFFFCC");
                 $("#pwd_sec_message").html("");
+                cPassword = false;
             }else if(pwd1 === pwd2){
-                $("#pwd_sec_message").html("<label>" + "valid" + "</label>");
+                $("#pwd_sec_message").html("<label>" + "合法" + "</label>");
+                cPassword = true;
                 $(this).css("background-color", "#FFFFFF");
             }else {
                 $("#pwd_sec_message").html("<label>" + "两次密码不一致" + "</label>");
+                cPassword = false;
             }
-        })
+        });
+
+        var checkCaptcha = function(data){
+            return data === number;
+        };
+
+        $("#to_sign").click(function () {
+            if (final_check()) {
+                if (!checkCaptcha($("#sign_captcha").val())){
+                    show("验证码输入错误");
+                }else {
+                    $.post("./adduser", {
+                        "password":$.md5($("#sign_pwd_sec").val()),
+                        "name": $("#sign_name").val(),
+                        "email": $("#sign_mail").val(),
+                        "permission": 1,
+                        "operator":"sign"
+                    }, function (result) {
+                        var jsonObject = JSON.parse(result);
+                        if (jsonObject.success === false) {
+                            if (jsonObject.exist === true) {
+                                show("用户名重复，请重新输入");
+                            }else {
+                                show("注册出错");
+                            }
+                        } else {
+                            show("登录成功！<br>2秒后将自动跳转...");
+                            setTimeout(function () {
+                                window.location.href=getCookie("currentPage");
+                            },2000);
+                        }
+                    });
+                }
+            }else {
+                show("您还有信息未正确填写！");
+            }
+        });
 
     })
 </script>
