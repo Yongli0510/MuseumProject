@@ -7,22 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb709441-a820-4b67-8955-ac8b2ed637cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/firstweb/src/Servlet/AddUserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/src/Servlet/UpdateUserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/js/sendinvite.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstweb/src/Servlet/ShowFriendSearchServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstweb/src/entity/Content.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstweb/web/js/showSearchFriendResult.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firstweb/src/Servlet/FriendSearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/Servlet/FriendSearchServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firstweb/src/dao/impl/InviteDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/dao/impl/InviteDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/src/service/FriendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/FriendService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firstweb/src/service/InviteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/InviteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/service/PageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/PageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firstweb/web/friends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/friends.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/js/usermanage.js" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/js/usermanage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/personalpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/personalpage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/userManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/userManage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/firstweb/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/firstweb/dao/impl/UserDaoImpl.class" afterDir="false" />
     </list>
     <list id="be6c0247-d223-4662-8caa-9454d266db38" name="Revert: fix bugs" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,40 +46,23 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.46246648">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/firstweb/web/js/usermanage.js">
+            <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
-                  <caret line="48" column="58" lean-forward="true" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
+                <state relative-caret-position="620">
+                  <caret line="358" column="39" selection-start-line="358" selection-start-column="39" selection-end-line="358" selection-end-column="39" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/firstweb/web/userManage.jsp">
+            <entry file="file://$PROJECT_DIR$/firstweb/web/js/showSearchFriendResult.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="599">
-                  <caret line="218" column="67" selection-start-line="218" selection-start-column="67" selection-end-line="218" selection-end-column="67" />
-                  <folding>
-                    <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/FriendSearchServlet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+                <state relative-caret-position="333">
+                  <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
                 </state>
               </provider>
             </entry>
@@ -94,63 +71,20 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="131">
-                  <caret line="278" column="33" selection-start-line="278" selection-start-column="33" selection-end-line="278" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/UpdateUserServlet.java">
+            <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+                <state relative-caret-position="497">
+                  <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/firstweb/src/service/UserService.java">
+            <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="287">
-                  <caret line="59" selection-start-line="59" selection-end-line="59" />
-                  <folding>
-                    <element signature="e#279#280#0" expanded="true" />
-                    <element signature="e#317#318#0" expanded="true" />
-                    <element signature="e#527#528#0" expanded="true" />
-                    <element signature="e#571#572#0" expanded="true" />
-                    <element signature="method#addUser#0;class#UserService#0" />
-                    <element signature="method#checkName#0;class#UserService#0" />
-                    <element signature="e#1377#1378#0" expanded="true" />
-                    <element signature="e#1428#1429#0" expanded="true" />
-                    <element signature="e#1456#1457#0" expanded="true" />
-                    <element signature="e#1491#1492#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="539">
-                  <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/firstweb/web/js/exhibitManage.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="159" column="40" lean-forward="true" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#120#1253#0" />
-                    <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                  </folding>
+                <state relative-caret-position="123">
+                  <caret line="33" column="79" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
                 </state>
               </provider>
             </entry>
@@ -165,9 +99,9 @@
         <option value="CSS File" />
         <option value="HTML File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -184,10 +118,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/firstweb/web/WEB-INF/servlet/HandleLogServlet.java" />
-        <option value="$PROJECT_DIR$/firstweb/src/service/FreindService.java" />
-        <option value="$PROJECT_DIR$/firstweb/src/servlet/FriendHandleServlet.java" />
-        <option value="$PROJECT_DIR$/firstweb/web/back.jsp" />
         <option value="$PROJECT_DIR$/firstweb/src/dao/impl/ExhibitDaoImpl.java" />
         <option value="$PROJECT_DIR$/firstweb/src/entity/LoveItem.java" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/HandleLogServlet.java" />
@@ -206,7 +136,6 @@
         <option value="$PROJECT_DIR$/firstweb/src/entity/Invite.java" />
         <option value="$PROJECT_DIR$/firstweb/src/dao/impl/FriendDaoImpl.java" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/InviteHandleServlet.java" />
-        <option value="$PROJECT_DIR$/firstweb/src/service/FriendService.java" />
         <option value="$PROJECT_DIR$/firstweb/src/entity/User.java" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/ModifySelfServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/web/js/formcheck.js" />
@@ -215,19 +144,14 @@
         <option value="$PROJECT_DIR$/firstweb/web/exhibitManager.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/homepage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/search.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/web/details.jsp" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/UpdateLoveServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/dao/impl/LoveDaoImpl.java" />
         <option value="$PROJECT_DIR$/firstweb/src/service/LoveService.java" />
         <option value="$PROJECT_DIR$/firstweb/src/entity/Page.java" />
         <option value="$PROJECT_DIR$/firstweb/src/service/PageService.java" />
-        <option value="$PROJECT_DIR$/firstweb/src/Servlet/FriendSearchServlet.java" />
-        <option value="$PROJECT_DIR$/firstweb/src/dao/impl/InviteDaoImpl.java" />
-        <option value="$PROJECT_DIR$/firstweb/src/service/InviteService.java" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/web/personalpage.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/web/friends.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/js/sendinvite.js" />
         <option value="$PROJECT_DIR$/firstweb/web/userManage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/AddUserServlet.java" />
@@ -235,6 +159,16 @@
         <option value="$PROJECT_DIR$/firstweb/src/service/UserService.java" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/UpdateUserServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/web/js/usermanage.js" />
+        <option value="$PROJECT_DIR$/firstweb/src/service/InviteService.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/dao/impl/InviteDaoImpl.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/service/FriendService.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/Servlet/FriendSearchServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/Servlet/searchServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/entity/Content.java" />
+        <option value="$PROJECT_DIR$/firstweb/web/js/showSearchFriendResult.js" />
+        <option value="$PROJECT_DIR$/firstweb/src/Servlet/ShowFriendSearchServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/web/friends.jsp" />
       </list>
     </option>
   </component>
@@ -279,6 +213,28 @@
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
               <item name="firstweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
+              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
+              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
+              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -293,6 +249,13 @@
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
               <item name="firstweb" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
+              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
@@ -318,7 +281,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563870472953" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563890051164" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -698,11 +661,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563860093060</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="人员管理做好了">
+      <created>1563870511531</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1563870511531</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173432000" />
+    <option name="totallyTimeSpent" value="186795000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -717,17 +687,17 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6954674" weight="0.20844504" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.69405097" weight="0.1930295" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.3045326" side_tool="true" weight="0.20844504" />
+      <window_info id="Web" order="7" sideWeight="0.305949" side_tool="true" weight="0.24396783" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.85269123" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" visible="true" weight="0.20679887" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" weight="0.5736544" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37818697" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -824,36 +794,10 @@
     <MESSAGE value="存一下" />
     <MESSAGE value="收藏做好了" />
     <MESSAGE value="update之前记得存一下！" />
-    <option name="LAST_COMMIT_MESSAGE" value="update之前记得存一下！" />
+    <MESSAGE value="人员管理做好了" />
+    <option name="LAST_COMMIT_MESSAGE" value="人员管理做好了" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/firstweb/web/image/竹雕提梁卣.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/image/竹根雕蝠桃盂.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/image/竹根雕群仙祝寿山.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/image/玉鹿.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/image/满族平金绣云龙纹朝袍.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/image/安喜宫绣佛像.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/image/exhibit/安喜宫绣佛像.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/image/exhibit/家爵.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/image/exhibit/广东寿字.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/image/decoration/background.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -966,86 +910,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/FriendDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/ExhibitDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="48" column="40" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/service/FriendService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/service/PageService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/entity/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="105" column="5" selection-start-line="105" selection-start-column="5" selection-end-line="105" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/searchServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="52" column="43" selection-start-line="52" selection-start-column="43" selection-end-line="52" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/js/exhibitManage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="159" column="40" lean-forward="true" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
-          <folding>
-            <element signature="e#120#1253#0" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/sign.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2340" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/InviteDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/service/InviteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-          <folding>
-            <element signature="e#704#705#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="41" column="38" lean-forward="true" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1063,77 +931,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="44" column="45" lean-forward="true" selection-start-line="44" selection-start-column="45" selection-end-line="44" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/FriendSearchServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="41" column="45" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/exhibitManager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-79">
-          <caret line="146" column="68" lean-forward="true" selection-start-line="146" selection-start-column="68" selection-end-line="146" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#fieldset#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/userManage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="218" column="67" selection-start-line="218" selection-start-column="67" selection-end-line="218" selection-end-column="67" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/AddUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/log.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-175">
           <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="278" column="33" selection-start-line="278" selection-start-column="33" selection-end-line="278" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/js/usermanage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="48" column="58" lean-forward="true" selection-start-line="48" selection-start-column="58" selection-end-line="48" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="52" column="29" lean-forward="true" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1156,10 +957,227 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/AddUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Filter/AuthorityFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Filter/HttpFilter.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/userManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="218" column="67" selection-start-line="218" selection-start-column="67" selection-end-line="218" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/exhibitManager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="146" column="68" lean-forward="true" selection-start-line="146" selection-start-column="68" selection-end-line="146" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/UpdateUserServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
+        <state relative-caret-position="353">
           <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="41" column="50" selection-start-line="41" selection-start-column="50" selection-end-line="41" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/ExhibitDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="49" column="82" lean-forward="true" selection-start-line="49" selection-start-column="82" selection-end-line="49" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/service/InviteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+          <folding>
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/js/usermanage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/js/exhibitManage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="159" column="40" selection-start-line="159" selection-start-column="40" selection-end-line="159" selection-end-column="40" />
+          <folding>
+            <element signature="e#120#1253#0" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/entity/Invite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt://C:/Program Files/Java/jdk-12.0.1!/jdk.javadoc/jdk/javadoc/internal/doclets/formats/html/resources/jquery/jquery-3.3.1.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="5957" column="4" selection-start-line="5957" selection-start-column="4" selection-end-line="5957" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/InviteDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="19" column="69" selection-start-line="19" selection-start-column="69" selection-end-line="19" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/sign.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="133" column="39" lean-forward="true" selection-start-line="133" selection-start-column="39" selection-end-line="133" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/entity/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/FriendDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="25" column="51" selection-start-line="25" selection-start-column="51" selection-end-line="25" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/js/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/FriendSearchServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/js/showSearchFriendResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/service/FriendService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
+          <folding>
+            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/ShowFriendSearchServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/entity/Content.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#139#140#0" expanded="true" />
+            <element signature="e#174#175#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="true" />
+            <element signature="e#299#300#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#420#421#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/searchServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="33" column="79" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/entity/Exhibit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="358" column="39" selection-start-line="358" selection-start-column="39" selection-end-line="358" selection-end-column="39" />
         </state>
       </provider>
     </entry>

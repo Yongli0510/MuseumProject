@@ -2,6 +2,7 @@ package Servlet;
 
 import com.alibaba.fastjson.JSON;
 import dao.impl.ExhibitDaoImpl;
+import dao.impl.FriendDaoImpl;
 import dao.impl.UserDaoImpl;
 import entity.Exhibit;
 import entity.Page;
@@ -28,7 +29,7 @@ public class FriendSearchServlet extends HttpServlet {
             name = request.getParameter("name");
 
 
-        FriendService fs = new FriendService(new UserDaoImpl());
+        FriendService fs = new FriendService(new UserDaoImpl(),new FriendDaoImpl());
         UserService us = new UserService(new UserDaoImpl());
 
         int page = 1;
@@ -37,11 +38,8 @@ public class FriendSearchServlet extends HttpServlet {
 
 
         List<User> list = us.searchUser(name);
-        //
-        for (User user : list) {
-            System.out.println(user.getName());
-        }
-        //
+
+
         PageService pageService = new PageService(new ExhibitDaoImpl());
         Page<User> bean = pageService.page(page,list);
 

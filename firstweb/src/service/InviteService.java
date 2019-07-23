@@ -39,5 +39,9 @@ public class InviteService {
     public List<Invite> getInvite(int resId){
         return idi.getInvites(resId);
     }
+
+    public List<Invite> getALLInvites(int id) {
+        return idi.getALLInvites(id);
+    }
 }
 

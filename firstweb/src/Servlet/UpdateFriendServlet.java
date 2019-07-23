@@ -33,14 +33,18 @@ public class UpdateFriendServlet extends HttpServlet {
         }
 
         FriendService fs = new FriendService(new UserDaoImpl(),new FriendDaoImpl());
-
+        JSONObject object = new JSONObject();
         if ("del".equals(func)){
             fs.delFriend(uid,fid);
+            object.put("result", "成功删除好友");
         }else if ("add".equals(func)){
             fs.addFriend(uid,fid);
+            object.put("result", "好友添加成功");
+        }else {
+            object.put("result", "空操作");
         }
 
-        JSONObject object = new JSONObject();
+
         object.put("success", true);
         response.getWriter().println(object);
     }

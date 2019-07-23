@@ -16,8 +16,13 @@ public class InviteDaoImpl extends DAO<Invite> {
         return getForList(sql, resId, 0);
     }
 
+    public List<Invite> getALLInvites(int id) {
+        String sql = "SELECT * FROM invite WHERE (sendId = ? OR resId = ?)";
+        return getForList(sql, id, id);
+    }
+
     public void addNewInvitation(int sendId, int resId) {
-        String sql = "INSERT INTO invite (sendId, resID, agree) VALUES (? , ?, 0)";
+        String sql = "INSERT INTO invite (sendId, resId, agree) VALUES (? , ?, 0)";
         update(sql,sendId,resId);
     }
 

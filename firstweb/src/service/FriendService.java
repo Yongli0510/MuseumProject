@@ -13,10 +13,6 @@ public class FriendService {
     private FriendDaoImpl fd;
 
 
-    public FriendService(UserDaoImpl ud){
-        this.ud = ud;
-    }
-
     public FriendService(UserDaoImpl ud, FriendDaoImpl fd) {
         this.ud = ud;
         this.fd = fd;
