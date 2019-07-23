@@ -17,13 +17,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>商品详情</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="framework/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/details.css">
 
-    <script src="https://kit.fontawesome.com/032ebc398d.js"></script>
 </head>
 <body class="layui-layout-body">
 
@@ -72,6 +70,7 @@
                     <dd><a href="selfManage.jsp">信息管理</a></dd>
                     <dd><a href="friends.jsp">好友列表</a></dd>
                     <dd><a href="backlove.jsp">收藏夹</a></dd>
+                    <dd><a href="email.jsp">私信</a></dd>
                     <dd><a href="logout">退出登录</a></dd>
                 </dl>
 
@@ -110,11 +109,8 @@
             <p>出土时间：<%=exhibit.getYear()%>年</p>
             <p>简介：<%=exhibit.getDetail()%></p>
             <p>热度：<%=exhibit.getHotDegree() + 1%></p>
-            <button class="layui-btn"><i class="fa fa-heart" aria-hidden="true"
-            onclick="loveIt(<%=user==null?-1:user.getId()%>,<%=exhibit.getId()%>)">
-            </i>收藏
-            </button>
-            <button class="layui-btn" id="video"><i class="fa fa-play" aria-hidden="true"></i>播放介绍视频</button>
+            <button class="layui-btn" onclick="loveIt(<%=user==null?-1:user.getId()%>,<%=exhibit.getId()%>)"><i class="layui-icon">&#xe658;</i>收藏</button>
+            <button class="layui-btn" id="video"><i class="layui-icon">&#xe6ed;</i>播放介绍视频</button>
 
         </div>
     </div>

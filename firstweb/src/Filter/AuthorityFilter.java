@@ -1,7 +1,5 @@
 package Filter;
 
-import entity.User;
-
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +8,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebFilter(filterName = "AuthorityFilter",
-        urlPatterns = {"/backlove.jsp","/exhibitManager.jsp","/friends.jsp","/personalpage.jsp","/selfManage.jsp","/userManage.jsp"}
+        urlPatterns = {"/backlove.jsp","/exhibitManager.jsp","/friends.jsp","/personalpage.jsp","/selfManage.jsp","/userManage.jsp","/email.jsp"}
         )
 public class AuthorityFilter extends HttpFilter{
     @Override

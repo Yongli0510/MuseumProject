@@ -1,12 +1,9 @@
 <%@ page import="entity.User" %>
-<%@ page import="java.util.List" %>
-<%@ page import="entity.Exhibit" %>
 <%@ page import="service.UserService" %>
 <%@ page import="dao.impl.UserDaoImpl" %>
-<%@ page import="service.LoveService" %>
-<%@ page import="dao.impl.LoveDaoImpl" %>
-<%@ page import="entity.LoveItem" %>
-<%@ page import="dao.impl.ExhibitDaoImpl" %><%--
+<%@ page import="dao.impl.EmailDaoImpl" %>
+<%@ page import="java.util.List" %>
+<%@ page import="entity.Email" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/13
@@ -14,17 +11,18 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>个人信息</title>
-    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="framework/layui/css/layui.css">
+    <title>展品管理</title>
+
+    <link rel="stylesheet" href="framework/layui/css/layui.css" media="all">
 </head>
 <body class="layui-layout-body">
+
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
         <div class="layui-logo">博物馆</div>
@@ -125,48 +123,85 @@
     </div>
 
     <div class="layui-body">
-        <!-- 内容主体区域 -->
-        <div style="padding: 15px;">
-            <div style="padding: 20px; background-color: #F2F2F2;" id="loves_section">
-                <div class="layui-row layui-col-space15">
+        <div class="layui-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">收件箱</li>
+                <li>发件箱</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <table id="testReload" lay-filter="parse-table-demo">
+                        <thead>
+                        <tr>
+                            <th style="display: none" lay-data="{field:'id', width:200}">id</th>
+                            <th lay-data="{field:'read', width:200,sort:true}">是否已读</th>
+                            <th lay-data="{field:'time', width:200,sort:true}">时间</th>
+                            <th lay-data="{field:'sendUser', width:200}">发件人</th>
+                            <th lay-data="{field:'content', width:200}">内容</th>
+                            <th lay-data="{fixed: 'right', width:200, align:'center', toolbar: '#barDemo'}"></th>
+                        </tr>
+                        </thead>
+                        <tbody style="display: none">
+                        <%
+                            EmailDaoImpl emailDao = new EmailDaoImpl();
+                            List<Email> receivedEmail = emailDao.getReceivedEmail(user.getId());
+                            for (Email email : receivedEmail){
+                                int id = email.getId();
+                                String read = email.getIsRead() == 0 ? "未读" : "已读";
+                                String sendUser = new UserDaoImpl().getUser(email.getSendId()).getName();
+                        %>
 
-                    <%
+                        <tr>
+                            <td style="display: none"><%= id %></td>
+                            <td><%= read %></td>
+                            <td><%= email.getTime() %></td>
+                            <td><%= sendUser %></td>
+                            <td><%= email.getContent() %></td>
+                        </tr>
 
-                        LoveService ls = new LoveService(new LoveDaoImpl(),new ExhibitDaoImpl());
-                        List<LoveItem> loves = ls.getLoves(user);
-                        for (LoveItem love : loves) {
-                            Exhibit ex = ls.getLoveOne(love.getArtid());
-                    %>
-                    <div class="layui-col-md6">
-                        <div class="layui-card">
-                            <div class="layui-card-header"><%=ex.getName()%></div>
-                            <div class="layui-card-body">
-                                收藏展品的时间:<%=love.getTime()%><br>
-                                馆藏地点:<%=ex.getPlace()%><br>
-                                热度:<%=ex.getHotDegree()%><br>
-                                可见度：<%=love.getCanSee()==0?"不可见":"可见"%><br>
-                                <div class="layui-btn-group">
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=user.getId()%>,<%=ex.getId()%>,'setpublic',1)">公开</button>
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=user.getId()%>,<%=ex.getId()%>,'setpublic',0)">私有</button>
-                                </div>
-                                <div class="layui-btn-group">
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="window.location.href='details.jsp?id=<%=ex.getId()%>'">
-                                        <i class="layui-icon">&#xe602;</i>
-                                    </button>
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=user.getId()%>,<%=ex.getId()%>,'del',0)">
-                                        <i class="layui-icon">&#xe640;</i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <%
-                        }
-                    %>
+                        <%
+                            }
+                        %>
 
-
+                        </tbody>
+                    </table>
                 </div>
+
+                <div class="layui-tab-item">
+                    <table lay-filter="parse-table-demo">
+                        <thead>
+                        <tr>
+                            <th lay-data="{field:'time', width:200,sort:true}">时间</th>
+                            <th lay-data="{field:'sendUser', width:200}">收件人</th>
+                            <th lay-data="{field:'content', width:200}">内容</th>
+                            <th lay-data="{field:'status', width:200}">状态</th>
+                        </tr>
+                        </thead>
+                        <tbody style="display: none">
+                        <%
+                            List<Email> sentEmail = emailDao.getSentEmail(user.getId());
+                            for (Email email : sentEmail){
+                                String read = email.getIsRead() == 0 ? "对方未读" : "对方已读";
+                                String receiveUser = new UserDaoImpl().getUser(email.getResId()).getName();
+                        %>
+
+                        <tr>
+                            <td><%= email.getTime() %></td>
+                            <td><%= receiveUser %></td>
+                            <td><%= email.getContent() %></td>
+                            <td><%= read %></td>
+                        </tr>
+
+                        <%
+                            }
+                        %>
+
+                        </tbody>
+                    </table>
+                </div>
+
             </div>
+
         </div>
     </div>
 
@@ -176,47 +211,13 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-<script src="framework/layui/layui.js"></script>
-<script src="js/hintShow.js"></script>
-
-<script src="js/cookie.js"></script>
-<script src="js/previouspage.js"></script>
-<script>
-    //JavaScript代码区域
-    layui.use('element', function () {
-        var element = layui.element;
-    });
-
-    var updataMyLove = function (userid,artid,func,level) {
-        $.post("./updatelovelevel", {
-            userId:userid,
-            artId:artid,
-            newLevel: level,
-            func:func
-        }, function (result) {
-            var jsonObject = JSON.parse(result);
-            if (jsonObject.success === true) {
-                show("修改成功");
-                setTimeout(function () {
-                    location.reload();
-                },2000);
-
-            } else {
-                show("修改失败");
-                setTimeout(function () {
-                    location.reload();
-                },2000);
-            }
-        });
-    };
-
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-xs" lay-event="edit">修改已读/未读状态</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
+
+<script src="framework/layui/layui.js"></script>
+<script type="text/javascript" src="js/email.js"></script>
+
 </body>
 </html>

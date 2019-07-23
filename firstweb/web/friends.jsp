@@ -71,6 +71,7 @@
                     <dd><a href="selfManage.jsp">信息管理</a></dd>
                     <dd><a href="friends.jsp">好友列表</a></dd>
                     <dd><a href="backlove.jsp">收藏夹</a></dd>
+                    <dd><a href="email.jsp">私信</a></dd>
                     <dd><a href="logout">退出登录</a></dd>
                 </dl>
 
@@ -103,6 +104,7 @@
                         <dd><a href="selfManage.jsp">信息管理</a></dd>
                         <dd><a href="friends.jsp">好友列表</a></dd>
                         <dd><a href="backlove.jsp">收藏夹</a></dd>
+                        <dd><a href="email.jsp">私信</a></dd>
                     </dl>
                 </li>
 
@@ -168,6 +170,10 @@
                                         <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
                                                 onclick="updateMyFriend(<%=me.getId()%>,<%=myFriend.getId()%>,'del')">
                                             <i class="layui-icon">&#xe640;</i>
+                                        </button>
+                                        <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                                                onclick="sendMessage(<%=me.getId()%>,<%=myFriend.getId()%>)">
+                                            <i class="layui-icon">&#xe63a;</i>
                                         </button>
                                     </div>
                                 </div>
@@ -372,6 +378,38 @@
             }
         });
     };
+
+    var sendMessage = function (sendId,resId) {
+        layui.use('layer', function(){
+            var layer = layui.layer;
+
+            layer.open({
+                type: 1,
+                title:'发送私信',
+                content: '<div class="layui-input-block" style="text-align: center">' +
+                    '<textarea name="desc" placeholder="请输入私信内容" class="layui-textarea"></textarea></div>' +
+                    '<button class="layui-btn" id="send">发送</button> ',
+                area: ['400px', '300px']
+            });
+            
+            $("#send").click(function () {
+                var content = $("textarea").val();
+                $.ajax({
+                    url:'emailServlet',
+                    type:'post',
+                    data:{
+                        type:'add',
+                        sendId:sendId,
+                        resId:resId,
+                        content:content
+                    },
+                    success:function () {
+                        layer.msg("发送成功！");
+                    }
+                })
+            })
+        });
+    }
 
 </script>
 
