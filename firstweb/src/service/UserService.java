@@ -5,6 +5,7 @@ import dao.impl.UserDaoImpl;
 import entity.Exhibit;
 import entity.User;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,8 +58,13 @@ public class UserService {
         userDao.updatePermission(level,uid);
     }
 
-
     public void delUser(int id){
         userDao.delUser(id);
+    }
+
+    public void updateLastLogIn(int id){
+        long time = System.currentTimeMillis();
+        Date date = new Date(time);
+        userDao.updateLastLogIn(id,date);
     }
 }

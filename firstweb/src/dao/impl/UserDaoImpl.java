@@ -4,6 +4,7 @@ import dao.DAO;
 import dao.UserDao;
 import entity.User;
 
+import java.sql.Date;
 import java.util.List;
 
 public class UserDaoImpl extends DAO<User> implements UserDao {
@@ -53,4 +54,8 @@ public class UserDaoImpl extends DAO<User> implements UserDao {
         update(sql,level,id);
     }
 
+    public void updateLastLogIn(int id, Date date){
+        String sql = "UPDATE user SET lastlogin = ? WHERE (id = ?)";
+        update(sql,date,id);
+    }
 }

@@ -10,7 +10,9 @@
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link rel="stylesheet" href="framework/layui/css/layui.css">
+<link rel="stylesheet" href="css/home2.css">
 <link href="css/signin.css" rel="stylesheet">
+
 
 <head>
     <title>Sign</title>
@@ -27,10 +29,11 @@
     </style>
 </head>
 <body class="text-center">
-
+<a class="h2 mb-3 font-weight-normal" href="homepage.jsp"><i class="layui-icon">&#xe68e;</i></a>
 <div class="container" id="reg_content">
 
             <form>
+                <h1 class="h3 mb-3 font-weight-normal">请注册</h1>
                 <div class="form-group row">
                     <label for="sign_name" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-6">

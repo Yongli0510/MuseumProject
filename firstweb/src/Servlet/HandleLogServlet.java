@@ -38,6 +38,7 @@ public class HandleLogServlet extends HttpServlet {
 
         if (ru != null) {
             request.getSession().setAttribute("me",ru);
+            userService.updateLastLogIn(ru.getId());
         }
         out.append(JSON.toJSONString(ru));
     }

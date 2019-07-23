@@ -1,4 +1,6 @@
-<%--
+<%@ page import="entity.User" %>
+<%@ page import="service.UserService" %>
+<%@ page import="dao.impl.UserDaoImpl" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/13
@@ -16,28 +18,41 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Signin Template for Bootstrap</title>
+    <link rel="stylesheet" href="css/homepage.css">
+    <title>Log</title>
     <!-- Custom styles for this template -->
     <link href="css/signin.css" rel="stylesheet">
 </head>
 
-<body class="text-center">
-<form class="form-signin" id="log_form">
-    <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
-
-    <label for="log_name" class="sr-only">账户</label>
-    <input type="text" id="log_name" name="log_name" class="form-control" placeholder="Name" required autofocus>
 
 
-    <label for="log_pwd" class="sr-only">密码</label>
-    <input type="password" id="log_pwd" name="log_pwd" class="form-control" placeholder="Password" required>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+        <form class="form-signin" id="log_form">
+        <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
 
-    <div class="alert alert-warning" role="alert" id="error_msg">
-        用户名或密码错误
+        <label for="log_name" class="sr-only">账户</label>
+        <input type="text" id="log_name" name="log_name" class="form-control" placeholder="Name" required autofocus>
+
+
+        <label for="log_pwd" class="sr-only">密码</label>
+        <input type="password" id="log_pwd" name="log_pwd" class="form-control" placeholder="Password" required>
+
+        <div class="alert alert-warning" role="alert" id="error_msg">
+            用户名或密码错误
+        </div>
+
+        <a class="btn btn-lg btn-primary btn-block" id="to_log">登录</a>
+    </form>
+    <div class="layui-body">
+
     </div>
 
-    <a class="btn btn-lg btn-primary btn-block" id="to_log">登录</a>
-</form>
+</div>
+
+
+
+
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
