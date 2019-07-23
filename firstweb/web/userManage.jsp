@@ -8,18 +8,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%
-    User user = (User)session.getAttribute("me");
-    if(user == null){
-        out.write("<p>您尚未登录，没有访问该页面的权限！<a href='javascript:history.back(-1)'>返回上一页</a></p>");
-        return;
-    }
-    else if(user.getPermission() != 0){
-        out.write("<p>您不是管理员，没有访问该页面的权限！<a href='javascript:history.back(-1)'>返回上一页</a></p>");
-        return;
-    }
 
-%>
 <html>
 <head>
     <meta charset="utf-8">
@@ -40,6 +29,7 @@
             <li class="layui-nav-item"><a href="homepage.jsp">首页</a></li>
             <li class="layui-nav-item"><a href="search.jsp">搜索</a></li>
             <%
+                User user = null;
                 UserService us = new UserService(new UserDaoImpl());
                 if (session.getAttribute("me") != null) {
                     user = us.getUser(((User) session.getAttribute("me")).getId());
