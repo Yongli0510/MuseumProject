@@ -7,19 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb709441-a820-4b67-8955-ac8b2ed637cc" name="Default Changelist" comment="finish exhibitManage page">
-      <change afterPath="$PROJECT_DIR$/firstweb/src/Filter/AuthorityFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/src/Filter/HttpFilter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/SignChecker.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/dao/DAO.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/entity/Exhibit.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/entity/User.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/jdbc/JdbcUtil.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/details.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/homePage.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/details.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/homepage.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/search.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/exhibitManager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/exhibitManager.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/firstweb/dao/impl/UserDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/firstweb/dao/impl/UserDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/firstweb/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/firstweb/entity/User.class" afterDir="false" />
     </list>
@@ -50,14 +48,13 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/firstweb/src/Filter/HttpFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+            <state relative-caret-position="-190">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#983#984#0" expanded="true" />
                 <element signature="e#1018#1019#0" expanded="true" />
               </folding>
@@ -65,41 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/Filter/AuthorityFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-266">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/web/details.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="152" column="16" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
+        <entry file="file://$PROJECT_DIR$/firstweb/web/exhibitManager.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="312" column="6" lean-forward="true" selection-start-line="312" selection-start-column="6" selection-end-line="312" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/web/backlove.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+            <state relative-caret-position="520">
+              <caret line="234" column="27" selection-start-line="234" selection-start-column="27" selection-end-line="234" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -175,7 +142,6 @@
         <option value="$PROJECT_DIR$/firstweb/web/js/page.js" />
         <option value="$PROJECT_DIR$/firstweb/web/details.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/search.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/web/exhibitManager.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/personalpage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/userManage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/backlove.jsp" />
@@ -184,6 +150,7 @@
         <option value="$PROJECT_DIR$/firstweb/src/Filter/HttpFilter.java" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/AuthorityServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/Filter/AuthorityFilter.java" />
+        <option value="$PROJECT_DIR$/firstweb/web/exhibitManager.jsp" />
       </list>
     </option>
   </component>
@@ -205,6 +172,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,12 +186,34 @@
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
               <item name="firstweb" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
+              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
+              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
+              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="framework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -230,14 +221,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563867753510" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563871358485" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../卓越软件开发基础" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -527,7 +518,8 @@
       <workItem from="1563789751489" duration="17081000" />
       <workItem from="1563806893209" duration="6693000" />
       <workItem from="1563847043556" duration="5541000" />
-      <workItem from="1563855257099" duration="11227000" />
+      <workItem from="1563855257099" duration="14061000" />
+      <workItem from="1563874544139" duration="1140000" />
     </task>
     <task id="LOCAL-00001" summary="finished homepage">
       <created>1563104224639</created>
@@ -571,11 +563,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563851789297</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="use filter">
+      <created>1563868019688</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1563868019688</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172328000" />
+    <option name="totallyTimeSpent" value="176302000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,7 +588,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.3894102" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.3947721" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -718,7 +717,8 @@
     <MESSAGE value="finish exhibitManage page" />
     <MESSAGE value="reconstruct" />
     <MESSAGE value="fix bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
+    <MESSAGE value="use filter" />
+    <option name="LAST_COMMIT_MESSAGE" value="use filter" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/firstweb/web/homepage.html" />
@@ -841,16 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/js/exhibitManage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="147" column="30" selection-start-line="147" selection-start-column="30" selection-end-line="147" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/exhibitManageServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-12">
@@ -869,13 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1387">
           <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/exhibitManager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="72" column="34" lean-forward="true" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -990,48 +973,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Filter/Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/AuthorityServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Filter/HttpFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1018#1019#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Filter/Filter.java" />
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/AuthorityServlet.java" />
     <entry file="file://$PROJECT_DIR$/firstweb/web/backlove.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/details.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="152" column="16" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -1047,8 +994,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="312" column="6" lean-forward="true" selection-start-line="312" selection-start-column="6" selection-end-line="312" selection-end-column="6" />
+        <state relative-caret-position="5194">
+          <caret line="277" column="46" lean-forward="true" selection-start-line="277" selection-start-column="46" selection-end-line="277" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="152" column="16" selection-start-line="152" selection-start-column="16" selection-end-line="152" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Filter/HttpFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-190">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/js/exhibitManage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/exhibitManager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="234" column="27" selection-start-line="234" selection-start-column="27" selection-end-line="234" selection-end-column="27" />
         </state>
       </provider>
     </entry>
