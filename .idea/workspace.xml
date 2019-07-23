@@ -7,16 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb709441-a820-4b67-8955-ac8b2ed637cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/firstweb/src/Servlet/ShowFriendSearchServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/src/entity/Content.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firstweb/web/js/showSearchFriendResult.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/Servlet/FriendSearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/Servlet/FriendSearchServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/dao/impl/InviteDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/dao/impl/InviteDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/service/FriendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/FriendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/service/InviteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/InviteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/web/friends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/friends.jsp" afterDir="false" />
     </list>
     <list id="be6c0247-d223-4662-8caa-9454d266db38" name="Revert: fix bugs" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,14 +37,23 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.55764073">
       <split-first>
         <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="383">
+                  <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="620">
-                  <caret line="358" column="39" selection-start-line="358" selection-start-column="39" selection-end-line="358" selection-end-column="39" />
+                <state relative-caret-position="320">
+                  <caret line="358" column="30" selection-start-line="358" selection-start-column="30" selection-end-line="358" selection-end-column="30" />
                 </state>
               </provider>
             </entry>
@@ -61,8 +61,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/firstweb/web/js/showSearchFriendResult.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="333">
-                  <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+                <state relative-caret-position="313">
+                  <caret line="27" column="101" selection-start-line="27" selection-start-column="101" selection-end-line="27" selection-end-column="101" />
                 </state>
               </provider>
             </entry>
@@ -74,17 +74,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="497">
-                  <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="123">
-                  <caret line="33" column="79" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
+                <state relative-caret-position="517">
+                  <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -165,8 +156,8 @@
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/FriendSearchServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/searchServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/entity/Content.java" />
-        <option value="$PROJECT_DIR$/firstweb/web/js/showSearchFriendResult.js" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/ShowFriendSearchServlet.java" />
+        <option value="$PROJECT_DIR$/firstweb/web/js/showSearchFriendResult.js" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/web/friends.jsp" />
       </list>
@@ -281,7 +272,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563890051164" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563890156294" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -668,11 +659,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563870511531</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="除注册外的基础功能已完成">
+      <created>1563890141971</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1563890141971</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186795000" />
+    <option name="totallyTimeSpent" value="187049000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -697,7 +695,7 @@
       <window_info id="Web" order="7" sideWeight="0.305949" side_tool="true" weight="0.24396783" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.85269123" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" weight="0.5736544" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" weight="0.38101983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37818697" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -795,7 +793,8 @@
     <MESSAGE value="收藏做好了" />
     <MESSAGE value="update之前记得存一下！" />
     <MESSAGE value="人员管理做好了" />
-    <option name="LAST_COMMIT_MESSAGE" value="人员管理做好了" />
+    <MESSAGE value="除注册外的基础功能已完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="除注册外的基础功能已完成" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/firstweb/web/image/decoration/background.jpg">
@@ -1101,13 +1100,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/js/showSearchFriendResult.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="28" column="53" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/service/FriendService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -1153,13 +1145,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="33" column="79" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/entity/Exhibit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-20">
@@ -1169,15 +1154,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/UpdateFriendServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        <state relative-caret-position="517">
+          <caret line="43" column="40" lean-forward="true" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/js/showSearchFriendResult.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="27" column="101" selection-start-line="27" selection-start-column="101" selection-end-line="27" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="46" column="36" lean-forward="true" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="358" column="39" selection-start-line="358" selection-start-column="39" selection-end-line="358" selection-end-column="39" />
+        <state relative-caret-position="320">
+          <caret line="358" column="30" selection-start-line="358" selection-start-column="30" selection-end-line="358" selection-end-column="30" />
         </state>
       </provider>
     </entry>
