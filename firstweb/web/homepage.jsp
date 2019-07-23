@@ -1,7 +1,9 @@
 <%@ page import="entity.Exhibit" %>
 <%@ page import="dao.impl.ExhibitDaoImpl" %>
 <%@ page import="java.util.List" %>
-<%@ page import="entity.User" %><%--
+<%@ page import="entity.User" %>
+<%@ page import="dao.impl.UserDaoImpl" %>
+<%@ page import="service.UserService" %><%--
   Created by IntelliJ IDEA.
   User: lenovo
   Date: 2019/7/22
@@ -32,9 +34,14 @@
             <li class="layui-nav-item"><a href="search.jsp">搜索</a></li>
             <%
                 User user = null;
-                if(session.getAttribute("me") != null){
-                    user = (User) session.getAttribute("me");
-                    if(user.getPermission() == 0){
+                UserService us = new UserService(new UserDaoImpl());
+                if (session.getAttribute("me") != null) {
+                    user = us.getUser(((User) session.getAttribute("me")).getId());
+                    if (user.getPermission() == 0) {
+                        session.setAttribute("permission", "true");
+                    }
+
+                    if ("true".equals(session.getAttribute("permission"))){
             %>
             <li class="layui-nav-item">
                 <a>后台管理（需管理员权限）</a>
@@ -51,7 +58,7 @@
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <%
-                    if(user != null){
+                    if (user != null) {
                 %>
 
                 <a>
@@ -59,15 +66,15 @@
                     <%= user.getName()%>
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="personalpage.jsp">个人信息</a></dd>
+                    <dd><a href="personalpage.jsp?id=<%=user.getId()%>">我的主页</a></dd>
+                    <dd><a href="selfManage.jsp">信息管理</a></dd>
                     <dd><a href="friends.jsp">好友列表</a></dd>
                     <dd><a href="backlove.jsp">收藏夹</a></dd>
-                    <dd><a href="">退出登录</a></dd>
+                    <dd><a href="logout">退出登录</a></dd>
                 </dl>
 
                 <%
-                }
-                else {
+                } else {
                 %>
 
                 <a>

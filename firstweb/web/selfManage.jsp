@@ -1,4 +1,6 @@
-<%@ page import="entity.User" %><%--
+<%@ page import="entity.User" %>
+<%@ page import="service.UserService" %>
+<%@ page import="dao.impl.UserDaoImpl" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/23
@@ -23,18 +25,23 @@
             <li class="layui-nav-item"><a href="search.jsp">搜索</a></li>
             <%
                 User user = null;
+                UserService us = new UserService(new UserDaoImpl());
                 if (session.getAttribute("me") != null) {
-                    user = (User) session.getAttribute("me");
+                    user = us.getUser(((User) session.getAttribute("me")).getId());
                     if (user.getPermission() == 0) {
-            %>
-            <li class="layui-nav-item">
-                <a>后台管理（需管理员权限）</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="userManage.jsp">人员管理</a></dd>
-                    <dd><a href="exhibitManager.jsp">作品管理</a></dd>
-                </dl>
-            </li>
-            <%
+                        session.setAttribute("permission", "true");
+                    }
+
+                     if ("true".equals(session.getAttribute("permission"))){
+                        %>
+                        <li class="layui-nav-item">
+                            <a>后台管理（需管理员权限）</a>
+                            <dl class="layui-nav-child">
+                                <dd><a href="userManage.jsp">人员管理</a></dd>
+                                <dd><a href="exhibitManager.jsp">作品管理</a></dd>
+                            </dl>
+                        </li>
+                        <%
                     }
                 }
             %>
@@ -50,10 +57,11 @@
                     <%= user.getName()%>
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="personalpage.jsp">个人信息</a></dd>
+                    <dd><a href="personalpage.jsp?id=<%=user.getId()%>">我的主页</a></dd>
+                    <dd><a href="selfManage.jsp">信息管理</a></dd>
                     <dd><a href="friends.jsp">好友列表</a></dd>
                     <dd><a href="backlove.jsp">收藏夹</a></dd>
-                    <dd><a href="">退出登录</a></dd>
+                    <dd><a href="logout">退出登录</a></dd>
                 </dl>
 
                 <%
@@ -81,11 +89,16 @@
                 <li class="layui-nav-item layui-nav-itemed">
                     <a class="">用户相关</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="personalpage.jsp">个人信息</a></dd>
+                        <dd><a href="personalpage.jsp?id=<%=user.getId()%>">我的主页</a></dd>
+                        <dd><a href="selfManage.jsp">信息管理</a></dd>
                         <dd><a href="friends.jsp">好友列表</a></dd>
                         <dd><a href="backlove.jsp">收藏夹</a></dd>
                     </dl>
                 </li>
+
+                <%
+                if ("true".equals(session.getAttribute("permission"))){
+                %>
                 <li class="layui-nav-item">
                     <a>管理界面</a>
                     <dl class="layui-nav-child">
@@ -93,6 +106,9 @@
                         <dd><a href="exhibitManager.jsp">展品管理</a></dd>
                     </dl>
                 </li>
+                <%
+                    }
+                %>
             </ul>
         </div>
     </div>
@@ -101,7 +117,7 @@
         <!-- 内容主体区域 -->
         <form class="layui-form">
             <div class="layui-form-item">
-                <label for="modify_name" class="layui-form-label">用户名*</label>
+                <label for="modify_name" class="layui-form-label">名称*</label>
                 <div class="layui-input-block">
                     <input type="text" class="layui-input" id="modify_name" placeholder="Enter name"
                            value="<%=user.getName()%>">
@@ -133,8 +149,12 @@
                 </div>
             </div>
 
+
             <button type="button" class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius">
-                <a onclick="check()">确认修改</a>
+                <a onclick="check(<%=user.getId()%>)">确认修改</a>
+            </button>
+            <button type="button" class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius">
+                <a onclick="window.location.href='personalpage.jsp?id=<%=user.getId()%>'">查看我的主页</a>
             </button>
         </form>
 
@@ -156,14 +176,16 @@
 <script src="framework/layui/layui.js"></script>
 <script src="js/hintShow.js"></script>
 <script src="js/formcheck.js"></script>
+<script src="js/md5.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function () {
         var element = layui.element;
     });
 
+    var isEmail = /^([a-z0-9A-Z]+[-|.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/;
 
-    var check = function () {
+    var check = function (id) {
         var name = $("#modify_name").val();
         var email = $("#modify_mail").val();
         var sig = $("#modify_sig").val();
@@ -174,20 +196,25 @@
         } else {
             if (!checkNameValid(name)) {
                 show("您的用户名输入不合法");
-            } else if (!checkEmailValid(email)) {
+            } else if (!isEmail.test(email)) {
                 show("您的邮箱输入不合法");
             } else {
-                submit(name,email,sig,pwd);
+                submit(id,name,email,sig,pwd);
             }
         }
     };
+    /*前端md5加密*/
+    var modifyPwd = function (pwd) {
+        return $.md5(pwd);
+    };
 
-    var submit = function (name, email, sig, pwd) {
-        $.post("./", {
+    var submit = function (id,name, email, sig, pwd) {
+        $.post("./modifyself", {
+            id:id,
             name: name,
             email: email,
             sig: sig,
-            pwd: pwd
+            pwd: modifyPwd(pwd)
         }, function (result) {
             var jsonObject = JSON.parse(result);
             if (jsonObject.success === true) {

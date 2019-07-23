@@ -32,15 +32,17 @@ public class UserService {
         return userDao.getUser(id);
     }
 
-    public List<Exhibit> getLoves(User user){
-        ExhibitDaoImpl exhibitDao = new ExhibitDaoImpl();
+    public void updateMessage(int id,String name, String email, String sig){
+        userDao.updateMessage(id,name,email,sig);
+    }
 
-        int[] exs = userDao.getLoves(user);
-        List<Exhibit> list = new ArrayList<>();
-        for (int ex : exs) {
-            list.add(exhibitDao.getExhibit(ex));
-        }
-        return list;
+    public boolean checkPwd(int id, String pwd){
+        return getUser(id).getPassword().equals(pwd);
+    }
+
+    public boolean checkName(int id, String name){
+        User user = userDao.checkName(name);
+        return user == null || user.getId() == id;
     }
 
 }

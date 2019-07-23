@@ -1,17 +1,26 @@
 package entity;
 
 
+import java.sql.Date;
+
 public class User {
     protected int id;
     protected String name;
     protected String password;
     protected String email;
     protected int permission;
-
-    protected String loves;
-    protected String friends;
     protected String signature;
-    protected String invite;
+    protected Date lastlogin;
+
+    public Date getLastlogin() {
+        return lastlogin;
+    }
+
+    public void setLastlogin(Date lastlogin) {
+        this.lastlogin = lastlogin;
+    }
+
+
 
     public String getEmail() {
         return email;
@@ -22,14 +31,6 @@ public class User {
     }
 
 
-    public String getInvite() {
-        return invite;
-    }
-
-    public void setInvite(String invite) {
-        this.invite = invite;
-    }
-
     public String getSignature() {
         return signature;
     }
@@ -38,21 +39,7 @@ public class User {
         this.signature = signature;
     }
 
-    public String getFriends() {
-        return friends;
-    }
 
-    public void setFriends(String friends) {
-        this.friends = friends;
-    }
-
-    public String getLoves() {
-        return loves;
-    }
-
-    public void setLoves(String loves) {
-        this.loves = loves;
-    }
 
     public User() {
     }
