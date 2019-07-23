@@ -1,12 +1,8 @@
 package Servlet;
 
 import com.alibaba.fastjson.JSONObject;
-import dao.impl.ExhibitDaoImpl;
-import dao.impl.FriendDaoImpl;
-import dao.impl.LoveDaoImpl;
 import dao.impl.UserDaoImpl;
-import service.FriendService;
-import service.LoveService;
+import service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,38 +11,32 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/updatefriend")
-public class UpdateFriendServlet extends HttpServlet {
+@WebServlet("/updateuser")
+public class UpdateUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int uid,fid;
-        String func;
+        String func = "";
+        int uid = 0;
+        int permission = 0;
+        UserService us = new UserService(new UserDaoImpl());
+        JSONObject object = new JSONObject();
         try {
-            uid = Integer.parseInt(request.getParameter("uid"));
-            fid = Integer.parseInt(request.getParameter("fid"));
-
             func = request.getParameter("func");
+            uid = Integer.parseInt(request.getParameter("id"));
+
+            if ("del".equals(func)){
+                us.delUser(uid);
+            }else if ("changePer".equals(func)){
+                permission = Integer.parseInt(request.getParameter("permission"));
+                us.updatePermission(permission,uid);
+            }
         }catch (Exception e){
-            JSONObject object = new JSONObject();
             object.put("success", false);
             response.getWriter().println(object);
             return;
         }
-
-        FriendService fs = new FriendService(new UserDaoImpl(),new FriendDaoImpl());
-        JSONObject object = new JSONObject();
-        if ("del".equals(func)){
-            fs.delFriend(uid,fid);
-            object.put("result", "成功删除好友");
-        }else if ("add".equals(func)){
-            fs.addFriend(uid,fid);
-            object.put("result", "好友添加成功");
-        }else {
-            object.put("result", "空操作");
-        }
-
-
         object.put("success", true);
         response.getWriter().println(object);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

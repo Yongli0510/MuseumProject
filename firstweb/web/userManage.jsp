@@ -40,7 +40,6 @@
             <li class="layui-nav-item"><a href="homepage.jsp">首页</a></li>
             <li class="layui-nav-item"><a href="search.jsp">搜索</a></li>
             <%
-                User user = null;
                 UserService us = new UserService(new UserDaoImpl());
                 if (session.getAttribute("me") != null) {
                     user = us.getUser(((User) session.getAttribute("me")).getId());
@@ -131,39 +130,17 @@
         </div>
     </div>
 
+
     <div class="layui-body">
-        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-            <legend>在已有展品中搜索：</legend>
-        </fieldset>
-
-        <div class="demoTable">
-            <div class="layui-inline">
-                <label class="layui-form-label">展品名称</label>
-                <div class="layui-input-inline">
-                    <input class="layui-input" id="name" autocomplete="off">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">简介</label>
-                <div class="layui-input-inline">
-                    <input class="layui-input" id="detail" autocomplete="off">
-                </div>
-            </div>
-            <div class="layui-inline">
-                <label class="layui-form-label">馆藏地点</label>
-                <div class="layui-input-inline">
-                    <input class="layui-input" id="place" autocomplete="off">
-                </div>
-            </div>
-            <button class="layui-btn" data-type="reload">搜索</button>
-        </div>
 
         <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
-            <legend>添加新展品：</legend>
+            <legend>用户列表：</legend>
         </fieldset>
-        <button class="layui-btn" id="addExhibit" style="margin-left: 30px">添加新展品</button>
 
-        <table class="layui-hide" id="test" lay-filter="demo"></table>
+            <%--这里是添加新的--%>
+        <button class="layui-btn" id="umAddUser" style="margin-left: 30px">添加新用户</button>
+
+        <table class="layui-hide" id="umTable" lay-filter="demo"></table>
 
     </div>
 
@@ -173,94 +150,79 @@
     </div>
 </div>
 
-<form class="layui-form" id="information" method="post" style="display: none" lay-filter="informationForm">
+
+<%--用于添加新用户的表单--%>
+<form class="layui-form" id="newUserForm" method="post" style="display: none" lay-filter="newUserForm">
     <div class="layui-form-item" style="display: none">
         <label class="layui-form-label">类型</label>
         <div class="layui-input-inline">
-            <input name="type"  id="type" autocomplete="off" class="layui-input">
+            <input name="um_type"  id="um_type" autocomplete="off" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item" style="display: none">
         <label class="layui-form-label">id</label>
         <div class="layui-input-inline">
-            <input name="id"  id="id" autocomplete="off" class="layui-input">
+            <input name="um_id"  id="um_id" autocomplete="off" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
-        <label class="layui-form-label">作品名称</label>
+        <label class="layui-form-label">用户名</label>
         <div class="layui-input-inline">
-            <input name="name" id="nam" lay-verify="name" autocomplete="off" class="layui-input">
+            <input name="um_name" id="um_name" lay-verify="um_name" autocomplete="off" class="layui-input">
         </div>
     </div>
     <div class="layui-form-item">
-        <label class="layui-form-label">简介</label>
+        <label class="layui-form-label">邮 箱</label>
         <div class="layui-input-inline">
-            <input name="detail" id="det" autocomplete="off" class="layui-input">
+            <input name="um_mail" id="um_mail" autocomplete="off" class="layui-input">
         </div>
     </div>
 
     <div class="layui-form-item">
-        <label class="layui-form-label">馆藏地点</label>
+        <label class="layui-form-label">密 码</label>
         <div class="layui-input-inline">
-            <input name="place" id="pla" autocomplete="off" class="layui-input">
+            <input name="um_password" id="um_password" type="password" autocomplete="off" class="layui-input">
         </div>
     </div>
 
     <div class="layui-form-item">
-        <label class="layui-form-label">作品完成年代</label>
+        <label class="layui-form-label">权限设置</label>
         <div class="layui-input-inline">
-            <input name="age"  id="age" autocomplete="off" class="layui-input">
+            <input name="um_per"  id="um_per" autocomplete="off" class="layui-input">
         </div>
     </div>
 
     <div class="layui-form-item">
-        <label class="layui-form-label">出土时间</label>
+        <label class="layui-form-label">个性签名</label>
         <div class="layui-input-inline">
-            <input name="year" id="year" type="number" autocomplete="off" class="layui-input">
+            <input name="um_sig" id="um_sig" autocomplete="off" class="layui-input">
         </div>
     </div>
 
-    <div class="layui-form-item">
-        <label class="layui-form-label">图片文件名</label>
-        <div class="layui-input-inline">
-            <input name="pic" id="pic" autocomplete="off" class="layui-input">
-        </div>
-    </div>
 
-    <div class="layui-form-item">
-        <label class="layui-form-label">上传图片(如果需要修改图片)</label>
-        <div class="layui-upload">
-            <button type="button" class="layui-btn" id="chooseImage">上传图片</button>
-            <div class="layui-upload-list" style="">
-                <img class="layui-upload-img" id="imageShow">
-            </div>
-            <p id="demoText"></p>
-        </div>
-    </div>
 
     <div class="layui-form-item">
         <div class="layui-input-block">
-            <button id="save" class="layui-btn">保存修改</button>
+            <button id="um_save" class="layui-btn">保存修改</button>
         </div>
     </div>
 </form>
 
-<script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+<script type="text/html" id="um_bar">
     <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
-<script src="framework/layui/layui.js"></script>
-<script type="text/javascript" src="js/exhibitManage.js"></script>
-
-<script>
-    //JavaScript代码区域
-    layui.use('element', function () {
-        var element = layui.element;
-    });
-
-
+<script type="text/html" id="um_permission">
+    <a class="layui-btn layui-btn-xs" lay-event="to_admin">升级</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="to_normal">降级</a>
 </script>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="framework/layui/layui.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/hintShow.js"></script>
+<script type="text/javascript" src="js/usermanage.js"></script>
+
 </body>
 </html>

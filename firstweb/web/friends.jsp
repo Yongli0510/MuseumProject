@@ -135,6 +135,7 @@
                     <li class="layui-this">我的好友</li>
                     <li>好友查询</li>
                     <li>收到的邀请</li>
+                    <li>好友申请记录</li>
                 </ul>
 
                 <div class="layui-tab-content">
@@ -189,15 +190,15 @@
                         <%--好友查询栏目--%>
                         <form class="layui-form">
                             <div class="layui-form-item">
-                                <button type="button" class="layui-form-label layui-btn"><a class="layui-icon">GO
+                                <button type="button" class="layui-form-label layui-btn"><a class="layui-icon" onclick="showSearchUser(<%=me.getId()%>)">GO
                                     &#xe609;</a></button>
                                 <div class="layui-input-block">
-                                    <input type="text" autocomplete="off" placeholder="请输入" class="layui-input">
+                                    <input type="text" id="friend_search" autocomplete="off" placeholder="请输入" class="layui-input">
                                 </div>
                             </div>
                         </form>
                         <hr>
-                        <div id="find_friend_result">
+                        <div id="find_friend_result" class="layui-row layui-col-space15">
                             <%--展示查询的结果--%>
                         </div>
                     </div>
@@ -246,6 +247,61 @@
                         </div>
 
                     </div>
+
+
+                    <div class="layui-tab-item">
+                        <%--展示所有的好友申请记录--%>
+                        <div class="layui-row layui-col-space15">
+                            <%
+
+                                List<Invite> allInvites = is.getALLInvites(me.getId());
+
+                                if (allInvites.isEmpty()){
+                                    System.out.println("empty");
+                                }else {
+                                    for (Invite invite : allInvites) {
+                                        User sender = us.getUser(invite.getSendId());
+                                        User resver = us.getUser(invite.getResId());
+                            %>
+                            <div class="layui-col-md6">
+                                <div class="layui-card">
+                                    <div class="layui-card-header" data-toggle="popover"
+                                         onclick="window.location.href='personalpage.jsp?id=<%=sender.getId()%>'">
+                                        发送方：<%=sender.getName()%>
+                                    </div>
+                                    <div class="layui-card-body" data-toggle="popover"
+                                         onclick="window.location.href='personalpage.jsp?id=<%=sender.getId()%>'">
+                                        接收方：<%=resver.getName()%>
+                                    </div>
+
+                                    <div class="layui-btn-group">
+                                        <%
+                                            if (invite.getAgree()==0){
+                                                %>
+                                                <button type="button" class="layui-btn layui-btn-xs layui-btn-disabled"><i class="layui-icon"></i>未处理</button>
+                                                <%
+                                            }else if (invite.getAgree() == 1){
+                                                %>
+                                                <button type="button" class="layui-btn layui-btn-xs layui-btn-disabled"><i class="layui-icon"></i>已同意</button>
+                                                <%
+                                            }else{
+                                                %>
+                                                <button type="button" class="layui-btn layui-btn-xs layui-btn-disabled"><i class="layui-icon"></i>已拒绝</button>
+                                                <%
+                                            }
+                                        %>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <%
+                                    }
+                                }
+                            %>
+                        </div>
+
+                    </div>
+
                 </div>
 
 
@@ -267,6 +323,8 @@
         crossorigin="anonymous"></script>
 <script src="framework/layui/layui.js"></script>
 <script src="js/hintShow.js"></script>
+<script src="js/sendinvite.js"></script>
+<script src="js/showSearchFriendResult.js"></script>
 <script>
     //JavaScript代码区域
     layui.use('element', function () {
@@ -282,13 +340,13 @@
         }, function (result) {
             var jsonObject = JSON.parse(result);
             if (jsonObject.success === true) {
-                show("修改成功");
+                show(jsonObject.success);
                 setTimeout(function () {
                     location.reload();
                 }, 2000);
 
             } else {
-                show("修改失败");
+                show("失败");
                 setTimeout(function () {
                     location.reload();
                 }, 2000);
@@ -304,7 +362,7 @@
         }, function (result) {
             var jsonObject = JSON.parse(result);
             if (jsonObject.success === true) {
-                show("操作成功");
+                show("好友申请发生成功");
                 setTimeout(function () {
                     location.reload();
                 }, 2000);
