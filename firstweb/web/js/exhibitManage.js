@@ -74,9 +74,7 @@ layui.use('table', function(){
 
     table.on('tool(demo)', function(obj){
         var data = obj.data;
-        if(obj.event === 'detail'){
-            layer.msg('ID：'+ data.id + ' 的查看操作');
-        } else if(obj.event === 'del'){
+        if(obj.event === 'del'){
             layer.confirm('真的删除该展品吗？', function(index){
                 $.ajax({
                     url:'exhibitManageServlet',
