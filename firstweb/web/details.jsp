@@ -14,7 +14,7 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>商品详情</title>
+    <title>展品详情</title>
 
     <link rel="stylesheet" href="framework/layui/css/layui.css" media="all">
     <link rel="stylesheet" href="css/homepage.css">

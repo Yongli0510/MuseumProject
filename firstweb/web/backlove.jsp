@@ -6,12 +6,19 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    User user = (User)session.getAttribute("me");
+    if(user == null){
+        out.write("<p>您尚未登录，没有访问该页面的权限！<a href='javascript:history.back(-1)'>返回上一页</a></p>");
+        return;
+    }
 
+%>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>个人信息</title>
+    <title>收藏夹</title>
     <link rel="stylesheet" href="framework/layui/css/layui.css">
 </head>
 <body class="layui-layout-body">
@@ -23,10 +30,8 @@
             <li class="layui-nav-item"><a href="homepage.jsp">首页</a></li>
             <li class="layui-nav-item"><a href="search.jsp">搜索</a></li>
             <%
-                User user = null;
-                if(session.getAttribute("me") != null){
-                    user = (User) session.getAttribute("me");
-                    if(user.getPermission() == 0){
+                if(user.getPermission() == 0){
+
             %>
             <li class="layui-nav-item">
                 <a>后台管理（需管理员权限）</a>
@@ -36,20 +41,17 @@
                 </dl>
             </li>
             <%
-                    }
                 }
             %>
         </ul>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
-                <%
-                    if(user != null){
-                %>
 
                 <a>
                     <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
                     <%= user.getName()%>
                 </a>
+
                 <dl class="layui-nav-child">
                     <dd><a href="personalpage.jsp">个人信息</a></dd>
                     <dd><a href="friends.jsp">好友列表</a></dd>
@@ -57,21 +59,6 @@
                     <dd><a href="">退出登录</a></dd>
                 </dl>
 
-                <%
-                }
-                else {
-                %>
-
-                <a>
-                    未登录
-                </a>
-                <dl class="layui-nav-child">
-                    <dd><a href="log.jsp">登录</a></dd>
-                    <dd><a href="sign.jsp">注册</a></dd>
-                </dl>
-                <%
-                    }
-                %>
             </li>
         </ul>
     </div>
@@ -88,6 +75,11 @@
                         <dd><a href="backlove.jsp">收藏夹</a></dd>
                     </dl>
                 </li>
+
+                <%
+                    if(user.getPermission() == 0){
+
+                %>
                 <li class="layui-nav-item">
                     <a>管理界面</a>
                     <dl class="layui-nav-child">
@@ -95,6 +87,10 @@
                         <dd><a href="exhibitManager.jsp">展品管理</a></dd>
                     </dl>
                 </li>
+                <%
+                    }
+                %>
+
             </ul>
         </div>
     </div>

@@ -14,6 +14,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    User user = (User)session.getAttribute("me");
+    if(user == null){
+        out.write("<p>您尚未登录，没有访问该页面的权限！<a href='javascript:history.back(-1)'>返回上一页</a></p>");
+        return;
+    }
+
+%>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +31,7 @@
     <link rel="stylesheet" href="css/homepage.css">
     <link rel="stylesheet" href="css/details.css">
 
-    <title>主页</title>
+    <title>个人主页</title>
 </head>
 <body>
 <div class="container">

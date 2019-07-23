@@ -16,28 +16,30 @@ function goPage(page) {
             var jsonObject = JSON.parse(data);
             var list = jsonObject.list;
             var tabData = '<div>';
-            var totalNum = Math.min(jsonObject.currentPage * jsonObject.pageSize,jsonObject.totalNum) - (jsonObject.currentPage - 1) * jsonObject.pageSize;
-            for (var i = 0; i < totalNum; i++) {
-                if(i == 3)
-                    tabData += '</div><div>';
-                tabData += '<div class="layui-inline layui-bg-cyan" style="width: 300px;height: 600px">';
-                tabData += '<img style="width: 300px;height: 300px" src="image/exhibit/' + list[i].pic + '.jpg">';
-                tabData += '<div>';
-                tabData += '<h5>' + list[i].name + '</h5>';
-                tabData += '<p>' + list[i].detail + '</p>';
-                tabData += '<a href="details.jsp?id=' + list[i].id + '" name="a1" class="layui-btn">查看详情</a>';
-                tabData += '</div></div>';
-            }
-            if(totalNum < 3){
-                for(var i = 3 - totalNum; i > 0;i--){
+            if(jsonObject.totalNum != 0){
+                var totalNum = Math.min(jsonObject.currentPage * jsonObject.pageSize,jsonObject.totalNum) - (jsonObject.currentPage - 1) * jsonObject.pageSize;
+                for (var i = 0; i < totalNum; i++) {
+                    if(i == 3)
+                        tabData += '</div><div>';
                     tabData += '<div class="layui-inline layui-bg-cyan" style="width: 300px;height: 600px">';
-                    tabData += '</div>';
+                    tabData += '<img style="width: 300px;height: 300px" src="image/exhibit/' + list[i].pic + '.jpg">';
+                    tabData += '<div>';
+                    tabData += '<h5>' + list[i].name + '</h5>';
+                    tabData += '<p>' + list[i].detail + '</p>';
+                    tabData += '<a href="details.jsp?id=' + list[i].id + '" name="a1" class="layui-btn">查看详情</a>';
+                    tabData += '</div></div>';
                 }
-            }
-            if(totalNum > 3 && totalNum < 6){
-                for(var i = 6 - totalNum; i > 0;i--){
-                    tabData += '<div class="layui-inline layui-bg-cyan" style="width: 300px;height: 600px">';
-                    tabData += '</div>';
+                if(totalNum < 3){
+                    for(var i = 3 - totalNum; i > 0;i--){
+                        tabData += '<div class="layui-inline layui-bg-cyan" style="width: 300px;height: 600px">';
+                        tabData += '</div>';
+                    }
+                }
+                if(totalNum > 3 && totalNum < 6){
+                    for(var i = 6 - totalNum; i > 0;i--){
+                        tabData += '<div class="layui-inline layui-bg-cyan" style="width: 300px;height: 600px">';
+                        tabData += '</div>';
+                    }
                 }
             }
             tabData += '</div>';
