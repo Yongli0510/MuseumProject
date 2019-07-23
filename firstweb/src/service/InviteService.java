@@ -29,7 +29,10 @@ public class InviteService {
     public void refuse(int sendId, int resId){
         //将agree值设为2
         idi.updateAgree(sendId,resId,2);
+    }
 
+    public void addNewInvitation(int sendId, int resId){
+        idi.addNewInvitation(sendId,resId);
     }
 
 

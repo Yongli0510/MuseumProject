@@ -39,6 +39,8 @@ public class InviteHandleServlet extends HttpServlet {
             is.agree(sendId, resId);
         } else if ("refuse".equals(func)) {
             is.refuse(sendId, resId);
+        }else if ("new".equals(func)){
+            is.addNewInvitation(sendId,resId);
         }
 
         JSONObject object = new JSONObject();

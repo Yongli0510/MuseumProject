@@ -16,4 +16,9 @@ public class InviteDaoImpl extends DAO<Invite> {
         return getForList(sql, resId, 0);
     }
 
+    public void addNewInvitation(int sendId, int resId) {
+        String sql = "INSERT INTO invite (sendId, resID, agree) VALUES (? , ?, 0)";
+        update(sql,sendId,resId);
+    }
+
 }

@@ -28,6 +28,10 @@ public class UserService {
         return userDao.getUser(name);
     }
 
+    public void addUser(String name, String password,int permission, String email, String signature){
+        userDao.addUser(name,password,permission,email,signature);
+    }
+
     public User getUser(int id){
         return userDao.getUser(id);
     }
@@ -45,4 +49,16 @@ public class UserService {
         return user == null || user.getId() == id;
     }
 
+    public List<User> searchUser(String name){
+        return userDao.searchUser(name);
+    }
+
+    public void updatePermission(int level, int uid){
+        userDao.updatePermission(level,uid);
+    }
+
+
+    public void delUser(int id){
+        userDao.delUser(id);
+    }
 }

@@ -134,7 +134,7 @@
                     %>
                     <%--添加为好友--%>
                     <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
-                            onclick="updateMyFriend(<%=me.getId()%>,<%=friend.getId()%>,'add')">
+                            onclick="sendInvitation(<%=me.getId()%>,<%=friend.getId()%>)">
                         <i class="layui-icon">&#xe67b;</i>
                     </button>
                     <%
@@ -186,7 +186,8 @@
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="framework/layui/layui.js"></script>
-
+<script src="js/hintShow.js"></script>
+<script src="js/sendinvite.js"></script>
 <script type="text/javascript">
     //JavaScript代码区域
     layui.use('element', function(){
@@ -202,16 +203,16 @@
         }, function (result) {
             var jsonObject = JSON.parse(result);
             if (jsonObject.success === true) {
-                show("修改成功");
+                show("成功");
                 setTimeout(function () {
                     location.reload();
-                }, 2000);
+                }, 1000);
 
             } else {
-                show("修改失败");
+                show("失败");
                 setTimeout(function () {
                     location.reload();
-                }, 2000);
+                }, 1000);
             }
         });
     };

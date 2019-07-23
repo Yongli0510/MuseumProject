@@ -17,24 +17,40 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 @WebServlet("/friendsearch")
 public class FriendSearchServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
+        String name = "";
+        if(request.getParameter("name") != null)
+            name = request.getParameter("name");
 
-
-        if(request.getParameter("agree") != null){
-
-        }
-
-        if(request.getParameter("refuse") != null){
-
-        }
 
         FriendService fs = new FriendService(new UserDaoImpl());
         UserService us = new UserService(new UserDaoImpl());
 
+        int page = 1;
+        if(request.getParameter("page") != null)
+            page = Integer.parseInt(request.getParameter("page"));
+
+
+        List<User> list = us.searchUser(name);
+        //
+        for (User user : list) {
+            System.out.println(user.getName());
+        }
+        //
+        PageService pageService = new PageService(new ExhibitDaoImpl());
+        Page<User> bean = pageService.page(page,list);
+
+        String json = JSON.toJSONString(bean);
+
+
+        response.setCharacterEncoding("UTF-8");
+        PrintWriter out = response.getWriter();
+        out.append(json);
 
     }
 
