@@ -38,6 +38,8 @@ public class UpdateLoveServlet extends HttpServlet {
             ls.updatePublicLevel(userId,artId,newLevel);
         }else if ("del".equals(func)){
             ls.delLove(userId,artId);
+        }else if ("add".equals(func)){
+            ls.addLove(userId,artId);
         }
 
 

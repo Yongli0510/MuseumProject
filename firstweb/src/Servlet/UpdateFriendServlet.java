@@ -36,6 +36,8 @@ public class UpdateFriendServlet extends HttpServlet {
 
         if ("del".equals(func)){
             fs.delFriend(uid,fid);
+        }else if ("add".equals(func)){
+            fs.addFriend(uid,fid);
         }
 
         JSONObject object = new JSONObject();

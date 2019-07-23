@@ -7,6 +7,7 @@ import entity.Exhibit;
 import entity.LoveItem;
 import entity.User;
 
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,4 +42,9 @@ public class LoveService {
         loveDao.deleteLove(userId,artId);
     }
 
+    public void addLove(int userId,int artId){
+        long time = System.currentTimeMillis();
+        Date date = new Date(time);
+        loveDao.addLove(userId,artId,date);
+    }
 }

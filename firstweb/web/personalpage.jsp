@@ -124,15 +124,17 @@
                                 if (fs.isFriend(me.getId(), friend.getId())) {
                     %>
                     <%--删除好友--%>
-                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
-                        <i class="layui-icon">&#xe640;</i>
+                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                            onclick="updateMyFriend(<%=me.getId()%>,<%=friend.getId()%>,'del')">
+                        <i class="layui-icon" >&#xe640;</i>
                     </button>
 
                     <%
                     } else {
                     %>
                     <%--添加为好友--%>
-                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                            onclick="updateMyFriend(<%=me.getId()%>,<%=friend.getId()%>,'add')">
                         <i class="layui-icon">&#xe67b;</i>
                     </button>
                     <%
@@ -141,7 +143,8 @@
                         //如果这个是该用户的个人页面
                     %>
                     <%--修改个人信息--%>
-                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                            onclick="window.location.href='selfManage.jsp'">
                         <i class="layui-icon">&#xe716;</i>
                     </button>
                     <%
@@ -191,19 +194,27 @@
 
     });
 
-    layui.use('layer', function(){
-        var layer = layui.layer;
-        var loadstr = '<video width="100%" height="100%"  controls="controls" autobuffer="autobuffer"  autoplay="autoplay" loop="loop">' +
-            '<source src="video/HEXGRID111_x264.mp4" type="video/mp4"></video>';
-        $('#video').click(function () {
-            layer.open({
-                type: 1,
-                title: '介绍视频',
-                content: loadstr,
-                area: ['600px', '600px']
-            });
+    var updateMyFriend = function (UID, FID, FUNC) {
+        $.post("./updatefriend", {
+            uid: UID,
+            fid: FID,
+            func: FUNC
+        }, function (result) {
+            var jsonObject = JSON.parse(result);
+            if (jsonObject.success === true) {
+                show("修改成功");
+                setTimeout(function () {
+                    location.reload();
+                }, 2000);
+
+            } else {
+                show("修改失败");
+                setTimeout(function () {
+                    location.reload();
+                }, 2000);
+            }
         });
-    });
+    };
 
 </script>
 </body>

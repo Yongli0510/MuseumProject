@@ -110,7 +110,10 @@
             <p>出土时间：<%=exhibit.getYear()%>年</p>
             <p>简介：<%=exhibit.getDetail()%></p>
             <p>热度：<%=exhibit.getHotDegree() + 1%></p>
-            <button class="layui-btn"><i class="fa fa-heart" aria-hidden="true"></i>收藏</button>
+            <button class="layui-btn"><i class="fa fa-heart" aria-hidden="true"
+            onclick="loveIt(<%=user==null?-1:user.getId()%>,<%=exhibit.getId()%>)">
+            </i>收藏
+            </button>
             <button class="layui-btn" id="video"><i class="fa fa-play" aria-hidden="true"></i>播放介绍视频</button>
 
         </div>
@@ -123,7 +126,7 @@
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="framework/layui/layui.js"></script>
-
+<script src="js/hintShow.js"></script>
 <script type="text/javascript">
     //JavaScript代码区域
     layui.use('element', function(){
@@ -144,6 +147,37 @@
             });
         });
     });
+
+    var loveIt = function (userId,artId) {
+        if (userId < 0) {
+            show("你必须先登录");
+        }else {
+            updataMyLove(userId,artId,"add");
+        }
+    };
+
+    var updataMyLove = function (userid,artid,func) {
+        $.post("./updatelovelevel", {
+            userId:userid,
+            artId:artid,
+            newLevel: 0,
+            func:func
+        }, function (result) {
+            var jsonObject = JSON.parse(result);
+            if (jsonObject.success === true) {
+                show("添加成功");
+                setTimeout(function () {
+                    location.reload();
+                },2000);
+
+            } else {
+                show("添加失败");
+                setTimeout(function () {
+                    location.reload();
+                },2000);
+            }
+        });
+    };
 
 </script>
 </body>
