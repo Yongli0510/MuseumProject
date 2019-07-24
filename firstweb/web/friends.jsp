@@ -274,7 +274,7 @@
                                         发送方：<%=sender.getName()%>
                                     </div>
                                     <div class="layui-card-body" data-toggle="popover"
-                                         onclick="window.location.href='personalpage.jsp?id=<%=sender.getId()%>'">
+                                         onclick="window.location.href='personalpage.jsp?id=<%=resver.getId()%>'">
                                         接收方：<%=resver.getName()%>
                                     </div>
 

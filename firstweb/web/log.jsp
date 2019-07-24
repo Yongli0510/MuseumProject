@@ -24,12 +24,9 @@
     <link href="css/signin.css" rel="stylesheet">
 </head>
 
-
-
-<body class="layui-layout-body">
-<div class="layui-layout layui-layout-admin">
-        <form class="form-signin" id="log_form">
-        <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
+<body class="text-center">
+<form class="form-signin" id="log_form">
+    <h1 class="h3 mb-3 font-weight-normal">请登录</h1>
 
         <label for="log_name" class="sr-only">账户</label>
         <input type="text" id="log_name" name="log_name" class="form-control" placeholder="Name" required autofocus>
@@ -48,7 +45,7 @@
 
     </div>
 
-</div>
+
 
 
 
@@ -79,21 +76,31 @@
     };
 
     $("#to_log").click(function () {
-        $.post("./slog", {
-            log_name: $("#log_name").val(),
-            log_pwd: modifyPwd($("#log_pwd").val())
-        }, function (result) {
-            var jsonObject = JSON.parse(result);
-            if (jsonObject === null) {
-                $("#error_msg").show();
-            } else {
-                show("登录成功！<br>2秒后将自动跳转...");
-                setTimeout(function () {
-                    window.location.href=getCookie("currentPage");
-                },2000);
+        var name = $("#log_name").val();
+        var pwd = $("#log_pwd").val();
+        if (name == "")
+            show("请输入账户");
+        else if(pwd === "")
+            show("请输入密码");
+        else {
+            $.post("./slog", {
+                log_name:name ,
+                log_pwd: modifyPwd(pwd)
+            }, function (result) {
+                var jsonObject = JSON.parse(result);
+                if (jsonObject === null) {
+                    $("#error_msg").show();
+                } else {
+                    show("登录成功！<br>2秒后将自动跳转...");
+                    setTimeout(function () {
+                        window.location.href=getCookie("currentPage");
+                    },2000);
 
-            }
-        });
+                }
+            });
+        }
+
+
     });
 
 

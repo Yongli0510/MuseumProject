@@ -53,6 +53,7 @@ public class ShowFriendSearchServlet extends HttpServlet {
 
         String json = JSON.toJSONString(bean);
         System.out.println(json);
+        response.setCharacterEncoding("UTF-8");
         response.getWriter().append(json);
     }
 
