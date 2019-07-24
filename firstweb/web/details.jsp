@@ -170,10 +170,14 @@
                 },2000);
 
             } else {
-                show("添加失败");
-                setTimeout(function () {
-                    location.reload();
-                },2000);
+                if (jsonObject.loved === true) {
+                    show("您已经收藏了该展品");
+                }else{
+                    show("添加失败");
+                    setTimeout(function () {
+                        location.reload();
+                    },2000);
+                }
             }
         });
     };

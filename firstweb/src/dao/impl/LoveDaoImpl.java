@@ -33,4 +33,9 @@ public class LoveDaoImpl extends DAO<LoveItem> {
         update(sql,userId,artId,date);
     }
 
+    public LoveItem isLove(int userId, int artId){
+        String sql = "SELECT * FROM loves WHERE (userid = ? AND artid = ?)";
+        return get(sql,userId,artId);
+    }
+
 }

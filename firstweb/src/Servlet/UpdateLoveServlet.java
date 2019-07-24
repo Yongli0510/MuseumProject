@@ -33,17 +33,24 @@ public class UpdateLoveServlet extends HttpServlet {
         }
 
         LoveService ls = new LoveService(new LoveDaoImpl(),new ExhibitDaoImpl());
+        JSONObject object = new JSONObject();
 
         if ("setpublic".equals(func)){
             ls.updatePublicLevel(userId,artId,newLevel);
         }else if ("del".equals(func)){
             ls.delLove(userId,artId);
         }else if ("add".equals(func)){
-            ls.addLove(userId,artId);
+            if (!ls.isLove(userId,artId)){
+                ls.addLove(userId,artId);
+            }else {
+                object.put("success", false);
+                object.put("loved", true);
+                response.getWriter().println(object);
+                return;
+            }
         }
 
 
-        JSONObject object = new JSONObject();
         object.put("success", true);
         response.getWriter().println(object);
     }

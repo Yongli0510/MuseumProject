@@ -47,4 +47,8 @@ public class LoveService {
         Date date = new Date(time);
         loveDao.addLove(userId,artId,date);
     }
+
+    public boolean isLove(int userId, int artId){
+        return loveDao.isLove(userId,artId) != null;
+    }
 }

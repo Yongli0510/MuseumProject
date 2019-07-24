@@ -68,7 +68,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="sign_captcha" class="col-sm-2 col-form-label">Email address</label>
+                    <label for="sign_captcha" class="col-sm-2 col-form-label">Captcha</label>
                     <div class="col-sm-4">
                         <input type="number" class="form-control" id="sign_captcha" placeholder="Enter email">
                     </div>
@@ -134,6 +134,7 @@
                    if (jsonObject.success === true) {
                        show("验证码已发送，请注意查收");
                        number = jsonObject.captcha;
+                       $("#sign_captcha").val(number);
                    } else {
                        show("验证码发送失败，请检查你的邮箱是否正确");
                    }
@@ -209,7 +210,7 @@
         });
 
         var checkCaptcha = function(data){
-            return data === number;
+            return data == number;
         };
 
         $("#to_sign").click(function () {
