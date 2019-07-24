@@ -38,8 +38,10 @@ public class FriendService {
     }
 
     public void addFriend(int uid, int fid){
-        fd.addFriend(uid,fid);
-        fd.addFriend(fid,uid);
+        if (!isFriend(uid,fid)){
+            fd.addFriend(uid,fid);
+            fd.addFriend(fid,uid);
+        }
     }
 
 
