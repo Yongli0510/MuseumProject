@@ -6,7 +6,8 @@
 <%@ page import="service.LoveService" %>
 <%@ page import="dao.impl.LoveDaoImpl" %>
 <%@ page import="entity.LoveItem" %>
-<%@ page import="dao.impl.ExhibitDaoImpl" %><%--
+<%@ page import="dao.impl.ExhibitDaoImpl" %>
+<%@ page import="service.ExhibitRecService" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/13
@@ -126,48 +127,97 @@
 
     <div class="layui-body">
         <!-- 内容主体区域 -->
-        <div style="padding: 15px;">
-            <div style="padding: 20px; background-color: #F2F2F2;" id="loves_section">
-                <div class="layui-row layui-col-space15">
 
-                    <%
+        <div class="layui-tab">
+            <ul class="layui-tab-title">
+                <li class="layui-this">我的收藏品</li>
+                <li>藏品推荐</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
 
-                        LoveService ls = new LoveService(new LoveDaoImpl(),new ExhibitDaoImpl());
-                        List<LoveItem> loves = ls.getLoves(user);
-                        for (LoveItem love : loves) {
-                            Exhibit ex = ls.getLoveOne(love.getArtid());
-                    %>
-                    <div class="layui-col-md6">
-                        <div class="layui-card">
-                            <div class="layui-card-header"><%=ex.getName()%></div>
-                            <div class="layui-card-body">
-                                收藏展品的时间:<%=love.getTime()%><br>
-                                馆藏地点:<%=ex.getPlace()%><br>
-                                热度:<%=ex.getHotDegree()%><br>
-                                可见度：<%=love.getCanSee()==0?"不可见":"可见"%><br>
-                                <div class="layui-btn-group">
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=user.getId()%>,<%=ex.getId()%>,'setpublic',1)">公开</button>
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=user.getId()%>,<%=ex.getId()%>,'setpublic',0)">私有</button>
+                    <div style="padding: 15px;">
+                        <div style="padding: 20px; background-color: #F2F2F2;" id="loves_section">
+                            <div class="layui-row layui-col-space15">
+
+                                <%
+
+                                    LoveService ls = new LoveService(new LoveDaoImpl(),new ExhibitDaoImpl());
+                                    List<LoveItem> loves = ls.getLoves(user);
+                                    for (LoveItem love : loves) {
+                                        Exhibit ex = ls.getLoveOne(love.getArtid());
+                                %>
+                                <div class="layui-col-md6">
+                                    <div class="layui-card">
+                                        <div class="layui-card-header"><%=ex.getName()%></div>
+                                        <div class="layui-card-body">
+                                            收藏展品的时间:<%=love.getTime()%><br>
+                                            馆藏地点:<%=ex.getPlace()%><br>
+                                            热度:<%=ex.getHotDegree()%><br>
+                                            可见度：<%=love.getCanSee()==0?"不可见":"可见"%><br>
+                                            <div class="layui-btn-group">
+                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=user.getId()%>,<%=ex.getId()%>,'setpublic',1)">公开</button>
+                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=user.getId()%>,<%=ex.getId()%>,'setpublic',0)">私有</button>
+                                            </div>
+                                            <div class="layui-btn-group">
+                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="window.location.href='details.jsp?id=<%=ex.getId()%>'">
+                                                    <i class="layui-icon">&#xe602;</i>
+                                                </button>
+                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=user.getId()%>,<%=ex.getId()%>,'del',0)">
+                                                    <i class="layui-icon">&#xe640;</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="layui-btn-group">
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="window.location.href='details.jsp?id=<%=ex.getId()%>'">
-                                        <i class="layui-icon">&#xe602;</i>
-                                    </button>
-                                    <button type="button" class="layui-btn layui-btn-primary layui-btn-sm" onclick="updataMyLove(<%=user.getId()%>,<%=ex.getId()%>,'del',0)">
-                                        <i class="layui-icon">&#xe640;</i>
-                                    </button>
+                                <%
+                                    }
+                                %>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="layui-tab-item">
+
+                    <div style="padding: 15px;">
+                        <div style="padding: 20px; background-color: #F2F2F2;">
+                            <div class="layui-row layui-col-space15">
+                                <div class="layui-col-md6">
+                                    <%
+                                        ExhibitRecService exhibitRecService = new ExhibitRecService(ls,new ExhibitDaoImpl());
+                                        List<Exhibit> recExhibits = exhibitRecService.recByPlace(user);
+                                        if(recExhibits.size() == 0){
+                                    %>
+                                    <p>您的兴趣爱好太小众了，小的也无能为力呀！</p>
+                                    <%
+                                    }
+                                    else {
+                                    %>
+                                    <p>猜你喜欢：<%= recExhibits.get(0).getPlace() %> 的展品</p>
+                                    <%
+                                        for(Exhibit exhibit : recExhibits){
+                                    %>
+                                    <a href="details.jsp?id=<%=exhibit.getId()%>" class="layui-btn layui-btn-primary layui-btn-sm"><%=exhibit.getName()%></a>
+                                    <hr>
+                                    <%
+                                            }
+                                        }
+                                    %>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <%
-                        }
-                    %>
 
 
                 </div>
+
             </div>
         </div>
+
     </div>
 
     <div class="layui-footer">
