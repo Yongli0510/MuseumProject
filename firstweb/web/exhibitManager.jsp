@@ -91,7 +91,7 @@
         <div class="layui-side-scroll">
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
+                <li class="layui-nav-item">
                     <a class="">用户相关</a>
                     <dl class="layui-nav-child">
                         <dd><a href="personalpage.jsp?id=<%=user.getId()%>">我的主页</a></dd>
@@ -105,11 +105,11 @@
                 <%
                     if ("true".equals(session.getAttribute("permission"))){
                 %>
-                <li class="layui-nav-item">
+                <li class="layui-nav-item layui-nav-itemed">
                     <a>管理界面</a>
                     <dl class="layui-nav-child">
                         <dd><a href="userManage.jsp">人员管理</a></dd>
-                        <dd><a href="exhibitManager.jsp">展品管理</a></dd>
+                        <dd class="layui-this"><a href="exhibitManager.jsp">展品管理</a></dd>
                     </dl>
                 </li>
                 <%
