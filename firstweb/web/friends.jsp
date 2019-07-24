@@ -136,6 +136,7 @@
                     <li>好友查询</li>
                     <li>收到的邀请</li>
                     <li>好友申请记录</li>
+                    <li>好友推荐</li>
                 </ul>
 
                 <div class="layui-tab-content">
@@ -203,8 +204,10 @@
                         </div>
                     </div>
 
+
+                    <%--展示所有的好友申请记录--%>
                     <div class="layui-tab-item">
-                        <%--展示所有的好友申请记录--%>
+
                         <div class="layui-row layui-col-space15">
                             <%
                                 InviteService is = new InviteService(new InviteDaoImpl());

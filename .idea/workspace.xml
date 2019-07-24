@@ -7,10 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb709441-a820-4b67-8955-ac8b2ed637cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firstweb/src/service/FriendRecService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/Servlet/MailSendServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/Servlet/MailSendServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/service/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/MailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/src/SignChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/friends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/friends.jsp" afterDir="false" />
     </list>
     <list id="be6c0247-d223-4662-8caa-9454d266db38" name="Revert: fix bugs" comment="" />
     <list id="e8dc9c2b-9a79-491d-a8c3-b1af1ee251ff" name="Revert: 验证码已完成" comment="">
@@ -45,26 +45,45 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/service/MailService.java">
+        <entry file="file://$PROJECT_DIR$/firstweb/src/service/FriendRecService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+            <state relative-caret-position="153">
+              <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#1838#2075#0" expanded="true" />
-                <element signature="e#2074#2075#0" expanded="true" />
+                <element signature="e#586#604#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/MailSendServlet.java">
+        <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="251">
+              <caret line="206" selection-start-line="206" selection-end-line="206" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firstweb/src/service/FriendService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#792#793#0" expanded="true" />
+                <element signature="e#844#845#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,8 +97,8 @@
         <option value="Interface" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,7 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/firstweb/src/servlet/love/DeleteLoveServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/UpdateLoveServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/entity/Friend.java" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/UpdateFriendServlet.java" />
@@ -131,7 +149,6 @@
         <option value="$PROJECT_DIR$/firstweb/web/js/cookie.js" />
         <option value="$PROJECT_DIR$/firstweb/web/backlove.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/exhibitManager.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/web/friends.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/homepage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/personalpage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/search.jsp" />
@@ -152,6 +169,8 @@
         <option value="$PROJECT_DIR$/firstweb/web/details.jsp" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/MailSendServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/service/MailService.java" />
+        <option value="$PROJECT_DIR$/firstweb/src/service/FriendRecService.java" />
+        <option value="$PROJECT_DIR$/firstweb/web/friends.jsp" />
       </list>
     </option>
   </component>
@@ -196,28 +215,6 @@
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
               <item name="firstweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -229,30 +226,27 @@
             <path>
               <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-              <item name="decoration" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="firstweb_war_exploded" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="firstweb_war_exploded" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -268,7 +262,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563953331893" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563956951561" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -516,7 +510,7 @@
       <workItem from="1563791813189" duration="27211000" />
       <workItem from="1563851183081" duration="3729000" />
       <workItem from="1563941167441" duration="844000" />
-      <workItem from="1563945518370" duration="7652000" />
+      <workItem from="1563945518370" duration="10813000" />
     </task>
     <task id="LOCAL-00001" summary="finished homepage">
       <created>1563104224639</created>
@@ -714,11 +708,18 @@
       <option name="project" value="LOCAL" />
       <updated>1563951039057</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="验证码已修改">
+      <created>1563953363551</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1563953363552</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206751000" />
+    <option name="totallyTimeSpent" value="209912000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -731,8 +732,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6926346" visible="true" weight="0.23659517" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6926346" visible="true" weight="0.23659517" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -742,7 +744,7 @@
       <window_info id="Web" order="7" sideWeight="0.30736545" side_tool="true" weight="0.2660858" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.85269123" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7285523" visible="true" weight="0.48441926" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" weight="0.48441926" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37818697" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -845,19 +847,10 @@
     <MESSAGE value="验证码已完成" />
     <MESSAGE value="基本完成" />
     <MESSAGE value="修复了重复添加展品会出现的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复了重复添加展品会出现的bug" />
+    <MESSAGE value="验证码已修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="验证码已修改" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/firstweb/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/personalpage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="192" column="42" selection-start-line="192" selection-start-column="42" selection-end-line="192" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -914,13 +907,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/service/Test.java" />
-    <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4947">
-          <caret line="23" column="64" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/css/signin.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1083,18 +1069,6 @@
     <entry file="file://$PROJECT_DIR$/firstweb/web/css/details.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/service/FriendService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#844#845#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/dao/impl/FriendDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -1150,16 +1124,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/MailSendServlet.java">
+    <entry file="file://$PROJECT_DIR$/firstweb/src/SignChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state relative-caret-position="60">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/service/MailService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
+        <state relative-caret-position="840">
           <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1167,6 +1141,51 @@
             <element signature="e#330#331#0" expanded="true" />
             <element signature="e#1838#2075#0" expanded="true" />
             <element signature="e#2074#2075#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/MailSendServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/service/FriendService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="36" column="45" lean-forward="true" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#792#793#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="206" selection-start-line="206" selection-end-line="206" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/service/FriendRecService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="36" lean-forward="true" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#586#604#0" expanded="true" />
           </folding>
         </state>
       </provider>
