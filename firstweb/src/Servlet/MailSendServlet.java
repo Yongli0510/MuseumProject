@@ -23,9 +23,11 @@ public class MailSendServlet extends HttpServlet {
         try {
             String email = request.getParameter("email");
             MailService ms = new MailService();
-            ms.sendCaptcha(email);
+            //ms.sendCaptcha(email);
+            ms.sslSend(email);
             captcha = ms.getNumber();
         }catch (Exception e){
+            e.printStackTrace();
             object.put("success", false);
             response.getWriter().println(object);
             return;
