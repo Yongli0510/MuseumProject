@@ -37,7 +37,8 @@ public class fileUploadServlet extends HttpServlet {
                 if(!item.isFormField()){
                     String fileName = item.getName();
                     try {
-                        item.write(new File("C:Users/lenovo/MuseumProject/firstweb/web/image/exhibit/",fileName));
+                        String path = request.getSession().getServletContext().getRealPath("") + "/image/exhibit/";
+                        item.write(new File(path,fileName));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
