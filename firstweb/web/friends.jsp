@@ -6,7 +6,8 @@
 <%@ page import="service.InviteService" %>
 <%@ page import="dao.impl.InviteDaoImpl" %>
 <%@ page import="entity.Invite" %>
-<%@ page import="service.UserService" %><%--
+<%@ page import="service.UserService" %>
+<%@ page import="service.FriendRecService" %><%--
   Created by IntelliJ IDEA.
   User: dell
   Date: 2019/7/18
@@ -205,9 +206,9 @@
                     </div>
 
 
-                    <%--展示所有的好友申请记录--%>
-                    <div class="layui-tab-item">
 
+                    <div class="layui-tab-item">
+                        <%--展示所有的好友申请记录--%>
                         <div class="layui-row layui-col-space15">
                             <%
                                 InviteService is = new InviteService(new InviteDaoImpl());
@@ -303,6 +304,46 @@
                             %>
                         </div>
 
+                    </div>
+
+
+                    <div class="layui-tab-item">
+                        <%--我的好友栏目--%>
+                        <div class="layui-row layui-col-space15">
+
+                            <%
+                                FriendRecService frc = new FriendRecService(fs,us);
+                                List<User> friendRecs = frc.rec(me.getId());
+                                if (friendRecs.isEmpty()){
+                                }else {
+                                    for (User friendRec : friendRecs) {
+                                    %>
+                                    <div class="layui-col-md6">
+                                        <div class="layui-card">
+                                            <div class="layui-card-header" data-toggle="popover">名称：<%=friendRec.getName()%>
+                                            </div>
+                                            <div class="layui-card-body">
+                                                个性签名：<%=friendRec.getSignature()%>
+                                            </div>
+                                            <div class="layui-btn-group">
+                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                                                        onclick="window.location.href='personalpage.jsp?id=<%=friendRec.getId()%>'">
+                                                    <i class="layui-icon">&#xe612;</i>
+                                                </button>
+                                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm"
+                                                        onclick="inviteHandle(<%=me.getId()%>,<%=friendRec.getId()%>,'new')">
+                                                    <i class="layui-icon">&#xe654;</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%
+                                    }
+                                }
+                            %>
+
+
+                        </div>
                     </div>
 
                 </div>

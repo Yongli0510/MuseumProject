@@ -3,7 +3,6 @@ package service;
 import entity.User;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class FriendRecService {
     private FriendService fs;
@@ -41,10 +40,12 @@ public class FriendRecService {
         //获取排序结果
         Set<Integer> keySet = map.keySet();
         for (Integer key : keySet) {
-            rec.add(us.getUser(key));
-            System.out.println(key + " " + map.get(key));
+            if (!fs.isFriend(uid,key) && key != uid){
+                //只有非好友才行
+                rec.add(us.getUser(key));
+                System.out.println(key + " " + map.get(key));
+            }
         }
-
         return rec;
     }
 }
