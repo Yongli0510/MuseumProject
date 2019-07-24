@@ -29,12 +29,14 @@ function goPage(page) {
                     tabData += '<a href="details.jsp?id=' + list[i].id + '" name="a1" class="layui-btn">查看详情</a>';
                     tabData += '</div></div>';
                 }
+
                 if(totalNum < 3){
                     for(var i = 3 - totalNum; i > 0;i--){
                         tabData += '<div class="layui-inline layui-bg-cyan" style="width: 300px;height: 600px">';
                         tabData += '</div>';
                     }
                 }
+
                 if(totalNum > 3 && totalNum < 6){
                     for(var i = 6 - totalNum; i > 0;i--){
                         tabData += '<div class="layui-inline layui-bg-cyan" style="width: 300px;height: 600px">';
