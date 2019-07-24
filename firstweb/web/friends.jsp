@@ -386,9 +386,9 @@
             layer.open({
                 type: 1,
                 title:'发送私信',
-                content: '<div class="layui-input-block" style="text-align: center">' +
+                content: '<div class="layui-input-block" style="width: 400px;height: 200px;margin: auto">' +
                     '<textarea name="desc" placeholder="请输入私信内容" class="layui-textarea"></textarea></div>' +
-                    '<button class="layui-btn" id="send">发送</button> ',
+                    '<p style="text-align: center"><button class="layui-btn" id="send">发送</button></p> ',
                 area: ['400px', '300px']
             });
             
