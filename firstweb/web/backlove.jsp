@@ -102,7 +102,7 @@
                         <dd><a href="personalpage.jsp?id=<%=user.getId()%>">我的主页</a></dd>
                         <dd><a href="selfManage.jsp">信息管理</a></dd>
                         <dd><a href="friends.jsp">好友列表</a></dd>
-                        <dd><a href="backlove.jsp">收藏夹</a></dd>
+                        <dd class="layui-this"><a href="backlove.jsp">收藏夹</a></dd>
                         <dd><a href="email.jsp">私信</a></dd>
                     </dl>
                 </li>

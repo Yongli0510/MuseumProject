@@ -6,16 +6,26 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb709441-a820-4b67-8955-ac8b2ed637cc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/Servlet/MailSendServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/Servlet/MailSendServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstweb/src/service/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/src/service/MailService.java" afterDir="false" />
+    <list default="true" id="eb709441-a820-4b67-8955-ac8b2ed637cc" name="Default Changelist" comment="基本完成">
+      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/SignChecker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/dao/DAO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/entity/Exhibit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/entity/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/WEB-INF/classes/jdbc/JdbcUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/css/details.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/details.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/homepage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/firstweb_war_exploded/search.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/backlove.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/backlove.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/email.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/email.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/exhibitManager.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/exhibitManager.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/friends.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/friends.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/personalpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/personalpage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/selfManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/selfManage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstweb/web/userManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/userManage.jsp" afterDir="false" />
     </list>
     <list id="be6c0247-d223-4662-8caa-9454d266db38" name="Revert: fix bugs" comment="" />
-    <list id="e8dc9c2b-9a79-491d-a8c3-b1af1ee251ff" name="Revert: 验证码已完成" comment="">
-      <change beforePath="$PROJECT_DIR$/firstweb/web/log.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/firstweb/web/log.jsp" afterDir="false" />
-    </list>
+    <list id="e8dc9c2b-9a79-491d-a8c3-b1af1ee251ff" name="Revert: 验证码已完成" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,28 +53,21 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/service/MailService.java">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/fileUploadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#301#302#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#1838#2075#0" expanded="true" />
-                <element signature="e#2074#2075#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="266">
+              <caret line="29" column="80" lean-forward="true" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/MailSendServlet.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/firstweb/web/backlove.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="513">
+              <caret line="114" column="48" lean-forward="true" selection-start-line="114" selection-start-column="48" selection-end-line="114" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -91,6 +94,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="yongli0510 &lt;17302010031@fudan.edu.cn&gt;" />
         <option value="Yongli Wang" />
         <option value="yongli0510" />
       </list>
@@ -101,7 +105,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/firstweb/src/servlet/love/DeleteLoveServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/UpdateLoveServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/entity/Friend.java" />
         <option value="$PROJECT_DIR$/firstweb/src/servlet/UpdateFriendServlet.java" />
@@ -129,14 +132,8 @@
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/UpdateUserServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/web/js/previouspage.js" />
         <option value="$PROJECT_DIR$/firstweb/web/js/cookie.js" />
-        <option value="$PROJECT_DIR$/firstweb/web/backlove.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/web/exhibitManager.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/web/friends.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/homepage.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/web/personalpage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/web/search.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/web/selfManage.jsp" />
-        <option value="$PROJECT_DIR$/firstweb/web/userManage.jsp" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/AddUserServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/service/Test.java" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/InviteHandleServlet.java" />
@@ -152,6 +149,13 @@
         <option value="$PROJECT_DIR$/firstweb/web/details.jsp" />
         <option value="$PROJECT_DIR$/firstweb/src/Servlet/MailSendServlet.java" />
         <option value="$PROJECT_DIR$/firstweb/src/service/MailService.java" />
+        <option value="$PROJECT_DIR$/firstweb/web/email.jsp" />
+        <option value="$PROJECT_DIR$/firstweb/web/exhibitManager.jsp" />
+        <option value="$PROJECT_DIR$/firstweb/web/friends.jsp" />
+        <option value="$PROJECT_DIR$/firstweb/web/personalpage.jsp" />
+        <option value="$PROJECT_DIR$/firstweb/web/selfManage.jsp" />
+        <option value="$PROJECT_DIR$/firstweb/web/userManage.jsp" />
+        <option value="$PROJECT_DIR$/firstweb/web/backlove.jsp" />
       </list>
     </option>
   </component>
@@ -163,7 +167,7 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="326" />
+    <option name="x" value="325" />
     <option name="y" value="60" />
     <option name="width" value="1440" />
     <option name="height" value="805" />
@@ -173,6 +177,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,41 +195,6 @@
               <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
               <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -231,36 +202,23 @@
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
               <item name="firstweb" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-              <item name="decoration" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MuseumProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MuseumProject" type="462c0819:PsiDirectoryNode" />
-              <item name="firstweb" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -718,7 +676,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206751000" />
+    <option name="totallyTimeSpent" value="208135000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -731,8 +689,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6926346" visible="true" weight="0.23659517" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6926346" visible="true" weight="0.25670242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -742,7 +701,7 @@
       <window_info id="Web" order="7" sideWeight="0.30736545" side_tool="true" weight="0.2660858" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.85269123" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7285523" visible="true" weight="0.48441926" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" visible="true" weight="0.48441926" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.37818697" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -766,6 +725,41 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6926346" visible="true" weight="0.23659517" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.30736545" side_tool="true" weight="0.2660858" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.85269123" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7285523" weight="0.38101983" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.37818697" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.24929178" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.27144772" side_tool="true" weight="0.4022663" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.73458445" weight="0.50708216" />
+      <window_info anchor="bottom" id="Application Servers" order="13" sideWeight="0.49932975" weight="0.3286119" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.49597856" weight="0.3286119" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.3286119" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.2680965" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -848,64 +842,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="修复了重复添加展品会出现的bug" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/firstweb/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/personalpage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="192" column="42" selection-start-line="192" selection-start-column="42" selection-end-line="192" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/search.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="159" column="42" selection-start-line="159" selection-start-column="42" selection-end-line="159" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/selfManage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="181" column="42" selection-start-line="181" selection-start-column="42" selection-end-line="181" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/firstweb.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/userManage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="226" column="42" selection-start-line="226" selection-start-column="42" selection-end-line="226" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/searchServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="51" column="10" lean-forward="true" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/UpdateUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/js/formcheck.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/AddUserServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/js/usermanage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -914,13 +850,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/src/service/Test.java" />
-    <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4947">
-          <caret line="23" column="64" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/css/signin.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1056,13 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/homepage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="22" column="51" lean-forward="true" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/firstweb/web/sign.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -1136,13 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/firstweb/web/details.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1840">
-          <caret line="176" column="44" lean-forward="true" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/firstweb/web/WEB-INF/lib/mail.jar!/javax/mail/Message.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1168,6 +1083,105 @@
             <element signature="e#1838#2075#0" expanded="true" />
             <element signature="e#2074#2075#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/js/log.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/js/page.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="30" lean-forward="true" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#69#76#1" expanded="true" />
+            <element signature="e#70#77#1" expanded="true" />
+            <element signature="e#70#77#1" expanded="true" />
+            <element signature="e#70#77#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3204">
+          <caret line="176" column="44" lean-forward="true" selection-start-line="176" selection-start-column="44" selection-end-line="176" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/email.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/exhibitManager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="111" column="46" selection-start-line="111" selection-start-column="46" selection-end-line="111" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/friends.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="104" column="46" selection-start-line="104" selection-start-column="46" selection-end-line="104" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/personalpage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="105" column="46" selection-start-line="105" selection-start-column="46" selection-end-line="105" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1026" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/selfManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="93" column="46" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/userManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="111" column="46" selection-start-line="111" selection-start-column="46" selection-end-line="111" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/homepage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1876">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/src/Servlet/fileUploadServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="29" column="80" lean-forward="true" selection-start-line="29" selection-start-column="80" selection-end-line="29" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firstweb/web/backlove.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="114" column="48" lean-forward="true" selection-start-line="114" selection-start-column="48" selection-end-line="114" selection-end-column="48" />
         </state>
       </provider>
     </entry>
